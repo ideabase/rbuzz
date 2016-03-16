@@ -28,8 +28,8 @@ h3 {
 }
 
 body {
-   font-size: 17px;
-   color: #515151;
+   font-size: 18px;
+   color: #2D2D2D;
    line-height: 25px;
    font-family: "Lato", sans-serif;
    font-weight: 300;
@@ -38,7 +38,7 @@ body {
 }
 
 a {
-   font-size: 17px;
+   font-size: 18px;
    line-height: 25px;
    font-family: "Lato", sans-serif;
    font-weight: 300;
