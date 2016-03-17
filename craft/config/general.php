@@ -8,5 +8,13 @@
  */
 
 return array(
+    '*' => array(
+    ),
 
+    '.dev' => array(
+        'devMode' => true,
+    ),
+
+    '.com' => array(
+    )
 );
