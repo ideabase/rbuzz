@@ -17,7 +17,7 @@ return array(
         'password' => 'root',
         'database' => 'rbuzz',
     ),
-    '.us' => array(
+    '*' => array(
         'server' => 'localhost',
         'user' => 'ideabase',
         'password' => '&Fw;MRwCQ62w',
