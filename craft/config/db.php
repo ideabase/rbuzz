@@ -17,10 +17,10 @@ return array(
         'password' => 'root',
         'database' => 'rbuzz',
     ),
-    '*' => array(
+    '.us' => array(
         'server' => 'localhost',
         'user' => 'ideabase',
-        'password' => '&Fw;MRwCQ62w',
+        'password' => 'Ol&&-c{5mudN',
         'database' => 'rbuzz',
     ),
 );
