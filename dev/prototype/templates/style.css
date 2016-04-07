@@ -1,0 +1,141 @@
+body {
+  margin: 0 auto;
+  padding: 1em;
+}
+
+div, section, main, aside, footer {
+  border: 1px solid lightgray;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+h1 {
+     font-size: 18px;
+     line-height: 25px;
+     font-family: "Lato", sans-serif;
+     font-weight: 700;
+     font-style: normal;
+     text-transform: uppercase;
+     margin-bottom: -.5em;
+     color: rgba(240,194,66,1);
+  }
+
+h2 {
+   font-size: 25px;
+   line-height: 30px;
+   font-family: "Merriweather", serif;
+   font-weight: 300;
+   font-style: normal;
+   color: rgba(107,200,200,1);
+}
+
+
+body {
+   font-size: 18px;
+   color: #2D2D2D;
+   line-height: 25px;
+   font-family: "Lato", sans-serif;
+   font-weight: 300;
+   font-style: normal;
+   padding: 2em;
+}
+
+a {
+   font-size: 18px;
+   line-height: 25px;
+   font-family: "Lato", sans-serif;
+   font-weight: 300;
+   font-style: normal;
+   color: rgba(107,200,200,1);
+}
+
+header {
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    display: flex;
+  }
+}
+
+nav {
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav li {
+  float: left;
+  padding: 0 1em;
+}
+
+nav li a {
+  color: rgb(128,130,132);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 .75em;
+  font-size: .9em;
+}
+
+@media screen and (min-width: 800px) {
+  nav li {
+  border-right: 1px solid grey;
+  }
+  nav li:nth-last-child(2) {
+    border: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    max-height: inherit;
+  }
+}
+
+.menu-trigger {
+  float: right;
+  text-align: right;
+}
+
+@media screen and (min-width: 800px) {
+  .menu-trigger {
+    display: none;
+  }
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.signup {
+  float: right;
+  background-color: rgb(233,72,52);
+  border: 3px solid rgb(197,32,38);
+  padding: .25em .75em;
+}
+
+.signup a {
+  color: white;
+  font-weight: bold;
+}
+
+.callout {
+  background-color: rgb(233,72,52);
+}
+
+a:hover {
+  color: #009B93;
+}
+
+.plans-headings {
+  text-align: center;
+}
