@@ -1,34 +1,69 @@
-body {
-  margin: 0 auto;
-  padding: 1em;
-}
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300italic,700|Lato:700,300);
 
-div, section, main, aside, footer {
-  border: 1px solid lightgray;
-  padding: .5em;
-  margin-bottom: 1em;
-}
 
 h1 {
-     font-size: 18px;
+     font-size: 22px;
      line-height: 25px;
      font-family: "Lato", sans-serif;
      font-weight: 700;
      font-style: normal;
      text-transform: uppercase;
      margin-bottom: -.5em;
+     padding: 1.75em 0 .5em 0;
      color: rgba(240,194,66,1);
+     text-align: center;
   }
 
-h2 {
-   font-size: 25px;
-   line-height: 30px;
-   font-family: "Merriweather", serif;
-   font-weight: 300;
-   font-style: normal;
-   color: rgba(107,200,200,1);
+h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(240,194,66,1);
+  font-size: 18px;
 }
 
+.columns {
+    padding: 0;
+  }
+
+#callout {
+  font-family: "Merriweather", serif;
+  color: white;
+  width: 100%;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.25em;
+  margin: .25em;
+  line-height: 1.25em;
+}
+
+@media screen and (min-width: 800px) {
+  #callout {
+    font-size: 1.5em;
+    }
+  }
+
+#icontitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: .85em;
+  line-height: 1.4em;
+  color: rgb(112,112,112);
+}
+
+@media screen and (min-width: 800px) {
+  #icontitle {
+    font-size: 1em;
+   }
+  }
+
+  @media screen and (max-width: 640px) {
+  #icontitle {
+    font-size: 1.1em;
+   }
+  }
 
 body {
    font-size: 18px;
@@ -37,6 +72,7 @@ body {
    font-family: "Lato", sans-serif;
    font-weight: 300;
    font-style: normal;
+   color: rgb(112,112,112);
    padding: 2em;
 }
 
@@ -49,13 +85,19 @@ a {
    color: rgba(107,200,200,1);
 }
 
-header {
+a:hover {
+  text-decoration: underline;
+  color: white;
 }
 
 @media screen and (min-width: 800px) {
   header {
     display: flex;
   }
+}
+
+p {
+  margin: .25em;
 }
 
 nav {
@@ -68,7 +110,7 @@ nav {
 
 nav ul {
   list-style-type: none;
-  margin: 0;
+  margin: 2em 0 0 0;
   padding: 0;
   width: 100%;
 }
@@ -79,11 +121,15 @@ nav li {
 }
 
 nav li a {
-  color: rgb(128,130,132);
-  font-weight: 500;
+  color: rgb(147,149,151);
+  font-weight: 700;
   text-transform: uppercase;
   margin: 0 .75em;
   font-size: .9em;
+}
+
+nav li a:hover {
+  color: rgb(107,200,200);
 }
 
 @media screen and (min-width: 800px) {
@@ -103,7 +149,13 @@ nav li a {
 
 .menu-trigger {
   float: right;
-  text-align: right;
+  margin: 3.75em 0 0 0;
+  color: white;
+  background-color: rgb(107,200,200);
+  border: 3px solid rgb(9,142,133);
+  padding: .25em .75em;
+  text-align: center;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 800px) {
@@ -114,6 +166,7 @@ nav li a {
 
 .logo {
   max-width: 200px;
+  padding-right: 2em;
 }
 
 .signup {
@@ -128,14 +181,95 @@ nav li a {
   font-weight: bold;
 }
 
-.callout {
-  background-color: rgb(233,72,52);
+.signup a:hover {
+  color: white;
 }
 
-a:hover {
-  color: #009B93;
+.icons {
+  margin: 0 auto;
+  display: flex;
+  padding: .5em 0 0 0;
+}
+
+.home-signup, .home-learn {
+  background-color: rgb(233,72,52);
+  border: 3.9px solid rgb(197,32,38);
+  color: white;
+  width: 60%;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: .75em 2em;
+  text-align: center;
+  margin: .5em;
+}
+
+.home-signup {
+  float: right;
+}
+
+.home-learn {
+  float: left;
+}
+
+@media screen and (max-width: 1080px) {
+  .home-signup, .home-learn {
+    width: 80%;
+    margin: .5em;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .home-signup, .home-learn {
+    float: none;
+    display: block;
+    width: 100%;
+  }
 }
 
 .plans-headings {
   text-align: center;
 }
+
+#learn {
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.15em;
+  padding: 2.5em 0 0 0;
+  line-height: 1.5em;
+}
+
+iframe {
+  margin: 2em 0 -.4em 0;
+  width: 100%;
+  height: 100;
+}
+
+.callout {
+  background-color: rgb(233,72,52);
+  padding: .5em;
+  margin: 0;
+  width: 100%
+}
+
+@media screen and (max-width: 639px) {
+  #callout {
+    font-size: 1em;
+    line-height: 1.35em;
+    }
+  }
+
+hr {
+    margin-top: 1.75em;
+  }
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  footer ul li {
+    font-size: 16px;
+  }
