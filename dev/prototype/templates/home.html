@@ -14,22 +14,24 @@
         <div class="small-6 small-offset-0 medium-3 medium-offset-0 columns">
           <img class="logo" src="assets/logo.svg"</img>
         </div>
-        <a class="menu-trigger small-3 columns" href="#">Menu</a>
+        <a href="#menu" class="menu-link">Menu</a>
 
-        <nav class="small-12 medium-9 medium-offset-0 columns">
-          <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Plans</a></li>
-            <li><a href="#">About</a></li>
-            <li class="signup"><a href="#">Sign Up</a></li>
-          </ul>
+        <nav id="menu" role="navigation">
+        			<ul>
+        				<li><a href="#">Blog</a></li>
+        				<li><a href="#">Plans</a></li>
+        				<li><a href="#">About</a></li>
+
+                <li class="signup"><a href="#">Sign Up</a>
+        				</li>
+        			</ul>
         </nav>
   </header>
 
   <main class="row">
         <div class="column row">
           <div class="small-12 columns">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/M5RCO2LOtwU" frameborder="0" allowfullscreen></iframe>
+              <img class="libraryphoto" src="assets/library.jpg" alt="Reading Buzz Intro video"></img>
           </div>
           <div class="small-12 columns callout">
             <div id="callout">Premium videos delivered weekly to librarians</div>
@@ -79,27 +81,35 @@
 
   <footer class="row">
     <hr />
-        <div class="small-6 small-offset-3 medium-2 medium-offset-0 columns">
-        <h4>Reading Buzz</h4>
-          <ul>
-            <li>About</li>
-            <li>Services</li>
-            <li>Blog</li>
-            <li>Sign Up</li>
-          </ul>
+        <div class="small-6 small-offset-3 medium-3 medium-offset-0 columns">
+          <div class="reading">
+            <h4>Reading Buzz</h4>
+              <ul>
+                <li>About</li>
+                <li>Services</li>
+                <li>Blog</li>
+                <li>Sign Up</li>
+              </ul>
+          </div>
         </div>
-        <div class="small-6 small-offset-3 medium-2 medium-push-0 columns">
-          <h4>Contact</h4>
-          <ul>
-            <li>Lindsey Buzzelli Andes</li>
-            <li>readingbuzz@gmail.com</li>
-          </ul>
+
+        <div class="small-6 small-offset-3 medium-4 medium-push-0 columns">
+          <div class="contact">
+            <h4>Contact</h4>
+            <ul>
+              <li>Lindsey Buzzelli Andes</li>
+              <li>readingbuzz@gmail.com</li>
+            </ul>
+          </div>
         </div>
   </footer>
 
       <link rel="stylesheet" type="text/css" href="app.css">
       <link rel="stylesheet" type="text/css" href="foundation.css">
       <link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="javascript.js"></script>
 
 
 </body>
