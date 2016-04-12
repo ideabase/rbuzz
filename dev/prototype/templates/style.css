@@ -26,16 +26,20 @@ h4 {
   font-weight: 700;
   text-transform: uppercase;
   color: rgba(240,194,66,1);
-  font-size: 1em;
+  font-size: .9em;
 }
 
 @media screen and (max-width:800px) {
   h4 {
-    font-size: .9em;
+    font-size: .8em;
   }
 }
 
-.columns {
+.row {
+  max-width: 100%;
+}
+
+.columns, .column {
     padding: 0;
   }
 
@@ -61,8 +65,9 @@ h4 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-align: center;
-  font-size: .85em;
+  font-size: .9em;
   line-height: 1.4em;
+  padding: 0 .5em;
   color: rgb(112,112,112);
 }
 
@@ -72,21 +77,39 @@ h4 {
    }
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 639px) {
   #icontitle {
-    font-size: 1.1em;
+    font-size: 1em;
+    padding-bottom: .25em;
+   }
+   .icons {
+     width: 60%;
    }
   }
 
+  @media screen and (max-width: 500px) {
+    #icontitle {
+      font-size: .9em;
+    }
+    .icons {
+      width: 70%;
+    }
+  }
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-   font-size: 18px;
+   font-size: 1.3em;
    color: #2D2D2D;
    line-height: 25px;
    font-family: "Lato", sans-serif;
    font-weight: 300;
    font-style: normal;
    color: rgb(112,112,112);
-   padding: 2em;
+   padding: 1em 0 0 0;
 }
 
 a {
@@ -112,6 +135,11 @@ a:hover {
 p {
   margin: .25em;
 }
+
+#menu {
+  margin-right: 2.5em;
+}
+
 a.menu-link {
   	    float: right;
 		    padding: .25em 1.5em;
@@ -119,8 +147,15 @@ a.menu-link {
         border: 3px solid rgb(9,142,133);
         color: white;
         font-weight: 700;
-        margin: 3.25em 0 0 0;
+        margin: 4em 2.5em 0 0;
 		}
+
+@media screen and (max-width: 500px) {
+      a.menu-link {
+        margin-right: 1em;
+      }
+    }
+
 		nav[role=navigation] {
 			clear: both;
 			-webkit-transition: all 0.3s ease-out;
@@ -137,7 +172,7 @@ a.menu-link {
 			max-height: 15em;
 		}
 		nav[role=navigation] ul {
-			margin: 1em;
+			margin: 1em 0 0 0;
 			padding: 0;
 			border-top: 1px solid #A3A3A3;
 		}
@@ -146,6 +181,14 @@ a.menu-link {
 			padding: 0.5em;
 			border-bottom: 1px solid #A3A3A3;
 		}
+
+    nav[role=navigation] .signuplink {
+      border-bottom: none;
+    }
+
+    nav[role=navigation] .aboutlink {
+      border-bottom: none;
+    }
 
 		@media screen and (min-width:800px) {
 			a.menu-link {
@@ -190,7 +233,7 @@ a.menu-link {
 }
 
 nav {
-  margin: 2.5em 0 0 0;
+  margin: 2.5em 0 0 0em;
   max-height: 0;
   overflow: hidden;
   width: 100%;
@@ -221,15 +264,14 @@ nav li a {
   text-align: center;
 }
 
-
 nav li a:hover {
   color: rgb(107,200,200);
 }
 
 @media screen and (min-width: 800px) {
   nav li {
-  border-right: 1px solid #A3A3A3;
-  padding-right: .75em;
+    border-right: 1px solid #A3A3A3;
+    padding-right: .75em;
   }
   nav li:nth-last-child(2) {
     border: none;
@@ -261,8 +303,17 @@ nav li a:hover {
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 250px;
   padding-right: 2em;
+  padding-left: .75em;
+  margin-left: 1.5em;
+  margin-right: 2em;
+}
+
+@media screen and (max-width: 500px) {
+  .logo {
+    margin-left: 0em;
+  }
 }
 
 .signup a {
@@ -277,7 +328,8 @@ nav li a:hover {
 .icons {
   margin: 0 auto;
   display: flex;
-  padding: .5em 0 0 0;
+  padding: .5em .8em 0 .5em;
+
 }
 
 .home-signup, .home-learn {
@@ -291,6 +343,12 @@ nav li a:hover {
   padding: .75em 2em;
   text-align: center;
   margin: .5em;
+}
+
+@media screen and (max-width:639px) {
+  .home-signup, .home-learn {
+    padding: .5em 1em;
+  }
 }
 
 .home-signup {
@@ -316,8 +374,31 @@ nav li a:hover {
   }
 }
 
-.plans-headings {
+.plans {
   text-align: center;
+}
+
+.plans p {
+  padding: .5em 8em;
+}
+
+@media screen and (max-width:1000px) {
+  .plans p {
+    padding: .5em 5em;
+    font-size: .9em;
+  }
+}
+
+@media screen and (max-width:639px) {
+  .plans p {
+    font-size: .82em;
+  }
+}
+
+@media screen and (max-width:580px) {
+  .plans p {
+    padding: .5em 1.5em;
+  }
 }
 
 #learn {
@@ -325,9 +406,16 @@ nav li a:hover {
   font-style: italic;
   font-weight: 300;
   text-align: center;
-  font-size: 1.15em;
-  padding: 2.5em 0 0 0;
-  line-height: 1.5em;
+  font-size: 1em;
+  padding: 2.5em 2em 0 2em;
+  line-height: 1.6em;
+}
+
+@media screen and (max-width: 1000px) {
+ #learn {
+   font-size: .9em;
+   padding: 2em 2em 0 2em;
+ }
 }
 
 .libraryphoto {
@@ -352,37 +440,88 @@ nav li a:hover {
 
 hr {
     margin-top: 1.75em;
+    width: 100%;
   }
+
+footer {
+  padding: 0 0 0 5.5em;
+}
+
+@media screen and (max-width: 639px) {
+  footer {
+  padding: 0 0 0 0em;
+  }
+}
+
+.reading {
+  padding-right: 1.5em;
+}
+
+@media screen and (max-width:639px) {
+  footer {
+    text-align: center;
+  }
+  .reading {
+    padding-right: 0em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  footer {
+    text-align: left;
+  }
+}
 
 footer ul {
     list-style-type: none;
     margin: 0;
   }
 
-footer ul li {
-    font-size: 16px;
-    line-height: 1.5em;
-  }
+footer ul li a {
+  font-size: .9em;
+  color: #2D2D2D;
+  color: rgb(112,112,112);
+}
+
+footer ul li a:hover {
+color: rgb(107,200,200);
+}
 
 footer h4 {
     margin: .25em 0;
+    font-size: .9em;
 }
 
-.reading, .contact {
-  margin-right: 1.5em;
+.lindsey {
+  font-size: .9em;
+  color: #2D2D2D;
+  color: rgb(112,112,112);
+}
+
+.reading {
+  margin-bottom: 2em;
 }
 
 @media screen and (max-width: 639px) {
   .contact {
     margin-top: 1.5em;
+    margin-bottom: 2em;
   }
-  .reading, .contact {
-    text-align: center;
+  .reading {
+    margin-bottom: 0em;
   }
-  footer h4 {
-    font-size: 1em;
-  }
-  footer ul li {
-    font-size: 1em;
+}
+
+.socialmedia img {
+  padding: 0 .25em;
+}
+
+.socialmedia {
+  margin-bottom: 1.5em;
+}
+
+@media screen and (max-width:750px) and (min-width:639px) {
+  .socialmedia img {
+    width: 30%
   }
 }
