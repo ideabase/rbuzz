@@ -142,7 +142,7 @@ p {
 
 a.menu-link {
   	    float: right;
-		    padding: .25em 1.5em;
+		    padding: .45em 1.5em;
         background-color: rgb(107,200,200);
         border: 3px solid rgb(9,142,133);
         color: white;
@@ -520,8 +520,11 @@ footer h4 {
   margin-bottom: 1.5em;
 }
 
-@media screen and (max-width:750px) and (min-width:639px) {
+@media screen and (max-width:765px) and (min-width:639px) {
   .socialmedia img {
     width: 30%
+  }
+  .socialmedia {
+    margin-left: -1em;
   }
 }
