@@ -112,6 +112,13 @@ body {
    padding: 1em 0 0 0;
 }
 
+@media screen and (min-width:1440px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 a {
    font-size: 18px;
    line-height: 25px;
