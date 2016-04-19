@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather:300italic,700|Lato:700,300);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300italic,700|Lato:700,400,300);
 
 
 h1 {
@@ -551,4 +551,146 @@ footer h4 {
   .footer {
     margin-left: -10em;
   }
+}
+
+
+/* PLANS PAGE */
+
+
+/* Headings */
+
+h5 {
+  font-family: "Merriweather", serif;
+  color: white;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.access1 {
+  color: rgb(9,142,133);
+}
+
+.access2 {
+  color: rgb(189,133,43);
+}
+
+.access3 {
+  color: rgb(30,137,67);
+}
+
+.plans-page {
+  text-align: center;
+}
+
+.plans-page hr {
+    width: 80%;
+    border-color: white;
+    margin-top: 0em;
+  }
+
+.plans-page li {
+  list-style-type: none;
+  color: white;
+  font-weight: 400;
+}
+
+.plans-page a {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.plans-page p {
+  font-size: .82em;
+  margin-top: .5em;
+  padding: .5em 2.5em;
+}
+
+@media screen and (min-width: 580px) {
+  .plans-page p {
+    padding: .5em 3.5em;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .plans-page p {
+    font-size: .9em;
+    padding: .5em 4em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .plans-page p {
+    padding: .5em 8em;
+    font-size: 1em;
+  }
+}
+
+.plan1, .plan2, .plan3 {
+  margin-bottom: .5em;
+  margin-top: 1em;
+  padding-bottom: 1em;
+}
+
+.plan1 {
+  background-color: rgb(107,200,200);
+  margin-right: 1em;
+}
+
+.plan2 {
+  background-color: rgb(240,194,66);
+  margin-right: 1em;
+}
+
+.plan3 {
+  background-color: rgb(130,201,154);
+}
+
+.plans-signup {
+  background-color: rgb(233,72,52);
+  border: 3.9px solid rgb(197,32,38);
+  text-align: center;
+  padding: .5em 1.5em;
+  margin-top: 1em;
+}
+
+.price {
+  font-size: 2.25em;
+  font-weight: 700!important;
+  margin-top: .3em;
+}
+
+.permonth {
+  margin-top: -.75em;
+  font-size: .9em;
+}
+
+.peryear {
+  font-size: .75em;
+  margin-top: .5em;
+}
+
+
+/* Clearfix */
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* IE < 8 */
 }
