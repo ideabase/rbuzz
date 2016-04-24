@@ -1,6 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400italic,700|Lato:700,400,300);
 
 
+
+/* Header */
+
+.header {
+  max-width: 1300px!important;
+}
+
+
+/* HOME PAGE */
+
 h1 {
      font-size: 1.25em;
      line-height: 25px;
@@ -8,7 +18,6 @@ h1 {
      font-weight: 700;
      font-style: normal;
      text-transform: uppercase;
-     margin-bottom: -.5em;
      padding: 1.75em 0 .5em 0;
      color: rgba(240,194,66,1);
      text-align: center;
@@ -28,7 +37,8 @@ h3 {
     font-weight: 700;
     font-style: normal;
     color: rgb(107,200,200);
-    font-size: 1.25em;
+    font-size: .75em;
+    text-transform: uppercase;
     }
 
 h4 {
@@ -62,6 +72,12 @@ h4 {
 @media screen and (min-width: 800px) {
   #callout {
     font-size: 1.5em;
+    }
+  }
+
+@media screen and (max-width: 487px) {
+    #callout {
+      margin: 0em;
     }
   }
 
@@ -103,7 +119,7 @@ h4 {
 main {
   padding: 0 1em;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1300px;
 }
 
 body {
@@ -147,8 +163,6 @@ a:hover {
     display: flex;
   }
 }
-
-
 
 #menu {
   margin-right: 2.5em;
@@ -322,7 +336,7 @@ nav li a:hover {
   .logo {
     margin-left: 0em;
     max-width: 200px;
-    margin-top: 1em;
+    margin-top: 1.75em;
   }
 }
 
@@ -401,7 +415,7 @@ nav li a:hover {
 
 .plans p {
   max-width: 900px;
-  margin: 1em auto;
+  margin: 0 auto;
 }
 
 @media screen and (max-width:1000px) {
@@ -548,7 +562,7 @@ footer h4 {
   margin-bottom: 1.5em;
 }
 
-@media screen and (max-width:765px) and (min-width:639px) {
+@media screen and (max-width:780px) and (min-width:639px) {
   .socialmedia img {
     width: 30%
   }
@@ -574,9 +588,6 @@ footer h4 {
   text-align: center;
   max-width: 100%;
 }
-
-
-/* Headings */
 
 h5 {
   font-family: "Merriweather", serif;
@@ -619,8 +630,18 @@ h6 {
   color: rgb(30,137,67);
 }
 
+.planli-1, .planli-2, .planli-3, .planli-4 {
+  line-height: 1.25em;
+}
+
+.planli-2, .planli-3, .planli-4 {
+  margin-top: .5em;
+}
+
 .plans-page {
   text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .plans-page hr {
@@ -644,8 +665,7 @@ h6 {
 
 .plans-page p {
   font-size: .85em;
-  margin-top: .5em;
-  padding: .5em 1em;
+  padding: 0 1em;
 }
 
 .plans-page a {
@@ -671,7 +691,7 @@ h6 {
 .plan-video {
   background-color: #B7B7B7;
   padding: 4em 1em;
-  margin-right: 1em;
+  /*margin-right: 1em;*/
   margin-top: .75em;
   margin-bottom: .75em;
 }
@@ -686,20 +706,20 @@ h6 {
 
 @media screen and (min-width: 580px) {
   .plans-page p {
-    padding: .5em 3.5em;
+    padding: 0 3.5em;
   }
 }
 
 @media screen and (min-width: 640px) {
   .plans-page p {
     font-size: .9em;
-    padding: .5em 4em;
+    padding: 0 4em;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .plans-page p {
-    padding: .5em 8em;
+    padding: 0 8em;
     font-size: 1em;
   }
 }
@@ -734,63 +754,266 @@ h6 {
   background-color: rgb(233,72,52);
   border: 3.9px solid rgb(197,32,38);
   text-align: center;
-  padding: .5em 1.5em;
-  margin-top: 1em;
+  padding: .5em .5em;
+  margin-top: .5em;
 }
-
-
 
 
 
 
 /* ABOUT PAGE */
 
+.aboutpage {
+  max-width: 1200px;
+}
+
 .aboutpage a {
   color: white;
   font-weight: 700;
 }
 
-.aboutpage .call-to-action {
+.aboutpage p {
+  font-size: .82em;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
 
+@media screen and (min-width: 640px) {
+  .aboutpage p {
+    font-size: .9em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .aboutpage p {
+    font-size: 1em;
+  }
 }
 
 .aboutpage ul {
-  margin-top: 1em;
-}
-
-.aboutpage ul li {
-  list-style: none;
-  font-size: .85em;
-}
-
-p {
+  font-family: "Merriweather", serif;
   text-align: center;
-  font-size: .95em;
-  margin: .25em;
-  color: rgb(127,127,127)
+  color: rgb(127,127,127);
+  font-style: italic;
+  font-size: .85em;
+  list-style-type: none;
+  line-height: 1.5em;
 }
+
+@media screen and (min-width: 640px) {
+  .aboutpage ul {
+    text-align: left;
+    padding-left: 1em;
+  }
+}
+
+.li1-f {
+  margin-top: 1.75em
+}
+
+.li2, .li3 {
+  margin-top: .35em;
+}
+
 
 .biography {
   margin: 0 auto;
   display: block;
 }
 
+.lindseyabout {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .meetlindsey {
-  text-align: left;
+  text-align: center;
   padding-left: 1em;
-  padding-top: 1em;
+  padding-top: 1.25em;
 }
 
 .lindsey-img {
-  padding-top: 1em;
-  max-width: 75%;
+  padding-top: .5em;
+  max-width: 50%;
 }
 
-.bio-p {
-  text-align: left;
-  padding-left: -1em;
-  padding-right: 3em;
+.about-center-list {
+  text-align: center!important;
+  padding-left: 0!important;
 }
+
+@media screen and (min-width: 1000px) {
+  .about-center-list li {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .lindsey-img {
+    max-width: 100%;
+    margin-top: 1.3em;
+  }
+}
+
+.bio-p1 {
+  margin-top: .75em;
+}
+
+@media screen and (min-width: 640px) {
+  .bio-p2 {
+    text-align: left!important;
+    padding-left: 2em!important;
+  }
+  .meetlindsey {
+    text-align: left;
+    padding-left: 1.7em;
+  }
+}
+
+.call-to-action2 {
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-size: 1em;
+  padding: 0 1em;
+  line-height: 1.6em;
+}
+
+@media screen and (max-width: 639px) {
+  .favoritelist {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .favoritelist li {
+    font-size: 1.1em;
+  }
+}
+
+
+
+
+
+
+
+/* Blog Page */
+
+.blog-page .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.blog-page {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-align: center;
+}
+
+.blog-page p {
+  font-size: .82em;
+}
+
+@media screen and (min-width: 640px) {
+  .blog-page p {
+    font-size: .9em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .blog-page p {
+    font-size: 1em;
+  }
+}
+
+.blog-page h2 {
+  margin: 1em 0;
+}
+
+@media screen and (min-width: 640px) {
+  .blog-page h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .blog-page h2 {
+    font-size: 1.6em;
+  }
+}
+
+.blog-page h3 {
+  margin-top: -1.25em;
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 640px) {
+  .blog-page h3 {
+    font-size: .85em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .blog-page h3 {
+    font-size: .9em;
+  }
+}
+
+.blog-page h4 {
+  margin-top: 1.25em;
+}
+
+.sub-description {
+  margin-top: -.75em;
+  line-height: 1.4em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.blog-page a {
+  font-weight: 700;
+}
+
+.blog-page a:hover {
+  color: rgb(107,200,200);
+}
+
+.blogphoto {
+    margin: 1.5em 0 -.4em 0;
+    width: 100%;
+  }
+
+.subheading {
+  font-size: 1em;
+  margin: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .subheading {
+    font-size: 1em!important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .subheading {
+    font-size: 1.15em!important;
+  }
+}
+
+.plan-video-blog1, .plan-video-blog2, .plan-video-blog3 {
+  background-color: #B7B7B7;
+  padding: 4em 1em;
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+
+@media screen and (min-width: 640px) {
+  .plan-video-blog1, .plan-video-blog2 {
+    margin-right: 1em;
+}
+
+
+
 
 
 /* Clearfix */

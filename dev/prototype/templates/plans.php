@@ -18,9 +18,9 @@
                <hr />
                <h6 class="access1">Includes:</h6>
                <ul>
-                 <li>Weekly 20 minute lessons for PreK-8</li>
-                 <li>Monthly tip video</li>
-                 <li>Full access to ReadingBuzz.us</li>
+                 <li class="planli-1">Weekly 20 minute lessons for PreK-8</li>
+                 <li class="planli-2">Monthly tip video</li>
+                 <li class="planli-3">Full access to ReadingBuzz.us</li>
                  <li class="price">$250</li>
                  <li class="permonth">per month</li>
                  <li class="peryear">or $2,400 per school year</li>
@@ -32,9 +32,9 @@
                <hr />
                <h6 class="access2">Includes:</h6>
                <ul>
-                 <li>Monthly live sessions for PreK-8</li>
-                 <li>Monthly tip videos</li>
-                 <li>Full access to ReadingBuzz.us</li>
+                 <li class="planli-1">Monthly live sessions for PreK-8</li>
+                 <li class="planli-2">Monthly tip videos</li>
+                 <li class="planli-3">Full access to ReadingBuzz.us</li>
                  <li class="price">$300</li>
                  <li class="permonth">per month</li>
                  <li class="peryear">or $3,600 per school year</li>
@@ -46,10 +46,10 @@
                <hr />
                <h6 class="access3">Includes:</h6>
                <ul>
-                 <li>Customizable videos</li>
-                 <li>Monthly live video sessions</li>
-                 <li>Monthly tip videos</li>
-                 <li>Full access to ReadingBuzz.us</li>
+                 <li class="planli-1">Customizable videos</li>
+                 <li class="planli-2">Monthly live video sessions</li>
+                 <li class="planli-3">Monthly tip videos</li>
+                 <li class="planli-4">Full access to ReadingBuzz.us</li>
                  <li class="price">$400</li>
                  <li class="permonth">per month</li>
                  <li class="peryear">or $4,800 per school year</li>

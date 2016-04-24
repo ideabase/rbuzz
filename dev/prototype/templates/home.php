@@ -1,6 +1,8 @@
 <!-- Include Header.php -->
   <?php include("partials/header.html") ?>
 
+
+
   <div class="column row">
     <div class="small-12 columns">
         <img class="libraryphoto" src="assets/library.jpg" alt="Reading Buzz Intro video"></img>
