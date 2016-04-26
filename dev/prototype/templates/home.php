@@ -46,12 +46,12 @@
         <div class="row column">
           <p class="call-to-action">Learn more about our plan offerings and which program is right for you.</p>
             <div class="small-12 small-offset-0 medium-6 medium-offset-0 columns">
-              <a class="home-learn" href="#">
+              <a class="home-learn" href="plans.php">
                 Learn More
               </a>
               </div>
             <div class="small-12 small-offset-0 medium-6 medium-offset-0 columns">
-              <a class="home-signup" href="#">
+              <a class="home-signup" href="signup.php">
                 Sign Up
               </a>
             </div>
