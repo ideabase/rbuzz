@@ -2,8 +2,7 @@
 
 @media screen and (min-width:660px) {
 
-
-
+/********* WHAT'S NEW SECTION***************/
 
 #new-content {
   float:left;
@@ -20,15 +19,16 @@
 
 }
 
-
 #new-content h3 {
   text-align:left;
 }
 
 #new-content img {
   display:inline;
-  width:300px;
-  height:125px;
+  float:left;
+  width:110px;
+  height:110px;
+  padding-right:10px;
 
 }
 
@@ -38,8 +38,13 @@
   text-align:left;
   margin:10px;
   padding:0;
-
 } 
+
+#new-blog p {
+  margin-bottom:18px;
+}
+
+/*********TIP VIDEO SECTION***************/
 
 #tip-video {
   float:right;
@@ -58,14 +63,52 @@
 
 #tip-video img {
   display:block;
+  margin:auto;
+  width:110px;
+  height:110px;
 
 }
 
+#tip-video h4, #tip-video p {
+  display:block;
+  width:90%;
+  text-align:center;
+  margin:10px;
+  padding:0;
+
+} 
+
+#tip-video p {
+  margin-bottom:0;
+}
+
+/*********OUTRO***************/
+
+#outro p, #outro a {
+  margin:5%;
+
+}
+
+#button {
+  text-decoration:none;
+  background-color:lightgrey;
+  border-style:solid;
+  border-color:lightgrey;
+  border-radius:5%;
+  padding:9px;
+}
+
+/*********FOOTER***************/
 footer {
   clear:both;
 }
 
-footer p, footer img {
-  margin-top:40px;
+#social {
+  height:20px;
 }
-/*
+
+
+footer td, footer img {
+  margin-top:60px;
+}
+

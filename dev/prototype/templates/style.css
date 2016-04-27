@@ -1,38 +1,52 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather:300italic,700|Lato:700,300);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400italic,700|Lato:700,400,300);
 
+
+
+/* Header */
+
+.header {
+  max-width: 1300px!important;
+}
+
+
+/* HOME PAGE */
 
 h1 {
-     font-size: 22px;
-     line-height: 25px;
+     font-size: 1.25em;
+     line-height: 1.25em;
      font-family: "Lato", sans-serif;
      font-weight: 700;
      font-style: normal;
      text-transform: uppercase;
-     margin-bottom: -.5em;
      padding: 1.75em 0 .5em 0;
      color: rgba(240,194,66,1);
      text-align: center;
   }
 
 h2 {
-    margin: -5em 0 0 0;
-    text-align: center;
-    position: absolute;
-    width: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(233,72,52);
+  font-size: 1.25em;
   }
+
+
+h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(107,200,200);
+    font-size: .75em;
+    text-transform: uppercase;
+    }
 
 h4 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: rgba(240,194,66,1);
-  font-size: .9em;
-}
-
-@media screen and (max-width:800px) {
-  h4 {
-    font-size: .8em;
-  }
+  font-size: 1.05em;
 }
 
 .row {
@@ -47,7 +61,7 @@ h4 {
   font-family: "Merriweather", serif;
   color: white;
   width: 100%;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   text-align: center;
   font-size: 1.25em;
@@ -58,6 +72,12 @@ h4 {
 @media screen and (min-width: 800px) {
   #callout {
     font-size: 1.5em;
+    }
+  }
+
+@media screen and (max-width: 487px) {
+    #callout {
+      margin: 0em;
     }
   }
 
@@ -97,8 +117,9 @@ h4 {
   }
 
 main {
-  padding: 0;
-  margin: 0;
+  padding: 0 1em;
+  margin: 0 auto;
+  max-width: 1300px;
 }
 
 body {
@@ -106,23 +127,34 @@ body {
    color: #2D2D2D;
    line-height: 25px;
    font-family: "Lato", sans-serif;
-   font-weight: 300;
+   font-weight: 400;
    font-style: normal;
    color: rgb(112,112,112);
    padding: 1em 0 0 0;
 }
 
+@media screen and (min-width:1440px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 a {
-   font-size: 18px;
+   font-size: 1em;
    line-height: 25px;
    font-family: "Lato", sans-serif;
-   font-weight: 300;
+   font-weight: 400;
    font-style: normal;
    color: rgba(107,200,200,1);
 }
 
+.plans a:hover {
+  color: rgb(127,127,127);
+}
+
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: white;
 }
 
@@ -130,10 +162,6 @@ a:hover {
   header {
     display: flex;
   }
-}
-
-p {
-  margin: .25em;
 }
 
 #menu {
@@ -214,22 +242,15 @@ a.menu-link {
 .signup {
   background-color: rgb(233,72,52);
   border: 3px solid rgb(197,32,38);
+  color: white;
+  font-weight: bold;
 }
 
 @media screen and (min-width:800px) {
 	.signup {
 		float: right;
-    padding: 0em .5em;
-	}
-}
-
-.signup a {
-  color: white;
-  font-weight: bold;
-}
-
-.signup a:hover {
-  color: white;
+    padding: .125em 1em;
+  }
 }
 
 nav {
@@ -266,6 +287,7 @@ nav li a {
 
 nav li a:hover {
   color: rgb(107,200,200);
+  text-decoration: none;
 }
 
 @media screen and (min-width: 800px) {
@@ -313,6 +335,8 @@ nav li a:hover {
 @media screen and (max-width: 500px) {
   .logo {
     margin-left: 0em;
+    max-width: 200px;
+    margin-top: 1.75em;
   }
 }
 
@@ -329,13 +353,15 @@ nav li a:hover {
   margin: 0 auto;
   display: flex;
   padding: .5em .8em 0 .5em;
+}
 
+.icons-container {
+  max-width: 1000px;
+  margin: 1em auto 0 auto;
 }
 
 .home-signup, .home-learn {
-  background-color: rgb(233,72,52);
   border: 3.9px solid rgb(197,32,38);
-  color: white;
   width: 60%;
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -345,18 +371,26 @@ nav li a:hover {
   margin: .5em;
 }
 
+.home-signup {
+  background-color: rgb(233,72,52);
+  color: white;
+  float: left;
+}
+
+.home-learn {
+  background-color: white;
+  color: rgb(233,72,52);
+  float: right;
+}
+
+.home-learn:hover {
+  color: rgb(233,72,52);
+}
+
 @media screen and (max-width:639px) {
   .home-signup, .home-learn {
     padding: .5em 1em;
   }
-}
-
-.home-signup {
-  float: right;
-}
-
-.home-learn {
-  float: left;
 }
 
 @media screen and (max-width: 1080px) {
@@ -380,12 +414,12 @@ nav li a:hover {
 }
 
 .plans p {
-  padding: .5em 8em;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width:1000px) {
   .plans p {
-    padding: .5em 5em;
     font-size: .9em;
   }
 }
@@ -396,24 +430,21 @@ nav li a:hover {
   }
 }
 
-@media screen and (max-width:580px) {
-  .plans p {
-    padding: .5em 1.5em;
-  }
-}
 
-#learn {
+.call-to-action {
   font-family: "Merriweather", serif;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   font-size: 1em;
   padding: 2.5em 2em 0 2em;
   line-height: 1.6em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 @media screen and (max-width: 1000px) {
- #learn {
+ .call-to-action {
    font-size: .9em;
    padding: 2em 2em 0 2em;
  }
@@ -427,7 +458,7 @@ nav li a:hover {
 
 .callout {
   background-color: rgb(233,72,52);
-  padding: .5em;
+  padding: .75em;
   margin: 0;
   width: 100%
 }
@@ -531,7 +562,7 @@ footer h4 {
   margin-bottom: 1.5em;
 }
 
-@media screen and (max-width:765px) and (min-width:639px) {
+@media screen and (max-width:780px) and (min-width:639px) {
   .socialmedia img {
     width: 30%
   }
@@ -544,4 +575,629 @@ footer h4 {
   .footer {
     margin-left: -10em;
   }
+}
+
+
+
+
+
+/* PLANS PAGE */
+
+.plans-block {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 100%;
+}
+
+h5 {
+  font-family: "Merriweather", serif;
+  color: white;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.price {
+  font-size: 2.25em!important;
+  font-weight: 700!important;
+  margin-top: .3em;
+}
+
+.permonth {
+  margin-top: -.75em;
+  font-size: .9em!important;
+}
+
+.peryear {
+  font-size: .75em!important;
+  margin-top: .5em;
+}
+
+.access1 {
+  color: rgb(9,142,133);
+}
+
+.access2 {
+  color: rgb(189,133,43);
+}
+
+.access3 {
+  color: rgb(30,137,67);
+}
+
+.planli-1, .planli-2, .planli-3, .planli-4 {
+  line-height: 1.25em;
+}
+
+.planli-2, .planli-3, .planli-4 {
+  margin-top: .5em;
+}
+
+.plans-page {
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.plans-page hr {
+    width: 80%;
+    border-color: white;
+    margin-top: 0em;
+  }
+
+.plans-page li {
+  list-style-type: none;
+  color: white;
+  font-weight: 400;
+  font-size: .9em;
+}
+
+@media screen and (min-width: 1000px) {
+  .plans-page li {
+    font-size: 1em;
+  }
+}
+
+.plans-page p {
+  font-size: .85em;
+  padding: 0 1em;
+}
+
+.plans-page a {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.plans-page ul {
+  margin-left: 0em;
+}
+
+.whichplan h4 {
+  margin-top: 1em;
+}
+
+.plan-videos {
+  margin: 0 auto;
+}
+
+.plan-video {
+  background-color: #B7B7B7;
+  padding: 4em 1em;
+  /*margin-right: 1em;*/
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+
+@media screen and (min-width: 40em) {
+  .plan-video {
+    width: 30%;
+    margin-left: 1.65%;
+    margin-right: 1.65%;
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .plans-page p {
+    padding: 0 3.5em;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .plans-page p {
+    font-size: .9em;
+    padding: 0 4em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .plans-page p {
+    padding: 0 8em;
+    font-size: 1em;
+  }
+}
+
+.plan1, .plan2, .plan3 {
+  margin-bottom: .5em;
+  margin-top: 1em;
+  padding:1em;
+}
+
+@media screen and (min-width: 40em) {
+  .plan1, .plan2, .plan3 {
+      width: 30%;
+      margin-left: 1.65%;
+      margin-right: 1.65%;
+  }
+}
+
+.plan1 {
+  background-color: rgb(107,200,200);
+}
+
+.plan2 {
+  background-color: rgb(240,194,66);
+}
+
+.plan3 {
+  background-color: rgb(130,201,154);
+}
+
+.plans-signup {
+  background-color: rgb(233,72,52);
+  border: 3.9px solid rgb(197,32,38);
+  text-align: center;
+  padding: .5em .5em;
+  margin-top: .5em;
+}
+
+
+
+
+/* ABOUT PAGE */
+
+.aboutpage {
+  max-width: 1200px;
+}
+
+.aboutpage a {
+  color: white;
+  font-weight: 700;
+}
+
+.aboutpage p {
+  font-size: .82em;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+@media screen and (min-width: 640px) {
+  .aboutpage p {
+    font-size: .9em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .aboutpage p {
+    font-size: 1em;
+  }
+}
+
+.aboutpage ul {
+  font-family: "Merriweather", serif;
+  text-align: center;
+  color: rgb(127,127,127);
+  font-style: italic;
+  font-size: .85em;
+  list-style-type: none;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 640px) {
+  .aboutpage ul {
+    text-align: left;
+    padding-left: 1em;
+  }
+}
+
+.li1-f {
+  margin-top: 1.75em
+}
+
+.li2, .li3 {
+  margin-top: .35em;
+}
+
+
+.biography {
+  margin: 0 auto;
+  display: block;
+}
+
+.lindseyabout {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.meetlindsey {
+  text-align: center;
+  padding-left: 1em;
+  padding-top: 1.25em;
+}
+
+.lindsey-img {
+  padding-top: .5em;
+  max-width: 50%;
+}
+
+.about-center-list {
+  text-align: center!important;
+  padding-left: 0!important;
+}
+
+@media screen and (min-width: 1000px) {
+  .about-center-list li {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .lindsey-img {
+    max-width: 100%;
+    margin-top: 1.3em;
+  }
+}
+
+.bio-p1 {
+  margin-top: .75em;
+}
+
+@media screen and (min-width: 640px) {
+  .bio-p2 {
+    text-align: left!important;
+    padding-left: 2em!important;
+  }
+  .meetlindsey {
+    text-align: left;
+    padding-left: 1.7em;
+  }
+}
+
+.call-to-action2 {
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-size: 1em;
+  padding: 0 1em;
+  line-height: 1.6em;
+}
+
+@media screen and (max-width: 639px) {
+  .favoritelist {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .favoritelist li {
+    font-size: 1.1em;
+  }
+}
+
+
+
+
+
+/* Blog Page */
+
+.blog-page .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.blog-page {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-align: center;
+}
+
+.blog-page p {
+  font-size: .82em;
+}
+
+@media screen and (min-width: 640px) {
+  .blog-page p {
+    font-size: .9em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .blog-page p {
+    font-size: 1em;
+  }
+}
+
+.blog-page h2 {
+  margin: 1em 0;
+}
+
+@media screen and (min-width: 640px) {
+  .blog-page h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .blog-page h2 {
+    font-size: 1.6em;
+  }
+}
+
+.blog-page h3 {
+  margin-top: -1.25em;
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 640px) {
+  .blog-page h3 {
+    font-size: .85em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .blog-page h3 {
+    font-size: .9em;
+  }
+}
+
+.blog-page h4 {
+  margin-top: 1.25em;
+}
+
+.sub-description {
+  margin-top: -.75em;
+  line-height: 1.4em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.blog-page a {
+  font-weight: 700;
+}
+
+.blog-page a:hover {
+  color: rgb(107,200,200);
+}
+
+.blogphoto {
+    margin: 1.5em 0 -.4em 0;
+    width: 100%;
+  }
+
+.subheading {
+  font-size: 1em;
+  margin: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .subheading {
+    font-size: 1em!important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .subheading {
+    font-size: 1.15em!important;
+  }
+}
+
+.plan-video-blog1, .plan-video-blog2, .plan-video-blog3 {
+  background-color: #B7B7B7;
+  padding: 4em 1em;
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+
+@media screen and (min-width: 640px) {
+  .plan-video-blog1, .plan-video-blog2 {
+    margin-right: 1em;
+  }
+}
+
+
+
+
+
+
+
+/* Blog Index Page */
+
+.blogindex-page .sub-description {
+  margin: 0 0 1em 0;
+  padding: 0;
+  text-align: center;
+}
+
+.blogindex-page h2 {
+  text-align: center;
+}
+
+.blogindex-page div {
+  text-align: center;
+}
+
+.filterby {
+  background-color: rgb(107,200,200);
+  color: white;
+  text-transform: uppercase;
+  font-size: .9em;
+  font-weight: 700;
+  text-align: center;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sign Up Page */
+
+
+.signup-page {
+  max-width: 1300px;
+}
+
+.signup-page p {
+  font-size: .82em;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+@media screen and (min-width: 640px) {
+  .signup-page p {
+    font-size: .9em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .signup-page p {
+    font-size: 1em;
+  }
+}
+
+.signup-page input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.signup-page input[type=submit] {
+    width: 100%;
+    background-color: rgb(233,72,52);
+    border: 3px solid rgb(197,32,38);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 3px solid rgb(197,32,38);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9em;
+}
+
+.signup-page input[type=submit]:hover {
+    background-color: rgb(197,32,38);
+}
+
+.signup-page .forms {
+    padding: 1em 2em 0 2em;
+}
+
+@media screen and (min-width: 600px) {
+  .signup-page .forms {
+    padding: 1em 4em 0 4em;
+  }
+}
+
+@media screen and (min-width: 885px) {
+  .signup-page .forms {
+    padding: 1em 6em 0 6em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .signup-page .forms {
+    padding-right: 0 8em 0 8em;
+  }
+}
+
+.forms label {
+  font-size: .85em;
+}
+
+#message {
+  padding: 82px 20px;
+}
+
+@media screen and (min-width: 835px) {
+  .fname {
+      width: 48%;
+      float: left;
+      text-align: left;
+      margin-right: 1.1em;
+  }
+  .lname {
+      width: 48%;
+      float: left;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .fname {
+      margin-right: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .fname {
+      margin-right: 1.8em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .submit-form {
+     max-width: 200px;
+     text-align: center;
+     margin: 0 auto;
+  }
+}
+
+.signup-page a:hover {
+  color: rgb(112,112,112);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Clearfix */
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* IE < 8 */
 }
