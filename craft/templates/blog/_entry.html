@@ -1,0 +1,51 @@
+{#
+ # Blog entry template
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	<article>
+		<h1>{{ entry.title }}</h1>
+		<p>{{ entry.blogShortDescription }}</p>
+
+		{% set assets = entry.blogFeaturedImage %}
+		{% for asset in assets %}
+			<img src="{{ asset.url }}" />
+		{% endfor %}
+
+		
+		<h2>{{ entry.relatedPostsTitle }}</h2>
+
+
+			
+
+		{% for block in entry.blogContentMatrix %}
+
+		    {% if block.type == "heading" %}
+
+		        <h3>{{ block.heading }}</h3>
+
+		    {% elseif block.type == "text" %}
+
+		        {{ block.text|markdown }}
+
+		    {% elseif block.type == "image" %}
+
+		        {% set image = block.image.first() %}
+		        {% if image %}
+		            <img src="{{ image.getUrl('') }}">
+		        {% endif %}
+
+		    {% elseif block.type == "pullQuote" %}
+
+		        <blockquote>
+		            <p>{{ block.pullQuote }}</p>
+		            <cite>– {{ block.quotee }}</cite>
+		        </blockquote>
+
+		    {% endif %}
+
+		{% endfor %}
+	</article>
+{% endblock %}
