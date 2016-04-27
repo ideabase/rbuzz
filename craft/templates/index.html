@@ -22,7 +22,8 @@
 {% block content %}
 	<h1>{{ entry.title }}</h1>
 
-	{{ entry.callToActionMessage }}
-	{{ entry.servicesDescription }}
-	{{ entry.servicesTitle }}
+	<h2>{{ entry.callToActionMessage }}</h2>
+	<p>{{ entry.servicesDescription }}</p>
+	<h2>{{ entry.servicesTitle }}</h2>
+
 {% endblock %}
