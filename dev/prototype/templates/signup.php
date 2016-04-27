@@ -12,7 +12,7 @@
                  <h1>Connect with Reading Buzz Today!</h1>
                  </div>
 
-                 <p class="small-12 small-offset-0 medium-10 medium-offset-1 columns clearfix">Have a question or interested in signing up? Feel free to connect with Reading Buzz today. Send us an <a href="mailto:readingbuzz@gmail.com">email</a> or complete the form below.</p>
+                 <p class="small-12 small-offset-0 medium-10 medium-offset-1 columns clearfix">Have a question or interested in signing up? Connect with Reading Buzz today by sending an email to <a href="mailto:readingbuzz@gmail.com">readingbuzz@gmail.com</a>  or completing the form below.</p>
             </div>
 
              <div class="forms clearfix">
@@ -36,10 +36,10 @@
                   <input type="text" id="subject" name="subject">
 
                   <label for="message">Message</label>
-                  <input type="text" id="message" name="message">
+                  <textarea type="text" rows="10" id="message" name="message"></textarea>
 
                   <div class="submit-form">
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Send">
                   </div>
                 </form>
             </div>

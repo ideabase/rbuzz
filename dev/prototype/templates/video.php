@@ -1,68 +1,64 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Title Goes Here</title>
-    <meta name="description" content="Page Description Goes Here">
-  </head>
-  <body>
-      <header class="column row">
-        <div class="small-3 small-offset-0 medium-3 medium-offset-0 columns">Logo</div>
-        <div class="small-1 small-offset-1 small-push-7 medium-5 medium-offset-0 medium-push-1 columns">Menu</div>
-        <div class="small-3 small-offset-2 medium-1 columns">Sign Up</div>
-      </header>
-      <div class="row">
-        <div class="small-10 medium-8 small-centered columns ">Video<br><br><br><br><br><br><br><br><br><br></div>
-        <div class="small-10 medium-8 small-centered columns">Video Description<br><br><br><br><br><br></div>
+<!-- Include Header.php -->
+    <?php include("partials/header.html") ?>
+
+
+
+    <div class="column row">
+      <div class="center-video small-12 columns">
+          <iframe width="1200" height="540" src="https://www.youtube.com/embed/M5RCO2LOtwU" frameborder="0" allowfullscreen></iframe>
       </div>
 
-      <div class="row">
-        <div class="column row">
-           <div class="small-8 small-offset-2 medium-2 medium-offset-3 columns">
-             <h3>Video 1</h3>
-             <ul>
-               <li>Short description about video post</li>
-             </ul>
-           </div>
-           <div class="small-8 small-offset-2 medium-2 medium-offset-0 columns">
-             <h3>Video 2</h3>
-             <ul>
-               <li>Short description about video post</li>
-             </ul>
-           </div>
-           <div class="small-8 small-offset-2 medium-2 medium-offset-0 columns">
-             <h3>Video 3</h3>
-             <ul>
-               <li>Short description about video post</li>
-             </ul>
-           </div>
-       </div>
+
+<main class="blog-page clearfix">
+
+      <div class="row clearfix">
+        <div class="small-12 medium-12 columns">
+
+          <div class="video-section">
+          <h2>Video Title <h2>
+            <h3>
+              <a href="#">Tags</a>
+              <a href="#">Theme</a>
+              <a href="#">Grade</a>
+              <a href="#">Category</a>
+            </h3>
+
+            <p>The term “redesign” is heard quite a lot in any creative agency setting. But what is a redesign really?  Is it simply giving the current site a facelift, or does it imply starting over completely from scratch? The term “redesign” is heard quite a lot in any creative agency.</p>
+        </div>
+
+
+      <div class="small-12 medium-12 medium-offset-0 columns clearfix">
+        <h4>Related Videos</h4>
       </div>
 
-      <footer class="row">
-        <div class="small-6 small-offset-3 medium-2 medium-offset-0 columns">
-        <h3>Reading Buzz</h3>
-          <ul>
-            <li>About</li>
-            <li>Services</li>
-            <li>Blog</li>
-            <li>Sign Up</li>
-          </ul>
-        </div>
-        <div class="small-6 small-offset-3 medium-2 medium-push-5 columns">
-          <h3>Contact</h3>
-          <ul>
-            <li>Name</li>
-          </ul>
-        </div>
-      </footer>
+      <div class="plan-videos clearfix">
 
-      <link rel="stylesheet" type="text/css" href="app.css">
-      <link rel="stylesheet" type="text/css" href="foundation.css">
-      <link href="style.css" rel="stylesheet" type="text/css" media="screen" /> <!-- Add your stylesheet here, before the closing HTML tag -->
+        <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+          <div class="thumbnail1">Video</div>
+
+            <h2 class="subheading">Video Title</h2>
+            <p class="sub-description">Description about the video and other information.</p>
+      </div>
+
+      <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+        <div class="thumbnail2">Video</div>
+
+          <h2 class="subheading">Video Title</h2>
+          <p class="sub-description">Description about the video and other information.</p>
+    </div>
+
+    <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+      <div class="thumbnail3">Video</div>
+
+        <h2 class="subheading">Video Title</h2>
+        <p class="sub-description">Description about the video and other information.</p>
+  </div>
 
 
-  </body>
-</html>
+    </div>
+  </main>
+
+
+
+<!-- Include Footer.html -->
+<?php include("partials/footer.html") ?>

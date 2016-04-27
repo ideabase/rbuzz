@@ -20,7 +20,8 @@
               <a href="#">Grade</a>
               <a href="#">Category</a>
             </h3>
-          </div>
+
+          <article>
             <p>The term “redesign” is heard quite a lot in any creative agency setting.  But what is a redesign really?  Is it simply giving the current site a facelift, or does it imply starting over completely from scratch?</p>
 
             <p>
@@ -29,7 +30,7 @@
 
             <p>
             In this case, the staff at IdeaBase (a student-powered design agency run through Kent State University's College of Communication and Information) faced a similar decision with our own internal agency website.  Our site had spent nearly 5 years in a WordPress-powered site and it used a modified purchased theme that had seen few content improvements over the years.  Was it time to redesign from the ground up?  How would we counsel clients who were in the same situation?</p>
-      </div>
+      </article>
 
 
 
@@ -39,22 +40,22 @@
 
       <div class="plan-videos clearfix">
 
-        <div class="small-10 small-offset-1 medium-4 medium-offset-0 columns">
-          <div class="plan-video-blog1">Blog Photo</div>
+        <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+          <div class="thumbnail1">Blog Photo</div>
 
             <h2 class="subheading">Blog Title</h2>
             <p class="sub-description">Description about the blog and other information.</p>
       </div>
 
-      <div class="small-10 small-offset-1 medium-4 medium-offset-0 columns">
-        <div class="plan-video-blog2">Blog Photo</div>
+      <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+        <div class="thumbnail2">Blog Photo</div>
 
           <h2 class="subheading">Blog Title</h2>
           <p class="sub-description">Description about the blog and other information.</p>
     </div>
 
-    <div class="small-10 small-offset-1 medium-4 medium-offset-0 columns">
-      <div class="plan-video-blog3">Blog Photo</div>
+    <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+      <div class="thumbnail3">Blog Photo</div>
 
         <h2 class="subheading">Blog Title</h2>
         <p class="sub-description">Description about the blog and other information.</p>

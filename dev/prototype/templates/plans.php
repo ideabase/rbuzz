@@ -76,7 +76,7 @@
                   Video
                 </div>
 
-                <a href="signup.html">
+                <a href="signup.php">
                   <div class="plans-signup small-6 small-offset-3 medium-4 medium-offset-4 columns">
                   Sign Up
                 </div>

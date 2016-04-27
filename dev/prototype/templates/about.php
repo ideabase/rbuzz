@@ -20,9 +20,11 @@
                   <li class="li2">• Notification of new, trending and must-read books</li>
                 </ul>
 
-              <div class="plans-signup small-6 small-offset-3 medium-4 medium-offset-4 columns">
-                <a href="signup.html">Learn More</a>
+            <a href="plans.php">
+                <div class="plans-signup small-6 small-offset-3 medium-4 medium-offset-4 columns">
+                Learn More
               </div>
+            </a>
           </div>
 
           <hr />

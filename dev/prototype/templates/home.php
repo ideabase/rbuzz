@@ -4,8 +4,12 @@
 
 
   <div class="column row">
-    <div class="small-12 columns">
-        <img class="libraryphoto" src="assets/library.jpg" alt="Reading Buzz Intro video"></img>
+    <div class="carousel small-12 columns">
+        <img class="libraryphoto" src="assets/carousel.jpg" alt="Reading Buzz Intro video"></img>
+          <div class="carousel-title">
+            <h1>What's the Buzz?</h1>
+            <h2>Founder Lindsey Buzzelli introduces Reading Buzz</h2>
+          </div>
     </div>
     <div class="small-12 columns callout">
       <div id="callout">Premium videos delivered weekly to librarians</div>
@@ -13,7 +17,7 @@
    </div>
 
 
-  <main class="row">
+  <main class="home row">
 
          <div class="column row">
            <div class="plans">
