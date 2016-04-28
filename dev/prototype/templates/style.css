@@ -73,7 +73,7 @@ h4 {
 
 .carousel {
   position: relative;
-  max-height: 700px;
+  max-height: 650px;
   overflow: hidden;
 
 }
@@ -279,7 +279,7 @@ a.menu-link {
 
 @media screen and (min-width: 501px) {
     a.menu-link {
-      margin-top: 3.5em;
+      margin-top: 3em;
     }
 }
 
@@ -356,6 +356,11 @@ a.menu-link {
   border: 3px solid rgb(197,32,38);
   color: white;
   font-weight: bold;
+  transition: .2s all ease-in-out;
+}
+
+.signup:hover, .signup:focus {
+  background-color: rgb(197,32,38);
 }
 
 @media screen and (min-width:800px) {
@@ -368,13 +373,19 @@ a.menu-link {
 }
 
 nav {
-  margin: 2.5em 0 0 0em;
+  margin: 2.1em 0 0 0em;
   max-height: 0;
   overflow: hidden;
   width: 100%;
   display: flex;
   align-items: center;
   position: relative;
+}
+
+@media screen and (min-width: 700px) {
+  nav {
+    margin: 2.5em 0 0 0em;
+  }
 }
 
 nav ul {
@@ -403,6 +414,7 @@ nav li a {
 @media screen and (min-width: 1200px) {
   nav li a {
     font-size: 1em;
+    transition: .2s all ease-in-out;
   }
 
 }
@@ -447,17 +459,23 @@ nav li a:hover {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 200px;
   padding-right: 2em;
   padding-left: .75em;
-  margin-left: 1.5em;
+  margin-left: 0em;
   margin-right: 2em;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   .logo {
-    margin-left: 0em;
-    max-width: 200px;
+    margin-left: 1em;
+    max-width: 225px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .logo {
+    max-width: 250px;
   }
 }
 
@@ -583,7 +601,7 @@ nav li a:hover {
 
 .callout {
   background-color: rgb(233,72,52);
-  padding: .75em;
+  padding: 1.5em;
   margin: 0;
   width: 100%
 }
@@ -1140,9 +1158,6 @@ h6 {
 }
 
 @media screen and (max-width: 500px) {
-  .plan-videos {
-        margin: 0 -2em;
-    }
   .thumbnail-block {
     margin-bottom: -1em;
   }
