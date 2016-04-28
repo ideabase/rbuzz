@@ -10,14 +10,14 @@
              <h1>About Reading Buzz</h1>
              </div>
 
-             <p class="call-to-action2 small-12 small-offset-0 medium-10 medium-offset-1 columns">Learning is easy with Reading Buzz’s digital content library of educational videos and blog posts. Our content is delivered to schools weekly by MLIS Children’s Librarian.</p>
+             <p class="call-to-action2 small-12 small-offset-0 medium-10 medium-offset-1 columns">Learning is easy with Reading Buzz’s digital content library of educational videos and blog posts. Our content is delivered to schools weekly by a children’s librarian.</p>
 
               <p class="bio-p1 small-12 small-offset-0 medium-10 medium-offset-1 columns">Facing budget cuts, decreased staff and an evolving educational landscape, school libraries across the country need a solution that is accessible and affordable to supplement their existing services. Reading Buzz addresses this need with a comprehensive educational service offering that includes:</p>
 
                 <ul class="about-center-list small-12 small-offset-0 medium-12 medium-offset-0 columns">
-                  <li class="li1">• Weekly lesson plans for school librarians and students</li>
-                  <li class="li3">• Story time and read-along sessions</li>
-                  <li class="li2">• Notification of new, trending and must-read books</li>
+                  <li class="li1">Weekly lesson plans for school librarians and students</li>
+                  <li class="li3">Story time and read-along sessions</li>
+                  <li class="li2">Notification of new, trending and must-read books</li>
                 </ul>
 
             <a href="plans.php">

@@ -13,7 +13,7 @@
 
       <div class="row clearfix">
         <div class="small-12 medium-12 columns">
-          <h2>Blog Post Title Description<h2>
+          <h2>Getting the Most Out Of Your Research<h2>
             <h3>
               <a href="#">Tags</a>
               <a href="#">Theme</a>
@@ -22,16 +22,17 @@
             </h3>
 
           <article>
-            <p>The term “redesign” is heard quite a lot in any creative agency setting.  But what is a redesign really?  Is it simply giving the current site a facelift, or does it imply starting over completely from scratch?</p>
+            <p>Get the most out of your research by using this approach:</p>
 
-            <p>
-            From my perspective, an organization should undergo a redesign for the right reasons.  Maybe your content doesn’t answer your users’ questions, the design was built from a desktop-first perspective or the backend architecture is unmanageable, for example.
-            </p>
+            <h4>Determine Your Research Questions Upfront</h4>
+            <p>What questions are you trying to answer with your research? It might seem obvious, but many people forget to define their research questions before diving into the research process. It’s important to know what questions you’re trying to answer so that as you begin the research process, you can determine how successfully you’re addressing these items.</p>
 
-            <p>
-            In this case, the staff at IdeaBase (a student-powered design agency run through Kent State University's College of Communication and Information) faced a similar decision with our own internal agency website.  Our site had spent nearly 5 years in a WordPress-powered site and it used a modified purchased theme that had seen few content improvements over the years.  Was it time to redesign from the ground up?  How would we counsel clients who were in the same situation?</p>
+            <h4>Create a Research Plan</h4>
+            <p>Plan out your research. Start by creating a schedule that specifies when, where and how you will be conducting your research. For example, specify that you will go to the public library every Tuesday and Thursday from 6:00 p.m. to 7:00 p.m. You can also note what tools you will use to complete your research such as library computers, books, newspapers or other available resources. Having a research plan in place will help you stay organized.
+
+            <h4>Re-evaluate</h4>
+            <p>Over the course of your research, pause to re-evaluate your findings. Is what you’re finding in line with what you expected? Are there any things that you’re discovering that you didn’t expect? Make note of these items and adjust your research plan accordingly.</p>
       </article>
-
 
 
       <div class="small-12 medium-12 medium-offset-0 columns clearfix">
