@@ -58,7 +58,7 @@
 
         </div>
 
-        <span>Schools may request an additional 3 videos for summer months.  Yearly contracts are available upon request.</span>
+        <div class="plans-request">Schools may request an additional 3 videos for summer months.  Yearly contracts are available upon request.</div>
 
         <div class="row column" clearfix>
             <div class="whichplan">

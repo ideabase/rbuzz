@@ -901,6 +901,24 @@ h6 {
   margin-top: 2em;
 }
 
+.plans-request {
+  font-family: Georgia;
+  font-style: italic;
+  font-size: .9em;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1.35em;
+}
+
+@media screen and (min-width: 640px) {
+  .plans-request {
+    font-size: 1em;
+  }
+}
+
+.plans-block {
+  margin-bottom: 1em;
+}
 
 
 
@@ -1110,9 +1128,8 @@ h6 {
 }
 
 .sub-description {
-  margin-top: -.75em;
   line-height: 1.4em;
-  margin-right: 1em;
+  font-size: .9em;
 }
 
 .blog-page a {
@@ -1131,7 +1148,6 @@ h6 {
 .subheading {
   font-size: 1em;
   margin: 0;
-  margin-right: 1em;
 }
 
 .thumbnail-block {
@@ -1155,6 +1171,7 @@ h6 {
   padding: 4em 1em;
   margin-top: .75em;
   margin-bottom: .75em;
+  text-align: center;
 }
 
 @media screen and (max-width: 500px) {
@@ -1211,7 +1228,7 @@ iframe {
 }
 
 .blogindex-page .sub-description {
-  margin: 0 0 1em 0;
+  margin: .25em 0 1em 0;
   padding: 0;
   text-align: center;
 }
@@ -1220,8 +1237,14 @@ iframe {
   text-align: center;
 }
 
-.blogindex-page div {
-  text-align: center;
+.blogindex-page a {
+  color: inherit;
+}
+
+@media screen and (max-width: 1275px) {
+  .filter-bar {
+    padding-left: 1em;
+  }
 }
 
 .filterby {
@@ -1236,13 +1259,33 @@ iframe {
   margin-top: 1.95em;
 }
 
+.blogindex-page h3 {
+  font-size: .9em;
+  margin-bottom: .75em;
+  margin-top: 2em;
+}
 
+.blogindex-page p {
+  margin-top: -.35em;
+}
 
+.filter-text {
+  font-size: .9em;
+  line-height: 1.25em;
+}
 
+.filter-content {
+  text-align: left;
+}
 
-
-
-
+@media screen and (max-width: 639px) {
+  .filter-content {
+    text-align: center;
+  }
+  .filter-bar {
+    padding-left: 0em;
+  }
+}
 
 
 

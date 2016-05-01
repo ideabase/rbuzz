@@ -1,61 +1,140 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Title Goes Here</title>
-    <meta name="description" content="Page Description Goes Here">
-  </head>
-  <body>
-      <header class="column row">
-        <div class="small-3 small-offset-0 medium-3 medium-offset-0 columns">Logo</div>
-        <div class="small-1 small-offset-1 small-push-7 medium-5 medium-offset-0 medium-push-1 columns">Menu</div>
-        <div class="small-3 small-offset-2 medium-1 columns">Sign Up</div>
-      </header>
+<!-- Include Header.php -->
+    <?php include("partials/header.html") ?>
+
+
+
+    <div class="blogindex-page">
 
       <div class="row">
-        <div class="small-2 small-centered columns small-offset-0">Videos</div>
+        <div class="small-2 small-centered columns small-offset-0"><h1>Videos</h1></div>
       </div>
 
-      <div class="row">
-        <div class="small-12 medium-2 columns">Filter By</div>
+       <div class="row">
+
+
+           <div class="filter-bar small-12 medium-2 columns">
+             <div class="filterby">Filter By</div>
+             <div class="filter-content">
+                <h3>Content Type</h3>
+                  <p class="filter-text">All</p>
+                  <p class="filter-text">Videos</p>
+                  <p class="filter-text">Blog Posts</p>
+
+                  <h3>Theme</h3>
+                    <p class="filter-text">For Fun</p>
+                    <p class="filter-text">Homework</p>
+                    <p class="filter-text">Research</p>
+                    <p class="filter-text">Resources</p>
+
+                    <h3>Grade Level</h3>
+                      <p class="filter-text">Elementary</p>
+                      <p class="filter-text">Middle School</p>
+                      <p class="filter-text">High School</p>
+
+                    <h3>Post Date</h3>
+                      <p class="filter-text">Last week</p>
+                      <p class="filter-text">Last month</p>
+                      <p class="filter-text">Last year</p>
+
+                    <h3>Popularity</h3>
+                      <p class="filter-text">View Count</p>
+                      <p class="filter-text">Our Picks</p>
+              </div>
+           </div>
+
+
+
+
           <div class="small-12 medium-10 columns">
             <div class="row column">
-              <div class="small-8 small-offset-1 medium-3 medium-offset-1 columns">Video Title<br><br><br><br></div>
-              <div class="small-8 small-offset-1 medium-3 medium-offset-1 columns">Video Title<br><br><br><br></div>
-              <div class="small-8 small-offset-1 medium-3 medium-offset-1 columns">Video Title<br><br><br><br></div>
-              <div class="small-8 small-offset-1 medium-3 medium-offset-1 columns">Video Title<br><br><br><br></div>
-              <div class="small-8 small-offset-1 medium-3 medium-offset-1 columns">Video Title<br><br><br><br></div>
-              <div class="small-8 small-offset-1 medium-3 medium-offset-1 columns">Video Title<br><br><br><br></div>
-              <div class="small-8 small-offset-1 medium-3 medium-offset-1 columns">Video Title<br><br><br><br></div>
-              <div class="small-8 small-offset-1 medium-3 medium-offset-1 columns">Video Title<br><br><br><br></div>
-              <div class="small-8 small-offset-1 medium-3 medium-offset-1 columns">Video Title<br><br><br><br></div>
+
+              <div class="plan-videos clearfix">
+
+             <a href="video.php">
+                <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                  <div class="thumbnail1">Video Photo</div>
+
+                    <h2 class="subheading">Video Title</h2>
+                    <p class="sub-description">Description about the video and other information.</p>
+              </div>
+            </a>
+
+                    <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                      <div class="thumbnail1">Video Photo</div>
+
+                        <h2 class="subheading">Video Title</h2>
+                        <p class="sub-description">Description about the video and other information.</p>
+                  </div>
+
+                  <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                    <div class="thumbnail1">Video Photo</div>
+
+                      <h2 class="subheading">Video Title</h2>
+                      <p class="sub-description">Description about the video and other information.</p>
+                </div>
+
+                <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                  <div class="thumbnail1">Video Photo</div>
+
+                    <h2 class="subheading">Video Title</h2>
+                    <p class="sub-description">Description about the video and other information.</p>
+              </div>
+
+                        <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                          <div class="thumbnail1">Video Photo</div>
+
+                            <h2 class="subheading">Video Title</h2>
+                            <p class="sub-description">Description about the video and other information.</p>
+                      </div>
+
+                      <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                        <div class="thumbnail1">Video Photo</div>
+
+                          <h2 class="subheading">Video Title</h2>
+                          <p class="sub-description">Description about the video and other information.</p>
+                    </div>
+
+
+
+                      <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                        <div class="thumbnail1">Video Photo</div>
+
+                          <h2 class="subheading">Video Title</h2>
+                          <p class="sub-description">Description about the video and other information.</p>
+                    </div>
+
+
+
+                    <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                      <div class="thumbnail1">Video Photo</div>
+
+                        <h2 class="subheading">Video Title</h2>
+                        <p class="sub-description">Description about the video and other information.</p>
+                  </div>
+
+
+
+                  <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                    <div class="thumbnail1">Video Photo</div>
+
+                      <h2 class="subheading">Video Title</h2>
+                      <p class="sub-description">Description about the video and other information.</p>
+                  </div>
+
+            </div>
+
+
+
             </div>
           </div>
       </div>
-      <footer class="row">
-        <div class="small-6 small-offset-3 medium-2 medium-offset-0 columns">
-        <h3>Reading Buzz</h3>
-          <ul>
-            <li>About</li>
-            <li>Services</li>
-            <li>Blog</li>
-            <li>Sign Up</li>
-          </ul>
-        </div>
-        <div class="small-6 small-offset-3 medium-2 medium-push-5 columns">
-          <h3>Contact</h3>
-          <ul>
-            <li>Name</li>
-          </ul>
-        </div>
-      </footer>
 
-      <link rel="stylesheet" type="text/css" href="app.css">
-      <link rel="stylesheet" type="text/css" href="foundation.css">
-      <link href="style.css" rel="stylesheet" type="text/css" media="screen" /> <!-- Add your stylesheet here, before the closing HTML tag -->
+    </div>
 
 
-  </body>
-</html>
+
+
+
+
+      <!-- Include Footer.html -->
+      <?php include("partials/footer.html") ?>
