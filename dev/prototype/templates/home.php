@@ -9,6 +9,7 @@
           <div class="carousel-title">
             <h1>What's the Buzz?</h1>
             <h2>Founder Lindsey Buzzelli introduces Reading Buzz</h2>
+            <a href="#" class="carousel-button">Play Video</a>
           </div>
     </div>
     <div class="small-12 columns callout">

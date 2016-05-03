@@ -16,6 +16,7 @@
             </div>
 
              <div class="forms clearfix">
+
                 <form action="action_page.php">
                   <div class="fname">
                     <label for="fname">First Name</label>
