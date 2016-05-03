@@ -19,12 +19,6 @@
                   <li class="li3">Story time and read-along sessions</li>
                   <li class="li2">Notification of new, trending and must-read books</li>
                 </ul>
-
-            <a href="plans.php">
-                <div class="plans-signup small-6 small-offset-3 medium-4 medium-offset-4 columns">
-                Learn More
-              </div>
-            </a>
           </div>
 
           <hr />
