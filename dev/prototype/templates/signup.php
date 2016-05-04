@@ -12,7 +12,7 @@
                  <h1>Connect with Reading Buzz Today!</h1>
                  </div>
 
-                 <p class="small-12 small-offset-0 medium-10 medium-offset-1 columns clearfix">Have a question or interested in signing up? Connect with Reading Buzz today by sending an email to <a href="mailto:readingbuzz@gmail.com">readingbuzz@gmail.com</a>  or completing the form below.  Not sure what plan is right for you? <a href="#">Review our plans.</a></p>
+                 <p class="small-12 small-offset-0 medium-10 medium-offset-1 columns clearfix">Have a question or interested in signing up? Connect with Reading Buzz today by sending an email to <a href="mailto:readingbuzzllc@gmail.com">readingbuzzllc@gmail.com</a>  or completing the form below.  Not sure what plan is right for you? <a href="plans.php">Review our plans.</a></p>
             </div>
 
              <div class="forms clearfix">

@@ -67,17 +67,24 @@
 
               <div class="plan-videos">
                 <h4>View Sample Videos</h4>
-                <div class="plan-video small-10 small-offset-1 medium-4 medium-offset-0 columns">
-                  Video
-                </div>
 
-                <div class="plan-video small-10 small-offset-1 medium-4 medium-offset-0 columns">
-                  Video
-                </div>
+                <a href="video.php">
+                  <div class="plan-video small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                    Video
+                  </div>
+                </a>
 
-                <div class="plan-video small-10 small-offset-1 medium-4 medium-offset-0 columns">
-                  Video
-                </div>
+                <a href="video.php">
+                  <div class="plan-video small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                    Video
+                  </div>
+                </a>
+
+                <a href="video.php">
+                  <div class="plan-video small-10 small-offset-1 medium-4 medium-offset-0 columns">
+                    Video
+                  </div>
+                </a>
 
                 <a href="signup.php">
                   <div class="plans-signup small-6 small-offset-3 medium-4 medium-offset-4 columns">

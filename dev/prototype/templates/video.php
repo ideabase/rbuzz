@@ -34,24 +34,37 @@
       <div class="plan-videos clearfix">
 
         <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
+        <a href="video.php">
           <div class="thumbnail1">Video</div>
+        </a>
 
             <h2 class="subheading">Video Title</h2>
             <p class="sub-description">Description about the video and other information.</p>
+            <p class="post-date">Posted: September 2016</p>
+
       </div>
 
+
       <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
-        <div class="thumbnail2">Video</div>
+        <a href="video.php">
+          <div class="thumbnail2">Video</div>
+        </a>
 
           <h2 class="subheading">Video Title</h2>
           <p class="sub-description">Description about the video and other information.</p>
+          <p class="post-date">Posted: September 2016</p>
+
     </div>
 
     <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
-      <div class="thumbnail3">Video</div>
+      <a href="video.php">
+        <div class="thumbnail3">Video</div>
+      </a>
 
         <h2 class="subheading">Video Title</h2>
         <p class="sub-description">Description about the video and other information.</p>
+        <p class="post-date">Posted: September 2016</p>
+
   </div>
 
 

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400italic,700|Lato:900,700,400,300);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Lato:900,700,400,300);
 
 
 
@@ -84,9 +84,15 @@ h4 {
   background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 49%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 49%,rgba(0,0,0,0.65) 100%);
   padding-top: 1.5em;
-  padding-bottom: 2.5em;
+  padding-bottom: 2em;
   text-align: center;
   width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .carousel-title {
+    padding-bottom: 3em;
+  }
 }
 
 .carousel-button {
@@ -95,6 +101,20 @@ h4 {
   color: white;
   font-weight: bold;
   padding: .5em 1.5em;
+  font-size: .85em;
+  margin-top: 10em;
+}
+
+@media screen and (min-width: 640px) {
+  .carousel-button {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .carousel-button {
+    font-size: 1.1em;
+  }
 }
 
 .carousel-button:hover {
@@ -135,7 +155,8 @@ h4 {
   color: white;
   font-size: .75em;
   text-align: center;
-  text-shadow: 3px 1px 10px rgba(0,0,0,.8)
+  text-shadow: 3px 1px 10px rgba(0,0,0,.8);
+  margin-bottom: 1.5em;
 }
 
 @media screen and (min-width: 500px) {
@@ -162,6 +183,16 @@ h4 {
   .carousel h2 {
     font-size: 1.5em;
   }
+}
+
+.post-date {
+  font-size: .75em!important;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(112,112,112);
+  margin: 0;
 }
 
 .row {
@@ -846,6 +877,8 @@ h6 {
   padding: 4em 1em;
   margin-top: .75em;
   margin-bottom: .75em;
+  color: rgb(112,112,112);
+  font-weight: 500;
 }
 
 @media screen and (min-width: 40em) {
@@ -1100,7 +1133,7 @@ h6 {
 }
 
 .blog-page h2 {
-  margin: 1em 0;
+  margin: 1em 0 .25em 0;
 }
 
 @media screen and (min-width: 640px) {
@@ -1181,6 +1214,8 @@ h6 {
   margin-top: .75em;
   margin-bottom: .75em;
   text-align: center;
+  color: rgb(112,112,112);
+  font-weight: 500;
 }
 
 @media screen and (max-width: 500px) {
@@ -1268,7 +1303,7 @@ iframe {
     padding-top: 1.6em;
   }
   .plan-videos {
-    float: left;
+    /*float: left;*/
   }
   .blogindex-page .plan-videos {
     padding-left: 1.5em;

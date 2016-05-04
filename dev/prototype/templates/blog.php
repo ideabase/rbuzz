@@ -42,24 +42,36 @@
       <div class="plan-videos clearfix">
 
         <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
-          <div class="thumbnail1">Blog Photo</div>
+          <a href="blog.php">
+            <div class="thumbnail1">Blog Photo</div>
+          </a>
 
             <h2 class="subheading">Blog Title</h2>
             <p class="sub-description">Description about the blog and other information.</p>
+            <p class="post-date">Posted: September 2016</p>
+
       </div>
 
       <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
-        <div class="thumbnail2">Blog Photo</div>
+        <a href="blog.php">
+          <div class="thumbnail2">Blog Photo</div>
+        </a>
 
           <h2 class="subheading">Blog Title</h2>
           <p class="sub-description">Description about the blog and other information.</p>
+          <p class="post-date">Posted: September 2016</p>
+
     </div>
 
     <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
-      <div class="thumbnail3">Blog Photo</div>
+      <a href="blog.php">
+        <div class="thumbnail3">Blog Photo</div>
+      </a>
 
         <h2 class="subheading">Blog Title</h2>
         <p class="sub-description">Description about the blog and other information.</p>
+        <p class="post-date">Posted: September 2016</p>
+
   </div>
 
 

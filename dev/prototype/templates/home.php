@@ -9,7 +9,7 @@
           <div class="carousel-title">
             <h1>What's the Buzz?</h1>
             <h2>Founder Lindsey Buzzelli introduces Reading Buzz</h2>
-            <a href="#" class="carousel-button">Play Video</a>
+            <a href="video.php" class="carousel-button">Play Video</a>
           </div>
     </div>
     <div class="small-12 columns callout">
@@ -24,7 +24,7 @@
            <div class="plans">
             <h1>How It Works</h1>
 
-            <p>Reading Buzz offers <a href="plans.php">three core plans</a> ranging from basic to fully customizable, curated by an <a href="about.php">accredited Children’s and Young Adult Librarian/School Librarian</a>.  Our weekly lessons can be used by librarians, teachers and their students to find out about new, trending, read-worthy books, listen to participate in a story time, or readalong to a curriculum-supported book.</p>
+            <p>Reading Buzz offers <a href="plans.php">three core plans</a> ranging from basic to fully customizable, curated by an <a href="http://www.ala.org/yalsa/" target="_blank">accredited Children’s and Young Adult Librarian/School Librarian</a>.  Our weekly lessons can be used by librarians, teachers and their students to find out about new, trending, read-worthy books, listen to participate in a story time, or readalong to a curriculum-supported book.</p>
           </div>
             <div class="icons-container">
               <div class="small-8 small-offset-2 medium-4 medium-offset-0 columns">
