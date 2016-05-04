@@ -12,6 +12,25 @@ header {
   margin-bottom: 1.5em;
 }
 
+.header-supplemental-link {
+  text-align: center;
+  display: block;
+  padding: 1em 0;
+  font-size: .8em;
+  color: rgb(112,112,112);
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+
+  .header-supplemental-link {
+      top: 100px;
+      position: absolute;
+      right: 0;
+      padding: 0 .5em 0 0;
+  }
+}
+
 
 /* HOME PAGE */
 
@@ -408,7 +427,7 @@ a.menu-link {
 	.signup {
     padding: .125em 1em;
     right: 0;
-    top: .55em;
+    top: 25px;
     position: absolute;
   }
 }
@@ -418,15 +437,18 @@ nav {
   max-height: 0;
   overflow: hidden;
   width: 100%;
-  display: flex;
   align-items: center;
   position: relative;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px ) {
+  
   nav {
-    margin: 2.5em 0 0 0em;
+    display: flex;
+    margin: .5em 0 0 0em;
+    padding-top: 1.5em;
   }
+
 }
 
 nav ul {
