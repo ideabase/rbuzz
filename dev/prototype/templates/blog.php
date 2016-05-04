@@ -21,6 +21,9 @@
               <a href="#">Category</a>
             </h3>
 
+            <p class="post-date">Posted: September 2016</p>
+
+
           <article>
             <p>Get the most out of your research by using this approach:</p>
 
@@ -32,6 +35,8 @@
 
             <h4>Re-evaluate</h4>
             <p>Over the course of your research, pause to re-evaluate your findings. Is what you’re finding in line with what you expected? Are there any things that you’re discovering that you didn’t expect? Make note of these items and adjust your research plan accordingly.</p>
+
+
       </article>
 
 

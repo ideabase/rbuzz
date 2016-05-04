@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700|Lato:900,700,400,300);
 
 
 .wrapper {
@@ -13,7 +14,6 @@
 #email-header {
 	width: 100%;
 	height:125px;
-	background-color: #cccccc;
 	/*background-image: url('banner.png')*/
 }
 
@@ -27,32 +27,56 @@
 	padding-top:10px;
 }
 
+/*********GREETING***************/
+
+#greeting {
+	background-color: rgb(233,72,52);
+	width: 100%;
+}
+
 /*********GENERAL***************/
 
 body {
 	margin: 0;
 	padding: 0;
-	font-family: Helvetica;
+	font-family: "Lato", Helvetica, sans-serif;
 	text-align:center;
 }
 
-h1, h3 {
-	color: #aaaaaa;;
+h1 {
+	color: white;
+	padding: .75em 0;
+	font-size: 1.4em;
+	margin-top: 1.25em;
+}
 
+h3 {
+	color: #aaaaaa;;
 }
 
 h3 {
 	font-size:1.5em;
+	color: rgb(240,194,66);
+	text-transform: uppercase;
 }
 
 h4 {
-	color:#999999;
+	color:rgb(233,72,52);
+	font-size: 1.2em;
+	margin-bottom: .75em;
 }
 
 p {
 	font-size:0.9em;
-	color:#555555;
-	line-height: 1.5em;
+	color: rgb(112,112,112);
+	line-height: 1.75em;
+	font-size: 1em;
+	margin-top: 4.5em;
+	font-weight: 400;
+}
+
+.post-p {
+	margin-top: 0em;
 }
 
 
@@ -115,12 +139,13 @@ a:link {
 }
 
 #button {
-	text-decoration:none;
-	background-color:lightgrey;
-	border-style:solid;
-	border-color:lightgrey;
-	border-radius:5%;
-	padding:9px;
+	background-color: rgb(233,72,52);
+  border: 3px solid rgb(197,32,38);
+  color: white;
+  font-weight: bold;
+	padding: 1em 2em;
+	text-decoration: none;
+	font-size: 1em;
 }
 
 #outro {
@@ -133,7 +158,6 @@ a:link {
 /*********FOOTER***************/
 
 footer {
-	background-color: #cccccc;
 	height:100px;
 	width:100%;
 	text-align:center;

@@ -14,7 +14,7 @@
 
              <input type="text" id="fname" name="firstname" class="search">
 
-             <input type="submit" value="Search">
+             <input type="submit" value="Search" class="magnifying-glass">
 
          </form>
      </div>

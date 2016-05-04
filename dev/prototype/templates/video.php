@@ -24,6 +24,9 @@
             </h3>
 
             <p>The term “redesign” is heard quite a lot in any creative agency setting. But what is a redesign really?  Is it simply giving the current site a facelift, or does it imply starting over completely from scratch? The term “redesign” is heard quite a lot in any creative agency.</p>
+
+            <p class="post-date">Posted: September 2016</p>
+
         </div>
 
 
