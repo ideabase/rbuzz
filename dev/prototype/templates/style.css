@@ -681,30 +681,22 @@ hr {
   }
 
 footer {
-  padding: 0 0 0 5.5em;
+  padding: 2em 0 0 0;
+  margin-top: 2em;
+  border-top: 1px solid rgb(167,167,167);
+  max-width: 1200px !important;
+  width: 90%;
 }
 
 @media screen and (max-width: 639px) {
   footer {
-  padding: 0 0 0 0em;
+  padding: 1em 1em 0 1em;
   }
 }
 
 .reading {
   padding-right: 1.5em;
   margin-bottom: 2em;
-}
-
-@media screen and (max-width:1000px) {
-  .reading {
-    margin-left: -2em;
-  }
-}
-
-@media screen and (max-width:820px) {
-  .reading {
-    margin-left: -3em;
-  }
 }
 
 @media screen and (max-width:639px) {
@@ -765,6 +757,12 @@ footer h4 {
 
 .socialmedia {
   margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 640px) {
+  .socialmedia {
+    text-align: right;
+  }
 }
 
 @media screen and (max-width:780px) and (min-width:639px) {
