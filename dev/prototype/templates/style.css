@@ -416,6 +416,7 @@ a.menu-link {
 			nav[role=navigation] ul {
 				margin: 0 0 0 -0.25em;
 				border: 0;
+        transition:none;
 			}
 
 			nav[role=navigation]  li {
@@ -1607,8 +1608,18 @@ textarea {
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: auto;
+  width: 150%;
+  max-width: 150%;
+  margin-left: -25%;
+}
+
+@media screen and (min-width: 500px) {
+  .carousel-slide img {
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      max-width: inherit;
+  }
 }
 
 /* Ensures that Flickity waits until CSS has loaded to calculate the height of the cells */
@@ -1747,6 +1758,16 @@ http://flickity.metafizzy.co
 .flickity-prev-next-button.no-svg {
   color: #333;
   font-size: 26px;
+}
+
+.flickity-prev-next-button {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .flickity-prev-next-button {
+    display: inherit;
+  }
 }
 
 /* ---- page dots ---- */
