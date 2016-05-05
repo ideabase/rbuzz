@@ -44,7 +44,12 @@
                   </div>
                 </form>
             </div>
-
+            <div id="member" class="plans-page small-centered small-12 small-offset-0 medium-10 medium-offset-1 columns clearfix">
+              <div class="whichplan">
+                <h4>Already a Member?</h4>
+                <p>Once you've signed up, you should have received a welcome email with a private link to view your latest content.  Can't find the email?  Let us know by emailing <a href="#">readingbuzzllc@gmail.com</a> and we'll get back to you right away!</p>
+              </div>
+            </div>
 
       </main>
 

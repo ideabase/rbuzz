@@ -27,7 +27,8 @@
 
 
            <div class="filter-bar small-12 medium-3 large-2 columns">
-             <div class="filterby">Filter By</div>
+             <a href="#filtermenu" class="filter-menu-link"><div class="filterby">
+             Filter By</div></a>
              <div class="filter-content">
 
                   <h3>Theme</h3>

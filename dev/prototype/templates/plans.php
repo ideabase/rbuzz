@@ -67,7 +67,7 @@
 
               <div class="plan-videos">
                 <h4>View Sample Videos</h4>
-
+                <p>Get a feel for how Reading Buzz works by watching three free preview videos.</p>
                 <a href="video.php">
                   <div class="plan-video small-10 small-offset-1 medium-4 medium-offset-0 columns">
                     Video

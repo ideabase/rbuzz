@@ -43,7 +43,7 @@
         </a>
 
             <h2 class="subheading">Video Title</h2>
-            <p class="sub-description">Description about the video and other information.</p>
+            <p class="sub-description">Description about the video and other information.</p>
             <p class="post-date">Posted: September 2016</p>
       </div>
 

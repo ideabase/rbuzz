@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="small-12 columns callout">
-      <div id="callout">Premium school library lessons delivered weekly.</div>
+      <div id="callout">School Library Lessons Made Easy!</div>
   </div>
    </div>
 
@@ -34,7 +34,7 @@
            <div class="plans">
             <h1>How It Works</h1>
 
-            <p>Reading Buzz offers <a href="plans.php">three core plans</a> ranging from basic to fully customizable, curated by an <a href="http://www.ala.org/yalsa/" target="_blank">accredited Children’s and Young Adult Librarian/School Librarian</a>.  Our weekly lessons can be used by librarians, teachers and their students to find out about new, trending, read-worthy books, listen to participate in a story time, or readalong to a curriculum-supported book.</p>
+            <p>Reading Buzz offers <a href="plans.php">three core plans</a> ranging from basic to fully customizable, curated by an <a href="http://www.ala.org/yalsa/" target="_blank">accredited Children’s and Young Adult Librarian</a>.  Our weekly lessons can be used by librarians, teachers and their students to find out about new, trending, read-worthy books, participate in a story time, or read along to a curriculum-supported book.</p>
           </div>
             <div class="icons-container">
               <div class="small-8 small-offset-2 medium-4 medium-offset-0 columns">

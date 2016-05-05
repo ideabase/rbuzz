@@ -9,6 +9,16 @@ $menulink.click(function() {
   return false;
 });});
 
+$(document).ready(function() {
+  var $filtermenu = $('.filter-content'),
+    $filtermenulink = $('.filter-menu-link');
+  
+$filtermenulink.click(function() {
+  $filtermenulink.toggleClass('active');
+  $filtermenu.toggleClass('active');
+  return false;
+});});
+
 /*!
  * Flickity PACKAGED v1.2.1
  * Touch, responsive, flickable galleries
