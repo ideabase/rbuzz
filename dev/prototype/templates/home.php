@@ -5,12 +5,22 @@
 
   <div class="column row">
     <div class="carousel small-12 columns">
-        <img class="libraryphoto" src="assets/carousel.jpg" alt="Reading Buzz Intro video"></img>
-          <div class="carousel-title">
-            <h1>What's the Buzz?</h1>
-            <h2>Founder Lindsey Buzzelli introduces Reading Buzz</h2>
-            <a href="video.php" class="carousel-button">Play Video</a>
-          </div>
+        <div class="carousel-slide">
+          <img class="libraryphoto" src="assets/carousel.jpg" alt="Reading Buzz Intro video"></img>
+            <div class="carousel-title">
+              <h1>What's the Buzz?</h1>
+              <h2>Founder Lindsey Buzzelli introduces Reading Buzz</h2>
+              <a href="video.php" class="carousel-button">Play Video</a>
+            </div>
+        </div>
+        <div class="carousel-slide">
+          <img class="libraryphoto" src="assets/blog-sample2.jpg" alt="Reading Buzz Intro video"></img>
+            <div class="carousel-title">
+              <h1>April is National Poetry Month</h1>
+              <h2>Presented by the Academy of American poets</h2>
+              <a href="video.php" class="carousel-button">Read Blog Post</a>
+            </div>
+        </div>
     </div>
     <div class="small-12 columns callout">
       <div id="callout">Premium school library lessons delivered weekly.</div>
