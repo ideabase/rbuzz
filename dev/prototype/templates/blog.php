@@ -7,6 +7,7 @@
       <div class="small-12 columns">
           <img class="blogphoto" src="assets/librarybooks.jpg" alt="Reading Buzz Intro video"></img>
       </div>
+    </div>
 
 
 <main class="blog-page clearfix">
