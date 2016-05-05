@@ -2,29 +2,28 @@
 <header role="banner">
 	<a id="skip-to-content" href="#content">skip to main content</a>
 	<a class="logo" href="{{ siteUrl }}">Reading Buzz</a>
-     <span class="nav__trigger">
-    	<a href="#" class="nav__trigger__link" id="navshow">Menu</a>
-	</span>
-	{% endcache %}
+    <a href="#menu" class="menu-link">Menu</a>
 	<nav role="navigation">
-				  <ul>
-				    {% nav node in craft.menus.getNodes('mainMenu') %}
-				      <li role="presentation"  class="
+		<ul>
+			{% nav node in craft.menus.getNodes('mainMenu') %}
+				<li role="presentation"  class="
 				        {{ node.children|length ? 'dropdown' }}
 				        {{ node.active ? 'active' }}">
-				        <a href="{{siteUrl}}/{{node.link}}"
+				    <a href="{{siteUrl}}/{{node.link}}"
 				          {% if node.children|length %}
 				            class="dropdown-toggle" data-toggle="dropdown"
 				          {% endif %}>
 				          {{ node.title }}
-				        </a>
-				        {% ifchildren %}
+				    </a>
+				    {% ifchildren %}
 				          <ul class="dropdown-menu" role="menu">
 				            {% children %}
 				          </ul>
 				        {% endifchildren %}
-				      </li>
-				    {% endnav %}
-				  </ul>
+				</li>
+			{% endnav %}
+		 </ul>
+		 <a href="#" class="link-supplemental">Already a Member?</a>
 	</nav>
+{% endcache %}
 </header>

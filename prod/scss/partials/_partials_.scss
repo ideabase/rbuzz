@@ -1,2 +1,21 @@
+@import '_clearfix';
+@import '_reset';
+@import '_accessibility';
+@import '_variables';
+@import '_animations';
+@import '_layout';
 @import '_footer';
 @import '_header';
+@import '_slider';
+@import '_links';
+
+/* Global Styles */
+
+body {
+	font-family: $sans-serif;
+	color: $gray;
+}
+
+a {
+	color: $blue;
+}

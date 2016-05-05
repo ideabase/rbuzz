@@ -1,0 +1,11 @@
+.link-supplemental {
+  text-align: center;
+  display: block;
+  padding: 1em 0;
+  font-size: .8em;
+  color: $gray;
+  text-decoration: underline;
+  &:hover, &:focus {
+  	color: $blue;
+  }
+}

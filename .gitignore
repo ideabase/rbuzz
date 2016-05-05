@@ -54,3 +54,4 @@ Thumbs.db
 !.gitignore
 !.editorconfig
 .DS_Store
+prod/config.codekit
