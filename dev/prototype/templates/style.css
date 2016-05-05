@@ -21,6 +21,11 @@ header {
   text-decoration: underline;
 }
 
+.header-supplemental-link:hover {
+  color: rgb(107,200,200);
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 800px) {
 
   .header-supplemental-link {
@@ -122,6 +127,7 @@ h4 {
   padding: .5em 1.5em;
   font-size: .85em;
   margin-top: 10em;
+  transition: .2s all ease-in-out;
 }
 
 @media screen and (min-width: 640px) {
@@ -570,6 +576,7 @@ nav li a:hover {
   padding: .75em 2em;
   text-align: center;
   margin: .5em;
+  transition: .2s all ease-in-out;
 }
 
 .home-signup {
@@ -578,10 +585,19 @@ nav li a:hover {
   float: left;
 }
 
+.home-signup:hover {
+  background-color: rgb(197,32,38);
+}
+
 .home-learn {
   background-color: white;
   color: rgb(233,72,52);
   float: right;
+}
+
+.home-learn:hover {
+  background-color: rgb(197,32,38);
+  color: white!important;
 }
 
 .home-learn:hover {
@@ -963,6 +979,11 @@ h6 {
   text-align: center;
   padding: .5em .5em;
   margin-top: 2em;
+  transition: .2s all ease-in-out;
+}
+
+.plans-signup:hover {
+  background-color: rgb(197,32,38);
 }
 
 .plans-request {
@@ -1452,6 +1473,7 @@ h3 a {
     text-transform: uppercase;
     font-weight: 700;
     font-size: .9em;
+    transition: .2s all ease-in-out;
 }
 
 .signup-page input[type=submit]:hover {

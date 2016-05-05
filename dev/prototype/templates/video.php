@@ -7,6 +7,7 @@
       <div class="center-video small-12 columns">
           <iframe width="1200" height="540" src="https://www.youtube.com/embed/M5RCO2LOtwU" frameborder="0" allowfullscreen></iframe>
       </div>
+    </div>
 
 
 <main class="blog-page clearfix">
@@ -44,7 +45,6 @@
             <h2 class="subheading">Video Title</h2>
             <p class="sub-description">Description about the video and other information.</p>
             <p class="post-date">Posted: September 2016</p>
-
       </div>
 
 
@@ -56,7 +56,6 @@
           <h2 class="subheading">Video Title</h2>
           <p class="sub-description">Description about the video and other information.</p>
           <p class="post-date">Posted: September 2016</p>
-
     </div>
 
     <div class="thumbnail-block small-10 small-offset-1 medium-4 medium-offset-0 columns">
