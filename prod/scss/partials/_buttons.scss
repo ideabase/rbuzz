@@ -1,0 +1,15 @@
+.button {
+	border-width: 3px;
+	border-style: solid;
+	color: white;
+	font-weight: bold;
+	transition: .2s all ease-in-out;
+}
+
+.button--red {
+	background-color: $red;
+	border-color: $darkred;
+	&:hover {
+		background-color: $darkred;
+	}
+}

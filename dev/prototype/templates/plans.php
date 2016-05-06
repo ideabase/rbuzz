@@ -4,14 +4,12 @@
 
       <main class="plans-page row clearfix">
 
-
+      <div class="row column">
+        <h1>Plans</h1>
+        <p>Knowledge is power, and at Reading Buzz, we make school library lessons easy by offering access to a library of educational videos and tips for busy elementary school librarians. We offer three core plans ranging from basic to fully customizable, with face-to-face options available.</p>
+        </div>
 
          <div class="plans-block column row">
-
-           <div class="row column">
-             <h1>Plans</h1>
-             <p>Knowledge is power, and at Reading Buzz, we make school library lessons easy by offering access to a library of educational videos and tips for busy elementary school librarians. We offer three core plans ranging from basic to fully customizable, with face-to-face options available.</p>
-             </div>
 
              <div class="plan1 small-10 small-offset-1 medium-3 medium-offset-0 columns">
                <h5>Basic</h5>

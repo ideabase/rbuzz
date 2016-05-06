@@ -8,14 +8,12 @@
 @import '_header';
 @import '_slider';
 @import '_links';
+@import '_buttons';
 
 /* Global Styles */
 
 body {
 	font-family: $sans-serif;
 	color: $gray;
-}
-
-a {
-	color: $blue;
+	font-size: 130%;
 }

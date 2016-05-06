@@ -1,9 +1,11 @@
 {% cache globally %}
 <header role="banner">
 	<a id="skip-to-content" href="#content">skip to main content</a>
-	<a class="logo" href="{{ siteUrl }}">Reading Buzz</a>
+	<a href="{{ siteUrl }}">
+		<img class="logo" alt="Reading Buzz: School Library Lessons Made Easy!" src="../dev/prototype/templates/assets/logo.svg" />
+	</a>
     <a href="#menu" class="menu-link">Menu</a>
-	<nav role="navigation">
+	<nav id="menu" role="navigation">
 		<ul>
 			{% nav node in craft.menus.getNodes('mainMenu') %}
 				<li role="presentation"  class="
