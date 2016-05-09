@@ -10251,14 +10251,16 @@ Craft.ElevatedSessionForm = Garnish.Base.extend(
 		if (typeof inputs !== typeof undefined)
 		{
 			this.inputs = [];
-			var $inputs = $(inputs);
+			var inputs = $.makeArray(inputs);
 
-			for (var i = 0; i < $inputs.length; i++)
+			for (var i = 0; i < inputs.length; i++)
 			{
-				var $input = $($inputs[i]);
+				var $inputs = $(inputs[i]);
 
-				if ($input.length)
+				for (var j = 0; j < $inputs.length; j++)
 				{
+					var $input = $inputs.eq(j);
+
 					this.inputs.push({
 						input: $input,
 						val: Garnish.getInputPostVal($input)
@@ -10272,7 +10274,6 @@ Craft.ElevatedSessionForm = Garnish.Base.extend(
 
 	handleFormSubmit: function(ev)
 	{
-		console.log('handleFormSubmit()');
 		// Ignore if we're in the middle of getting the elevated session timeout
 		if (Craft.elevatedSessionManager.fetchingTimeout)
 		{
@@ -10309,7 +10310,6 @@ Craft.ElevatedSessionForm = Garnish.Base.extend(
 
 	submitForm: function()
 	{
-		console.log('submitForm()');
 		// Don't let handleFormSubmit() interrupt this time
 		this.disable();
 		this.$form.submit();
