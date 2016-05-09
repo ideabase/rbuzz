@@ -29,7 +29,12 @@
 				</li>
 			{% endnav %}
 		 </ul>
+		 {% for entry in header.alreadyAMemberPage %}
+		 	<h1><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
+		 {% endfor %}
+
 		 <a href="#" class="link-supplemental">{{ header.alreadyAMember }}</a>
+
 	</nav>
 {% endcache %}
 </header>
