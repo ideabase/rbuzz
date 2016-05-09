@@ -12,4 +12,8 @@
 	<p>{{ entry.servicesDescription }}</p>
 	<h2>{{ entry.servicesTitle }}</h2>
 
+	{% for entry in entry.featuredPost %}
+		<h1>{{ entry.title }}</h1>
+	{% endfor %}
+
 {% endblock %}
