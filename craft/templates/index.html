@@ -13,7 +13,7 @@
 	<h2>{{ entry.servicesTitle }}</h2>
 
 	{% for entry in entry.featuredPost %}
-		<h1>{{ entry.title }}</h1>
+		<h1><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
 	{% endfor %}
 
 {% endblock %}
