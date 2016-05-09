@@ -7,6 +7,7 @@
 			<img src="{{ asset.url }}" />
 		{% endfor %}
 	</a>
+
     <a href="#menu" class="menu-link">Menu</a>
 	<nav id="menu" role="navigation">
 		<ul>
@@ -28,7 +29,7 @@
 				</li>
 			{% endnav %}
 		 </ul>
-		 <a href="#" class="link-supplemental">Already a Member?</a>
+		 <a href="#" class="link-supplemental">{{ header.alreadyAMember }}</a>
 	</nav>
 {% endcache %}
 </header>
