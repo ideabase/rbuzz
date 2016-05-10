@@ -332,7 +332,7 @@ p a {
 }
 
 .plans a:hover {
-  color: rgb(127,127,127);
+  color: rgb(112,112,112);
 }
 
 a:hover {
@@ -746,7 +746,7 @@ hr {
 footer {
   padding: 2em 0 0 0;
   margin-top: 2em;
-  border-top: 1px solid rgb(167,167,167);
+  border-top: 1px solid rgb(147,149,151);
   max-width: 1200px !important;
   width: 90%;
 }
@@ -1098,7 +1098,7 @@ h6 {
 .aboutpage ul {
   font-family: "Merriweather", serif;
   text-align: center;
-  color: rgb(127,127,127);
+  color: rgb(112,112,112);
   font-style: italic;
   font-size: .85em;
   list-style-type: none;
@@ -1422,7 +1422,7 @@ iframe {
             overflow: hidden;
             max-height: 0;
             clear: both;
-            -webkit-transition: all 0.5s ease-out;  
+            -webkit-transition: all 0.5s ease-out;
             -moz-transition: all 0.5s ease-out;
             -ms-transition: all 0.5s ease-out;
             -o-transition: all 0.5s ease-out;
