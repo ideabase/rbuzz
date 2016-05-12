@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<title>Greetings from Reading Buzz!</title> <!--Is this needed for an email template?-->
 		<link rel="stylesheet" href="email.css" >
-		<link rel="stylesheet" href="responsiveEmail.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
@@ -21,7 +20,9 @@
 			</header>
 		<div class="wrapper">
 
+				<div class="intro">
 								<p>Hi Jen! We're excited to share with you some of our latest video and blog posts. It's our goal to continue to enhance your library's service offering by providing current, meaningful content. Enjoy!</p>
+				</div>
 
 			<article id="new-content" >
 				<h3>What's New?</h3>
@@ -43,7 +44,7 @@
 
 			<section id="tip-video">
 				<div>
-				<h3>Tip Video</h3>
+				<h3 class="tip-h3">Tip Video</h3>
 					<img src="placeholder.png" alt="tip video post" class="placeholder"/>
 					<h4>Video Post</h4>
 					<p class="post-p">This is some information about the new tip video. Click on the image to learn more.</p>
@@ -64,7 +65,7 @@
 				<table align="center">
 					<tr>
 						<td id="contact">
-						<p><b>Contact Reading Buzz</b></p>
+						<p id="contact-title">Contact Reading Buzz</p>
 						<p>Lindsey Buzzelli - Andes</p>
 						<p><a href="mailto:readingbuzz@gmail.com">readingbuzz@gmail.com</a></p>
 						</td>
@@ -72,8 +73,12 @@
 						<p><a href="#">Unsubscribe</a> from these email notifications.</p>
 						</td>
 						<td id="social">
-							<img src="twitter-wrap.png" alt="Twitter" />
-							<img src="facebook-wrap.png" alt="Facebook" />
+							<a href="#">
+								<img src="twitter-wrap.png" alt="Twitter" />
+							</a>
+							<a href="#">
+								<img src="facebook-wrap.png" alt="Facebook" />
+							</a>
 						</td>
 					</tr>
 
