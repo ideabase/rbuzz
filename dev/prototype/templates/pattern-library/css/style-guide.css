@@ -882,13 +882,13 @@ section:after {
   background: rgb(30,137,67);
 }
 .cd-colors li:nth-of-type(5) .cd-color-swatch {
-  background: rgb(112,112,112);
+  background: rgb(147,149,151);
 }
 .cd-colors li:nth-of-type(5) .cd-color-swatch::before {
-  background: rgb(147,149,151);
+  background: rgb(112,112,112);
 }
 .cd-colors li:nth-of-type(5) .cd-color-swatch::after {
-  background: rgb(147,149,151);
+  background: rgb(112,112,112);
 }
 @media only screen and (min-width: 768px) {
   .cd-colors li {
