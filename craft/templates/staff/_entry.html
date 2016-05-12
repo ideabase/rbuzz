@@ -1,0 +1,19 @@
+{#
+ # Staff entry template
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	<h2>{{ entry.firstName }}</h2>
+	<h2>{{ entry.lastName }}</h2>
+	<p>{{ entry.biography }}</p>
+	<p>{{ entry.contactEmail }}</p>
+
+	{% set headshot = entry.staffHeadshot %}
+	{% for asset in headshot %}
+		<img src="{{ asset.url }}" />
+	{% endfor %}
+
+
+{% endblock %}
