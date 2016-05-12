@@ -1,6 +1,18 @@
 <footer role="contentinfo">
+	<h2>{{ footer.contactEmail }}</h2>
+	<h2>{{ footer.contactName }}</h2>
+	{% for block in footer.socialMediaMatrix %}
 
-	<h1>This is da footer</h1>
+	    {% if block.type == "social" %}
+
+	        <p><a href="{{ block.socialLink }}">{{ block.socialName }}</a></p>
+	        {% set image = block.socialIcon.first() %}
+	        {% if image %}
+	            <img src="{{ image.getUrl('') }}">
+	        {% endif %}
+
+	    {% endif %}   
+	{% endfor %}     
 
 </footer>
 
