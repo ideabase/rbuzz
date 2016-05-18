@@ -1,19 +1,43 @@
 <footer role="contentinfo">
-	<h2>{{ footer.contactEmail }}</h2>
-	<h2>{{ footer.contactName }}</h2>
-	{% for block in footer.socialMediaMatrix %}
-
-	    {% if block.type == "social" %}
-
-	        <p><a href="{{ block.socialLink }}">{{ block.socialName }}</a></p>
-	        {% set image = block.socialIcon.first() %}
-	        {% if image %}
-	            <img src="{{ image.getUrl('') }}">
-	        {% endif %}
-
-	    {% endif %}   
-	{% endfor %}     
-
+	<section class="footer-section footer-section-navigation">
+		<h4 class="footer-section-name">Reading Buzz</h4>
+			<nav>
+				<ul class="footer-section-list">
+					<li class="footer-section-list-item"><a href="about.php">Menu Item</a></li>
+					<li class="footer-section-list-item"><a href="plans.php">Menu Item</a></li>
+					<li class="footer-section-list-item"><a href="blogindex.php">Menu Item</a></li>
+					<li class="footer-section-list-item"><a href="signup.php">Menu Item</a></li>
+				</ul>
+			</nav>
+	</section>
+	<section class="footer-section footer-section-contact">
+		<h4 class="footer-section-name">Contact Us</h4>
+			<ul class="footer-section-list">
+				<li class="footer-section-list-item">{{ footer.contactName }}</li>
+				<li class="footer-section-list-item"><a href="mailto:{{ footer.contactEmail }}">{{ footer.contactEmail }}</li></a>
+			</ul>
+	</section>
+	<section class="footer-section footer-section-social">
+		<ul class="social-list">
+			{% for block in footer.socialMediaMatrix %}
+					{% if block.type == "social" %}
+						<li class="social-list-item">
+								<a href="{{ block.socialLink }}">
+									<span class="social-list-item-name">{{ block.socialName }}</span>
+									{% set image = block.socialIcon.first() %}
+									{% if image %}
+											<img class="social-list-item-icon" alt="{{ block.socialName }}" src="{{ image.getUrl('') }}">
+									{% endif %}
+								</a>
+						</li>
+					{% endif %}
+			{% endfor %}
+		</ul>
+	</section>
+	<section class="footer-section footer-copyright">
+		<p>Create field for copyright<br/>
+		and created by <a href="#">IdeaBase</a></p>
+	</section>
 </footer>
 
 <!-- Include Style Sheet -->

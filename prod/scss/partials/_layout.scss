@@ -1,5 +1,55 @@
 body {
-	max-width: 1300px;
 	margin: 0 auto;
-	padding: 1em 0 0 0;
+	padding: 0;
+}
+
+header {
+	@media #{$medium} {
+		padding: $globalpadding $globalpadding*2;
+	}
+	@media #{$large} {
+		padding: $globalpadding*1.5 $globalpadding*4 $globalpadding $globalpadding*4;
+	}
+	@media #{$x-large} {
+		padding: $globalpadding $globalpadding*6;
+		max-width: $globalpadding*100;
+		margin: 0 auto;
+	}
+}
+
+.header-inner {
+	padding: $globalpadding $globalpadding;
+	@media #{$medium} {
+		padding: 0;
+	}
+}
+
+main {
+	padding: $globalpadding;
+	@media #{$medium} {
+		padding: $globalpadding $globalpadding*2;
+	}
+	@media #{$large} {
+		padding: $globalpadding $globalpadding*4;
+	}
+	@media #{$x-large} {
+		padding: $globalpadding $globalpadding*6;
+		max-width: $globalpadding*100;
+		margin: 0 auto;
+	}
+}
+
+footer {
+	margin: $globalpadding;
+	@media #{$medium} {
+		margin: $globalpadding $globalpadding*2;
+	}
+	@media #{$large} {
+		margin: $globalpadding $globalpadding*4;
+	}
+	@media #{$x-large} {
+		margin: $globalpadding $globalpadding*6;
+		max-width: $globalpadding*88;
+		margin: 0 auto;
+	}
 }

@@ -15,5 +15,18 @@ $darkred: rgb(197,32,38);
 
 $sans-serif: "Lato", Helvetica, Arial, sans-serif;
 $serif: "Merriweather", Georgia, serif;
-
 $basefontsize: 100%;
+
+// Layout
+
+$globalpadding: 1em;
+
+// Media Queries
+
+$tiny: "(min-width: 31.25em)"; // 500 pixels wide //
+$small: "(min-width: 37.5em)"; // 600 pixels wide //
+$small-ish: "(min-width: 43.75em)"; // 700 pixels wide //
+$medium: "(min-width: 50em)"; // 800 pixels wide //
+$medium-ish: "(min-width: 56.25em)"; // 900 pixels wide //
+$large: "(min-width: 75em)"; // 1200 pixels wide //
+$x-large: "(min-width: 93.75em)"; // 1500 pixels wide //

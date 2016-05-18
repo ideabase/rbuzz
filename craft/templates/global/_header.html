@@ -1,14 +1,16 @@
 {% cache globally %}
 <header role="banner">
-	<a id="skip-to-content" href="#content">skip to main content</a>
-	<a class="logo" href="{{ siteUrl }}">
-		{% if header.logo|length %}
-		{% set asset = header.logo.first() %}
-		    <img src="{{ asset.url }}" />
-		{% endif %}
-	</a>
-
+	<div class="header-inner">
+		<a id="skip-to-content" href="#content">skip to main content</a>
+		<a class="logo" href="{{ siteUrl }}">
+			{% if header.logo|length %}
+			{% set asset = header.logo.first() %}
+			    <img src="{{ asset.url }}" />
+					<!-- Need to add alt text for logo -->
+			{% endif %}
+		</a>
     <a href="#menu" class="menu-link">Menu</a>
+	</div>
 	<nav id="menu" role="navigation">
 		<ul>
 				<li>
@@ -27,7 +29,6 @@
 		 {% for entry in header.alreadyAMemberPage %}
 		 	<a class="link-supplemental" href="{{ entry.url }}">{{ header.alreadyAMember }}</a></h1>
 		 {% endfor %}
-
 	</nav>
 {% endcache %}
 </header>

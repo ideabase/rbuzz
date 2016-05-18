@@ -8,11 +8,12 @@
   &:hover, &:focus {
   	color: $blue;
   }
-  @media screen and (min-width: 800px) {
+  @media #{$medium} {
   	top: 100px;
   	position: absolute;
   	right: 0;
   	padding: 0 .5em 0 0;
+    font-size: 1em;
   }
 }
 
