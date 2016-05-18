@@ -1,7 +1,7 @@
 {% cache globally %}
 <header role="banner">
 	<a id="skip-to-content" href="#content">skip to main content</a>
-	<a href="{{ siteUrl }}">
+	<a class="logo" href="{{ siteUrl }}">
 		{% if header.logo|length %}
 		{% set asset = header.logo.first() %}
 		    <img src="{{ asset.url }}" />
@@ -11,23 +11,18 @@
     <a href="#menu" class="menu-link">Menu</a>
 	<nav id="menu" role="navigation">
 		<ul>
-			{% nav node in craft.menus.getNodes('mainMenu') %}
-				<li role="presentation"  class="
-				        {{ node.children|length ? 'dropdown' }}
-				        {{ node.active ? 'active' }}">
-				    <a href="{{siteUrl}}/{{node.link}}"
-				          {% if node.children|length %}
-				            class="dropdown-toggle" data-toggle="dropdown"
-				          {% endif %}>
-				          {{ node.title }}
-				    </a>
-				    {% ifchildren %}
-				          <ul class="dropdown-menu" role="menu">
-				            {% children %}
-				          </ul>
-				        {% endifchildren %}
+				<li>
+					<a href="#">Menu Item</a>
 				</li>
-			{% endnav %}
+				<li>
+					<a href="#">Menu Item</a>
+				</li>
+				<li>
+					<a href="#">Menu Item</a>
+				</li>
+				<li>
+					<a href="#">Menu Item</a>
+				</li>
 		 </ul>
 		 {% for entry in header.alreadyAMemberPage %}
 		 	<a class="link-supplemental" href="{{ entry.url }}">{{ header.alreadyAMember }}</a></h1>
