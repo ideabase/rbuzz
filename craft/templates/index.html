@@ -19,6 +19,21 @@
 		{% for asset in assets %}
 			<img src="{{ asset.url }}" />
 		{% endfor %}
+		
+		<!-- Go To Entry Button Logic -->
+			{% if entry.section.handle == 'blog' %}
+				<a href="{{ entry.url }}">{{ miscGlobals.blogButton }}</a>
+			{% endif %}
+
+			{% if entry.section.handle == 'video' %}
+				<a href="{{ entry.url }}">{{ miscGlobals.videoButton }}</a>
+			{% endif %}
+		<!-- Go To Entry Button Logic -->	
+
 	{% endfor %}
+	{% if entry.section.handle == 'blog' %}
+		
+	{% endif %}
+
 
 {% endblock %}
