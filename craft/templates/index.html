@@ -6,7 +6,26 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
+  <section class="layout-full carousel-container">
+    <ul class="carousel" aria-label="Featured News Items">
+        <li class="carousel-slide">
+            <img class="carousel-slide-image" src="../dev/prototype/templates/assets/carousel.jpg" alt="Reading Buzz Intro video" />
+            <figcaption class="carousel-slide-title">
+              <h1>Title Here</h1>
+              <h2>Subtitle Here</h2>
+              <a href="buttonurl" class="carousel-slide-button">Button Title Here</a>
+            </figcaption>
+        </li>
+        <li class="carousel-slide">
+            <img class="carousel-slide-image" src="../dev/prototype/templates/assets/carousel.jpg" alt="Reading Buzz Intro video" />
+            <figcaption class="carousel-slide-title">
+              <h1>Title Here</h1>
+              <h2>Subtitle Here</h2>
+              <a href="buttonurl" class="carousel-slide-button">Button Title Here</a>
+            </figcaption>
+        </li>
+    </ul>
+  </section>
 
 	<h2>{{ entry.callToActionMessage }}</h2>
 	<p>{{ entry.servicesDescription }}</p>
@@ -29,7 +48,7 @@
 			{% if entry.section.handle == 'video' %}
 				<a href="{{ entry.url }}">{{ miscGlobals.videoButton }}</a>
 			{% endif %}
-		<!-- Go To Entry Button Logic -->	
+		<!-- Go To Entry Button Logic -->
 
 	{% endfor %}
 {% endblock %}

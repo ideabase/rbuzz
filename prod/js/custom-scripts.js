@@ -12,7 +12,7 @@ $menulink.click(function() {
 $(document).ready(function() {
   var $filtermenu = $('.filter-content'),
     $filtermenulink = $('.filter-menu-link');
-  
+
 $filtermenulink.click(function() {
   $filtermenulink.toggleClass('active');
   $filtermenu.toggleClass('active');

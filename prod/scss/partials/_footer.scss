@@ -2,9 +2,14 @@ footer {
   padding-top: .5em;
   margin-top: 2em;
   text-align: center;
-  border-top: 1px solid rgb(147,149,151);
   @media #{$medium} {
     text-align: left;
+  }
+  &:before {
+    content: "";
+    width: 100%;
+    border-top: 1px solid rgb(147,149,151);
+    display: block;
   }
 }
 
@@ -27,6 +32,9 @@ footer {
     margin-top: 0;
     width: 100%;
     background-size: 800px auto;
+  }
+  @media #{$x-large} {
+    margin-top:-5em
   }
 }
 

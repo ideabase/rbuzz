@@ -1,3 +1,46 @@
+.carousel-slide {
+    width: 100%;
+}
+
+.carousel {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+  animation: fadeIn .7s;
+  color: white;
+}
+
+.carousel-slide-title {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 49%,rgba(0,0,0,0.65) 100%);
+  padding-top: 1.5em;
+  padding-bottom: 2.5em;
+  padding-left:1.5em;
+  padding-right:1.5em;
+  text-align: center;
+  width: 100%;
+  h1, h2 {
+    text-shadow: 3px 1px 10px rgba(0,0,0,.8);
+  }
+}
+
+.carousel-slide-button {
+  background-color: $blue;
+  border: 3px solid $darkblue;
+  color: white;
+  font-weight: bold;
+  padding: 1em 2.5em;
+  text-decoration: none;
+  font-size: .8em;
+  transition: .2s all ease-in-out;
+  &:hover, &:focus {
+    background-color: $darkblue;
+  }
+}
+
+
 /* Ensures that Flickity waits until CSS has loaded to calculate the height of the cells */
 .carousel:after {
   content: 'flickity';
