@@ -62,6 +62,11 @@
 			{% endfor %}
 		</ul>
 	</section>
+	{% if footer.footerImage|length %}
+	{% set asset = footer.footerImage.first() %}
+	<div class="footer-image" style="background-image: url({{ asset.url }})">
+	</div>
+	{% endif %}
 	<section class="footer-section footer-copyright">
 		<p>Create field for copyright<br/>
 		and created by <a href="#">IdeaBase</a></p>
