@@ -16,9 +16,36 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<article>
+		{{ entry.videoUrl|videoEmbed }}
 		<h1>{{ entry.title }}</h1>
-		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-		{{ entry.body }}
-	</article>
+		<p>{{ entry.blogShortDescription }}</p>
+		<ul>
+			<li>
+				{% for category in entry.blogTheme %}
+				    {{ category.title }}
+				{% endfor %}
+			</li>
+			<li>
+				{% for category in entry.blogGradeLevel %}
+				    {{ category.title }}
+				{% endfor %}
+			</li>
+		</ul>	
+		<p>Posted on {{ entry.postDate | date("M Y") }}</p>
+
+		<p>{{ entry.videoDescription }}</p>
+
+		<h2>{{ entry.relatedPostsTitle }}</h2>
+			{% set category = craft.categories.group('theme') %}
+			{% set entries = craft.entries.section('video').relatedTo(category).id('not ' ~ entry.id).limit(3) %}
+			{% for entry in entries %}
+				<h1>{{ entry.title }}</h1>
+				<p>{{ entry.blogShortDescription }}</p>
+
+				{% set assets = entry.blogFeaturedImage %}
+				{% for asset in assets %}
+					<img src="{{ asset.url }}" />
+				{% endfor %}
+				<p>Posted on {{ entry.postDate | date("M Y") }}</p> 
+			{% endfor %}
 {% endblock %}

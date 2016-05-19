@@ -11,17 +11,19 @@
  #}
 
 {% extends "_layout" %}
-{% set title = "News" %}
 
 {% block content %}
-	<h1>News</h1>
+	<h1>{{ entry.title }}</h1>
 
-	{% for entry in craft.entries.section('news').find() %}
-		<article>
-			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-			<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-			{{ entry.body.getPage(1) }}
-			<p><a href="{{ entry.url }}">Continue reading</a></p>
-		</article>
+	{% for entry in craft.entries.section('video').find() %}
+			<h3>{{ entry.title }}</h3>
+			<p>{{ entry.blogShortDescription }}</p>
+
+			{% set assets = entry.blogFeaturedImage %}
+			{% for asset in assets %}
+				<img src="{{ asset.url }}" />
+			{% endfor %}
+			<p>Posted on {{ entry.postDate | date("M Y") }}</p> 
 	{% endfor %}
+	<p>{{ entry.backToSearchButton }}</p>
 {% endblock %}
