@@ -1,13 +1,41 @@
+{% set nav = craft.amNav.getNavRaw("mainMenu") %}
+
+{% macro addNodeToNavigation(node, index) %}
+    {%- set nodeClasses = [] -%}
+    {%- if node.hasChildren -%}
+        {%- set nodeClasses = nodeClasses|merge(['has-children']) -%}
+    {%- endif -%}
+    {%- if node.active or node.hasActiveChild -%}
+        {%- set nodeClasses = nodeClasses|merge(['active']) -%}
+    {%- endif -%}
+    {%- if node.level == 1 and index == 1 -%}
+        {%- set nodeClasses = nodeClasses|merge(['first']) -%}
+    {%- endif -%}
+    {%- if node.listClass|length -%}
+        {%- set nodeClasses = nodeClasses|merge([node.listClass]) -%}
+    {%- endif -%}
+
+    <li class="footer-section-list-item">
+        <a href="{{ node.url }}" title="{{ node.name }}"{% if node.blank %} target="_blank"{% endif %}>{{ node.name }}</a>
+        {% if node.hasChildren %}
+            <ul class="nav__level{{ (node.level + 1) }}">
+                {% for subnode in node.children %}
+                    {{ _self.addNodeToNavigation(subnode, loop.index) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro %}
+
 <footer role="contentinfo">
 	<section class="footer-section footer-section-navigation">
 		<h4 class="footer-section-name">Reading Buzz</h4>
 			<nav>
-				<ul class="footer-section-list">
-					<li class="footer-section-list-item"><a href="about.php">Menu Item</a></li>
-					<li class="footer-section-list-item"><a href="plans.php">Menu Item</a></li>
-					<li class="footer-section-list-item"><a href="blogindex.php">Menu Item</a></li>
-					<li class="footer-section-list-item"><a href="signup.php">Menu Item</a></li>
-				</ul>
+				  <ul class="footer-section-list">
+				        {% for node in nav %}
+				            {{ _self.addNodeToNavigation(node, loop.index) }}
+				        {% endfor %}
+				    </ul>
 			</nav>
 	</section>
 	<section class="footer-section footer-section-contact">

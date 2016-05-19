@@ -12,20 +12,7 @@
     <a href="#menu" class="menu-link">Menu</a>
 	</div>
 	<nav id="menu" role="navigation">
-		<ul>
-				<li>
-					<a href="#">Menu Item</a>
-				</li>
-				<li>
-					<a href="#">Menu Item</a>
-				</li>
-				<li>
-					<a href="#">Menu Item</a>
-				</li>
-				<li>
-					<a href="#">Menu Item</a>
-				</li>
-		 </ul>
+		 {{ craft.amNav.getNav("mainMenu") }}
 		 {% for entry in header.alreadyAMemberPage %}
 		 	<a class="link-supplemental" href="{{ entry.url }}">{{ header.alreadyAMember }}</a></h1>
 		 {% endfor %}
