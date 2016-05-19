@@ -14,6 +14,11 @@
 
 	{% for entry in entry.featuredPost %}
 		<h1><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
+		<p>{{ entry.blogShortDescription }}</p>
+		{% set assets = entry.blogFeaturedImage %}
+		{% for asset in assets %}
+			<img src="{{ asset.url }}" />
+		{% endfor %}
 	{% endfor %}
 
 {% endblock %}
