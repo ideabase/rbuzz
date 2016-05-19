@@ -20,6 +20,7 @@
 				{% endfor %}
 			</li>
 		</ul>	
+		<p>Posted on {{ entry.postDate | date("M Y") }}</p>
 
 		{% set assets = entry.blogFeaturedImage %}
 		{% for asset in assets %}
