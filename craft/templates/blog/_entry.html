@@ -8,6 +8,18 @@
 	<article>
 		<h1>{{ entry.title }}</h1>
 		<p>{{ entry.blogShortDescription }}</p>
+		<ul>
+			<li>
+				{% for category in entry.blogTheme %}
+				    {{ category.title }}
+				{% endfor %}
+			</li>
+			<li>
+				{% for category in entry.blogGradeLevel %}
+				    {{ category.title }}
+				{% endfor %}
+			</li>
+		</ul>	
 
 		{% set assets = entry.blogFeaturedImage %}
 		{% for asset in assets %}
