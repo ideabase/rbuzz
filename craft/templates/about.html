@@ -7,10 +7,16 @@
 
 {% block content %}
 	<h1>{{ entry.title }}</h1>
-	<h2>{{ entry.title }}</h2>
-  <h3>{{ entry.title }}</h3>
-  <h4>{{ entry.title }}</h4>
-  <h5>{{ entry.title }}</h5>
-
 	<p>{{ entry.description }}</p>
+
+	{% set profile = craft.entries.section('staff').find() %}
+
+	{% for entry in profile %}
+	    <h2>{{ entry.title}}</h2>
+	    <p>{{ entry.biography }}</p>
+	    {% set headshot = entry.staffHeadshot %}
+	    {% for asset in headshot %}
+	    	<img src="{{ asset.url }}" />
+	    {% endfor %}
+	{% endfor %}	
 {% endblock %}
