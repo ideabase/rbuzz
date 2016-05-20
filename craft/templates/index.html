@@ -30,6 +30,7 @@
         {% endfor %}
     </ul>
   </section>
+
   <section class="layout-full callout">
       <p>{{ entry.callToActionMessage }}</p>
   </section>
@@ -38,5 +39,26 @@
     <p>{{ entry.servicesDescription }}</p>
   </section>
 
+	{% for block in entry.servicesMatrix %}
+		{% if block.type == "infographic" %}
+			<p>{{ block.infoTitle }}</p>
+			{% set image = block.icon.first() %}
+				{% if image %}
+					<img class="social-list-item-icon" alt="{{ block.infoTitle }}" src="{{ image.getUrl('') }}">
+				{% endif %}
+		{% endif %}
+	{% endfor %}
+
+	<p>{{ entry.servicesDescription	}}</p>
+
+	{% set plansButton = entry.viewPlansButton %}
+	{% for entry in entry.plansEntry %}
+		<a href="{{ entry.url }}">{{ plansButton }}</a>
+	{% endfor %}
+
+	{% set signUpButton = entry.signUpButton %}
+	{% for entry in entry.signUpEntry %}
+		<a href="{{ entry.url }}">{{ signUpButton }}</a>
+	{% endfor %}
 
 {% endblock %}
