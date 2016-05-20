@@ -121,11 +121,11 @@ header nav li:nth-last-child(2) a {
 }
 
 header nav li:last-child a {
-  border-bottom: none;
   @extend .button;
   @extend .button--red;
   @media #{$medium} {
   	right: 0;
+		border-bottom: none;
   	top: 25px;
   	position: absolute;
 		padding: .8em 2em;
