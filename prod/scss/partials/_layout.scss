@@ -41,9 +41,12 @@ header {
 	}
 }
 
+.layout-centered {
+	text-align: center;
+}
+
 .layout-inner {
 	margin-top: $globalpadding*2;
-	text-align: center;
 	@media #{$medium} {
 		width: 80%;
 		margin-left: auto;
