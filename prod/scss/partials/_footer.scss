@@ -1,9 +1,10 @@
 footer {
   padding-top: .5em;
-  margin-top: 2em;
+  margin-top: 1em;
   text-align: center;
   @media #{$medium} {
     text-align: left;
+    margin-top: 2em;
   }
   &:before {
     content: "";
@@ -71,9 +72,8 @@ footer {
 }
 
 .footer-section-list {
-  list-style-type: none;
-  margin: 0 0 2em 0;
-  padding: 0;
+  @extend .plain-list;
+  margin-bottom: 2em;
   @media #{$medium} {
     margin-bottom: 0;
   }
@@ -99,9 +99,7 @@ footer {
 // Social Media
 
 .social-list {
-  margin: 0;
-  list-style-type: none;
-  padding: 0;
+  @extend .plain-list;
 }
 
 .social-list-item {

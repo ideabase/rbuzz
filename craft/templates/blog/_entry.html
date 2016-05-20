@@ -71,7 +71,8 @@
     <ul class="related-posts-list">
       {% for entry in entries %}
         {% set assets = entry.blogFeaturedImage %}
-        <li class="related-posts-list-item">
+        <a href="{{ entry.url }}" class="related-posts-list-item">
+          <li>
           {% for asset in assets %}
             <img src="{{ asset.url }}" />
           {% endfor %}
@@ -82,6 +83,7 @@
             <dd>{{ entry.postDate | date("M Y") }}</dd>
           </dl>
         </li>
+      </a>
       {% endfor %}
     </ul>
   </section>

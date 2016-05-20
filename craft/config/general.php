@@ -17,5 +17,6 @@ return array(
     ),
 
     '.com' => array(
+      'allowAutoUpdates' => false,
     )
 );

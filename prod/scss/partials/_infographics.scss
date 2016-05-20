@@ -1,0 +1,24 @@
+.infographic-list {
+  @extend .plain-list;
+  @media #{$medium} {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.infographic-list-item {
+  margin-bottom: 2em;
+  @media #{$medium} {
+    width: 30%;
+  }
+}
+
+.infographic-list-item-name {
+  color: $gray;
+  padding-top: 1em;
+  font-weight: 700;
+  line-height: 1.4;
+  @media #{$medium} {
+    font-size: 1.05em;
+  }
+}

@@ -4,6 +4,9 @@
 	color: white;
 	font-weight: bold;
 	transition: .2s all ease-in-out;
+	padding: .8em 1.25em;
+	text-decoration: none;
+	margin-bottom: 1em;
 }
 
 .button--red {
@@ -11,5 +14,28 @@
 	border-color: $darkred;
 	&:hover {
 		background-color: $darkred;
+	}
+}
+
+.button--white {
+	background-color: transparent;
+	color: red;
+	border-color: $darkred;
+	&:hover {
+		background-color: $darkred;
+		color: white;
+	}
+}
+
+.button-grid {
+	.button {
+		display: block;
+		@media #{$medium} {
+			width:48%;
+		}
+	}
+	@media #{$medium} {
+		display: flex;
+		justify-content: space-between;
 	}
 }

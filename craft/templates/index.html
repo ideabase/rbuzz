@@ -38,27 +38,34 @@
     <h1>{{ entry.servicesTitle }}</h1>
     <p>{{ entry.servicesDescription }}</p>
   </section>
+  <section class="layout-inner layout-centered">
+    <ul class="infographic-list">
+    	{% for block in entry.servicesMatrix %}
+    		{% if block.type == "infographic" %}
+          <li class="infographic-list-item">
+    			{% set image = block.icon.first() %}
+    				{% if image %}
+    					<img class="infographic-list-item-icon" alt="{{ block.infoTitle }}" src="{{ image.getUrl('') }}">
+    				{% endif %}
+            <figcaption class="infographic-list-item-name">{{ block.infoTitle }}</figcaption>
+          </li>
+    		{% endif %}
+    	{% endfor %}
+    </ul>
+  </section>
+  <section class="layout-inner layout-centered">
+  	<div class="callout-secondary">{{ entry.servicesDescription	}}</div>
+    <div class="button-grid">
+  	{% set plansButton = entry.viewPlansButton %}
+  	{% for entry in entry.plansEntry %}
+  		<a class="button button--white" href="{{ entry.url }}">{{ plansButton }}</a>
+  	{% endfor %}
 
-	{% for block in entry.servicesMatrix %}
-		{% if block.type == "infographic" %}
-			<p>{{ block.infoTitle }}</p>
-			{% set image = block.icon.first() %}
-				{% if image %}
-					<img class="social-list-item-icon" alt="{{ block.infoTitle }}" src="{{ image.getUrl('') }}">
-				{% endif %}
-		{% endif %}
-	{% endfor %}
-
-	<p>{{ entry.servicesDescription	}}</p>
-
-	{% set plansButton = entry.viewPlansButton %}
-	{% for entry in entry.plansEntry %}
-		<a href="{{ entry.url }}">{{ plansButton }}</a>
-	{% endfor %}
-
-	{% set signUpButton = entry.signUpButton %}
-	{% for entry in entry.signUpEntry %}
-		<a href="{{ entry.url }}">{{ signUpButton }}</a>
-	{% endfor %}
+  	{% set signUpButton = entry.signUpButton %}
+  	{% for entry in entry.signUpEntry %}
+  		<a class="button button--red" href="{{ entry.url }}">{{ signUpButton }}</a>
+  	{% endfor %}
+    </div>
+  </section>
 
 {% endblock %}
