@@ -9,6 +9,7 @@
 
 return array(
     '*' => array(
+      'preserveImageColorProfiles' => true,
     ),
 
     '.dev' => array(
