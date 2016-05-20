@@ -1,0 +1,11 @@
+p {
+  font-size: 1.05em;
+  line-height: 1.7;
+  font-weight: 400;
+  @media #{$medium} {
+    font-size: 1.2em;
+  }
+  @media #{$large} {
+    font-size: 1.25em;
+  }
+}
