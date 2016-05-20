@@ -1,0 +1,17 @@
+.callout {
+  background-color: $red;
+  color: white;
+  font-family: $serif;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.3em;
+  padding: 1.3em;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  @media #{$large} {
+    font-size: 1.5em;
+    padding: 1.5em;
+  }
+}

@@ -30,9 +30,13 @@
         {% endfor %}
     </ul>
   </section>
+  <section class="layout-full callout">
+      <p>{{ entry.callToActionMessage }}</p>
+  </section>
+  <section class="layout-inner">
+    <h1>{{ entry.servicesTitle }}</h1>
+    <p>{{ entry.servicesDescription }}</p>
+  </section>
 
-	<h2>{{ entry.callToActionMessage }}</h2>
-	<p>{{ entry.servicesDescription }}</p>
-	<h2>{{ entry.servicesTitle }}</h2>
 
 {% endblock %}
