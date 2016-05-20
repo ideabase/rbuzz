@@ -8,13 +8,14 @@ footer {
   &:before {
     content: "";
     width: 100%;
-    border-top: 1px solid rgb(147,149,151);
+    border-top: 1px solid $darkgray;
     display: block;
   }
 }
 
 footer {
   @media #{$medium} {
+    -js-display: flex;
     display: flex;
     flex-wrap: wrap;
   }
@@ -33,7 +34,7 @@ footer {
     width: 100%;
     background-size: 800px auto;
   }
-  @media #{$x-large} {
+  @media #{$large} {
     margin-top:-5em
   }
 }

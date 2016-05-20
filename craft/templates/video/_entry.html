@@ -30,7 +30,7 @@
 				    {{ category.title }}
 				{% endfor %}
 			</li>
-		</ul>	
+		</ul>
 		<p>Posted on {{ entry.postDate | date("M Y") }}</p>
 
 		<p>{{ entry.videoDescription }}</p>
@@ -46,6 +46,6 @@
 				{% for asset in assets %}
 					<img src="{{ asset.url }}" />
 				{% endfor %}
-				<p>Posted on {{ entry.postDate | date("M Y") }}</p> 
+				<p>Posted on {{ entry.postDate | date("M Y") }}</p>
 			{% endfor %}
 {% endblock %}

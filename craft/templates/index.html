@@ -2,28 +2,32 @@
  # Homepage template
  # ---------------
  #}
-
 {% extends "_layout" %}
-
 {% block content %}
   <section class="layout-full carousel-container">
     <ul class="carousel" aria-label="Featured News Items">
-        <li class="carousel-slide">
-            <img class="carousel-slide-image" src="../dev/prototype/templates/assets/carousel.jpg" alt="Reading Buzz Intro video" />
-            <figcaption class="carousel-slide-title">
-              <h1>Title Here</h1>
-              <h2>Subtitle Here</h2>
-              <a href="buttonurl" class="carousel-slide-button">Button Title Here</a>
-            </figcaption>
-        </li>
-        <li class="carousel-slide">
-            <img class="carousel-slide-image" src="../dev/prototype/templates/assets/carousel.jpg" alt="Reading Buzz Intro video" />
-            <figcaption class="carousel-slide-title">
-              <h1>Title Here</h1>
-              <h2>Subtitle Here</h2>
-              <a href="buttonurl" class="carousel-slide-button">Button Title Here</a>
-            </figcaption>
-        </li>
+        {% for entry in entry.featuredPost %}
+          <li class="carousel-slide">
+              {% set assets = entry.blogFeaturedImage %}
+              {% for asset in assets %}
+              <picture>
+                  <source srcset="{{ asset.url('largeFeatureImage') }}" media="(min-width: 1200px)">
+                  <source srcset="{{ asset.url('mediumFeatureImage') }}" media="(min-width: 700px)">
+                  <img class="carousel-slide-image" srcset="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}">
+              </picture>
+              {% endfor %}
+              <figcaption class="carousel-slide-title">
+                <h1>{{ entry.title }}</h1>
+                <h2>{{ entry.blogShortDescription }}</h2>
+                  {% if entry.section.handle == 'blog' %}
+                    <a href="{{ entry.url }}" class="carousel-slide-button">{{ miscGlobals.blogButton }}</a>
+                  {% endif %}
+                  {% if entry.section.handle == 'video' %}
+                    <a href="{{ entry.url }}" class="carousel-slide-button">{{ miscGlobals.videoButton }}</a>
+                  {% endif %}
+              </figcaption>
+          </li>
+        {% endfor %}
     </ul>
   </section>
 
@@ -31,24 +35,4 @@
 	<p>{{ entry.servicesDescription }}</p>
 	<h2>{{ entry.servicesTitle }}</h2>
 
-	{% for entry in entry.featuredPost %}
-		<h1><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
-		<p>{{ entry.blogShortDescription }}</p>
-
-		{% set assets = entry.blogFeaturedImage %}
-		{% for asset in assets %}
-			<img src="{{ asset.url }}" />
-		{% endfor %}
-
-		<!-- Go To Entry Button Logic -->
-			{% if entry.section.handle == 'blog' %}
-				<a href="{{ entry.url }}">{{ miscGlobals.blogButton }}</a>
-			{% endif %}
-
-			{% if entry.section.handle == 'video' %}
-				<a href="{{ entry.url }}">{{ miscGlobals.videoButton }}</a>
-			{% endif %}
-		<!-- Go To Entry Button Logic -->
-
-	{% endfor %}
 {% endblock %}

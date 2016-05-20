@@ -1,22 +1,20 @@
 header {
 	@media #{$medium} {
+		-js-display: flex;
 		display: flex;
 	}
 }
 
 .menu-link {
-  	float: right;
+		margin-left: auto;
 		padding: .5em 1.75em;
 		background-color: $blue;
     border: 3px solid $darkblue;
     color: white;
 		font-size: 1.15em;
     font-weight: 700;
-    margin-top: 1.75em;
     text-decoration: none;
-    @media #{$tiny} {
-		margin-top: 2.5em;
-    }
+		margin-top: 2em;
     @media #{$medium} {
 	    display: none;
 	}
@@ -41,6 +39,13 @@ header {
   }
 }
 
+.header-inner {
+	-js-display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 header nav {
 	clear: both;
 	transition: all 0.3s ease-out;
@@ -49,6 +54,7 @@ header nav {
 	align-items: center;
 	position: relative;
 	@media #{$medium} {
+		-js-display: flex;
 		display: flex;
 		margin-top: .5em;
 		padding-top: 1.5em;
@@ -130,7 +136,6 @@ header nav li {
 	@media #{$medium} {
 		display: inline-block;
 		margin: 0 0.25em;
-		float: left;
 		padding: 0 .75em 0 0;
 		border-right: 1px solid #A3A3A3;
 		&:nth-last-child(2) {
