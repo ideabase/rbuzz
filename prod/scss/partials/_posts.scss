@@ -7,6 +7,10 @@
   }
 }
 
+article ul {
+  @extend .default-list-style;
+}
+
 .related-posts {
   margin-top: 3em;
 }

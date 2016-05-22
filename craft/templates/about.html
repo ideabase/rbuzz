@@ -6,17 +6,27 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
-	<p>{{ entry.description }}</p>
-
+  <section class="layout-inner layout-centered">
+  	<h1>{{ entry.title }}</h1>
+  	<p>{{ entry.description }}</p>
+  </section>
+  <section>
 	{% set profile = craft.entries.section('staff').find() %}
-
+  <ul class="bio-list">
 	{% for entry in profile %}
-	    <h2>{{ entry.title}}</h2>
-	    <p>{{ entry.biography }}</p>
-	    {% set headshot = entry.staffHeadshot %}
-	    {% for asset in headshot %}
-	    	<img src="{{ asset.url }}" />
-	    {% endfor %}
-	{% endfor %}	
+      <li class="bio-list-item">
+        {% set headshot = entry.staffHeadshot %}
+        {% for asset in headshot %}
+        <div class="bio-list-item-headshot">
+          <img src="{{ asset.url }}" />
+        </div>
+        {% endfor %}
+        <div class="bio-list-item-description">
+    	    <h4 class="bio-list-item-name">{{ entry.title}}</h4>
+    	    <div class="bio-list-item-bio">{{ entry.biography }}</p>
+        </div>
+      </li>
+	{% endfor %}
+  </ul>
+</section>
 {% endblock %}

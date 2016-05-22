@@ -123,15 +123,16 @@ header nav li:nth-last-child(2) a {
 header nav li:last-child a {
   @extend .button;
   @extend .button--red;
-	border-bottom: none;
   @media #{$medium} {
   	right: 0;
-		border-bottom: inherit;
   	top: 25px;
   	position: absolute;
 		padding: .8em 2em;
   }
 	margin-bottom: 0;
+	&:hover {
+		color: white;
+	}
 }
 
 header nav li {

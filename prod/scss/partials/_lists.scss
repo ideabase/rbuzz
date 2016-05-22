@@ -1,0 +1,10 @@
+.default-list-style {
+  @extend .plain-list;
+  font-family: $serif;
+  font-style: italic;
+  font-size: 1.05em;
+  margin-top: 1.5em;
+  li {
+    margin-bottom: .75em;
+  }
+}

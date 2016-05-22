@@ -1,0 +1,36 @@
+.bio-list {
+  @extend .plain-list;
+  border-top: 1px solid $gray;
+  padding-top: 3em;
+  margin-top: 2em;
+}
+
+.bio-list-item {
+  @media #{$small-ish} {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.bio-list-item-description {
+  @media #{$small-ish} {
+    width: 65%;
+  }
+}
+
+.bio-list-item-headshot {
+  max-width: 250px;
+  margin-bottom: 1.5em;
+  @media #{$small-ish} {
+    width: 30%;
+    max-width: inherit;
+  }
+}
+
+.bio-list-item-name {
+  margin-top: 0;
+}
+
+.bio-list-item-bio ul {
+  @extend .default-list-style;
+}
