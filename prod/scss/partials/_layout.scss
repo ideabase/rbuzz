@@ -58,6 +58,39 @@ header {
 	}
 }
 
+.layout-split {
+	@media #{$medium} {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.layout-split-right {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	@media #{$medium} {
+		width: 70%;
+		margin-right: inherit;
+		margin-left: auto;
+	}
+	@media #{$large} {
+		width: 75%;
+	}
+}
+
+.layout-split-left {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	@media #{$medium} {
+		width: 20%;
+	}
+	@media #{$large} {
+		width: 20%;
+	}
+}
+
 main {
 	padding: $globalpadding;
 	@media #{$medium} {

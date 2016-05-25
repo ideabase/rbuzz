@@ -1,5 +1,5 @@
 {#
- # News index template
+ # Video index template
  # -------------------
  #
  # This template is loaded whenever http://example.com/news is
@@ -13,17 +13,39 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
+<div class="layout-split">
+  <section class="layout-split-right">
+  	<h1>{{ entry.title }}</h1>
+    <nav class="search-form">
+      <form action="action_page.php">
+         <input type="search" id="fname" name="firstname" class="search">
+         <input type="submit" value="Search" class="search-form-icon">
+      </form>
+    </nav>
+  </section>
+</div>
+<div class="layout-split">
+  {% include 'global/_sidebar.html' %}
+  <section class="layout-split-right layout-centered">
 
-	{% for entry in craft.entries.section('video').find() %}
-			<h3>{{ entry.title }}</h3>
-			<p>{{ entry.blogShortDescription }}</p>
-
-			{% set assets = entry.blogFeaturedImage %}
-			{% for asset in assets %}
-				<img src="{{ asset.url }}" />
-			{% endfor %}
-			<p>Posted on {{ entry.postDate | date("M Y") }}</p> 
-	{% endfor %}
-	<p>{{ entry.backToSearchButton }}</p>
+    <ul class="posts-list">
+    	{% for entry in craft.entries.section('video').find() %}
+    			<a href="{{ entry.url }}" class="posts-list-item">
+            <li>
+        			{% set assets = entry.blogFeaturedImage %}
+        			{% for asset in assets %}
+        				<img src="{{ asset.url }}" />
+        			{% endfor %}
+              <h3 class="posts-title">{{ entry.title }}</h3>
+              <figcaption class="posts-description">{{ entry.blogShortDescription }}</figcaption>
+              <dl class="post-date">
+                <dt>Posted on</dt>
+                <dd>{{ entry.postDate | date("M Y") }}</dd>
+              </dl>
+            </li>
+          </a>
+    	{% endfor %}
+    </ul>
+  </section>
+</div>
 {% endblock %}
