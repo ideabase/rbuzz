@@ -230,7 +230,13 @@
 /* Owl Controls */
 
 .owl-theme .owl-controls {
-  margin-top:-50px;
-z-index:10000;
-position:relative;
+  margin-top: -50px;
+  z-index: 10000;
+  position: absolute;
+  display: flex;
+  width: 100%;
+}
+
+.owl-pagination {
+  margin: 0 auto;
 }
