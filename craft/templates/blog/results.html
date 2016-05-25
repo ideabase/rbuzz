@@ -1,0 +1,49 @@
+{#
+ # Blog search results template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+{% set query = craft.request.getParam('q') %}
+{% set results = craft.entries.search(query).order('score').section('blog') %}
+<div class="layout-split">
+  <section class="layout-split-right">
+  	<h1>Results for “{{ query }}”</h1>
+    <nav class="search-form">
+      <form action="{{ url('blog/results') }}">
+        <input type="search" id="fname" name="q" class="search">
+        <input type="submit" value="Search" class="search-form-icon">
+      </form>
+    </nav>
+  </section>
+</div>
+<div class="layout-split">
+  {% include 'global/_results-sidebar.html' %}
+  <section class="layout-split-right layout-centered">
+  {% if results|length %}
+    <ul class="posts-list">
+      {% for entry in results %}
+        <a href="{{ entry.url }}" class="posts-list-item">
+          <li>
+            {% set assets = entry.blogFeaturedImage %}
+            {% for asset in assets %}
+              <img src="{{ asset.url }}" />
+            {% endfor %}
+            <h3 class="posts-title">{{ entry.title }}</h3>
+            <figcaption class="posts-description">{{ entry.blogShortDescription }}</figcaption>
+            <dl class="post-date">
+              <dt>Posted on</dt>
+              <dd>{{ entry.postDate | date("M Y") }}</dd>
+            </dl>
+          </li>
+        </a>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>Sorry, we couldn't find anything related to “{{ query }}”.</p>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

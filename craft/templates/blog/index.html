@@ -9,12 +9,16 @@
 <div class="layout-split">
   <section class="layout-split-right">
   	<h1>{{ entry.title }}</h1>
+
     <nav class="search-form">
-      <form action="action_page.php">
-         <input type="search" id="fname" name="firstname" class="search">
-         <input type="submit" value="Search" class="search-form-icon">
+
+      <form action="{{ url('blog/results') }}">
+        <input type="search" id="fname" name="q" class="search">
+        <input type="submit" value="Search" class="search-form-icon">
       </form>
+
     </nav>
+
   </section>
 </div>
 <div class="layout-split">
