@@ -5,14 +5,18 @@
 {% extends "_layout" %}
 {% block content %}
   <section class="layout-full carousel-container">
-    <ul class="carousel" aria-label="Featured News Items">
+    <ul class="owl-carousel owl-theme" aria-label="Featured News Items">
         {% for entry in entry.featuredPost %}
           <li class="carousel-slide">
               {% set assets = entry.blogFeaturedImage %}
               {% for asset in assets %}
               <picture>
+                <!-- Add Fallback for IE9 -->
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
                   <source srcset="{{ asset.url('largeFeatureImage') }}" media="(min-width: 1200px)">
                   <source srcset="{{ asset.url('mediumFeatureImage') }}" media="(min-width: 700px)">
+                  <!--[if IE 9]></video><![endif]-->
+                  <!-- Add <img> fallback -->
                   <img class="carousel-slide-image" srcset="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}">
               </picture>
               {% endfor %}
