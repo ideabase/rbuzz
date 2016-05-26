@@ -8,7 +8,6 @@
 {% block content %}
 	<h1>Plans Index</h1>
 	<p>{{ entry.plansSubdescription }}</p>
-	<p>{{ entry.plansSubquestion }}</p>
 
 	{% set entries = craft.entries.section('plans') %}
 	{% for entry in entries %}
@@ -28,7 +27,7 @@
 		{% endif %}
 	{% endfor %}
 	{% endfor %}
-	<p>{{ entry.servicesTitle }}</p>
+	<h2>{{ entry.plansSubquestion }}</h2>
 	<p>{{ entry.description }}</p>
 
 	<p>{{ entry.relatedPostsTitle }}</p>
