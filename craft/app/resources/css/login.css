@@ -4,7 +4,7 @@
 /* RTL stuff */
 html, body { height: 100%; }
 
-#login-form { display: block; position: absolute; top: 50%; left: 50%; margin: -208px 0 0 -150px; width: 300px; background: no-repeat 0 0; }
+#login-form { display: block; position: absolute; top: 50%; left: 50%; margin: -208px 0 0 -150px; width: 300px; background: no-repeat center top; }
 
 #login-form.has-logo { padding-top: 116px; }
 

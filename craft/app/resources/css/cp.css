@@ -143,6 +143,7 @@ body.mobile #container { overflow-y: scroll; /* has to be scroll, not auto */ -w
   body.rtl.showing-nav #container { -webkit-transform: translate(-220px, 0); -moz-transform: translate(-220px, 0); -ms-transform: translate(-220px, 0); -o-transform: translate(-220px, 0); transform: translate(-220px, 0); }
   body.ltr:not(.showing-nav) #global-sidebar { -webkit-transform: translate(-220px, 0); -moz-transform: translate(-220px, 0); -ms-transform: translate(-220px, 0); -o-transform: translate(-220px, 0); transform: translate(-220px, 0); }
   body.rtl:not(.showing-nav) #global-sidebar { -webkit-transform: translate(220px, 0); -moz-transform: translate(220px, 0); -ms-transform: translate(220px, 0); -o-transform: translate(220px, 0); transform: translate(220px, 0); } }
+@media print { #global-sidebar { display: none; } }
 #tasks-hud { padding: 0; overflow: auto; }
 
 #tasks-hud .task { overflow: hidden; }
