@@ -4,10 +4,10 @@
  #}
 
 {% extends "_layout" %}
-
 {% block content %}
 {% set query = craft.request.getParam('q') %}
 {% set results = craft.entries.search(query).order('score').section('blog') %}
+
 <div class="layout-split">
   <section class="layout-split-right">
   	<h1>Results for “{{ query }}”</h1>

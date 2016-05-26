@@ -1,30 +1,33 @@
 {#
- # Blog index template
+ # Video search results template
  # -------------------
  #}
 
 {% extends "_layout" %}
-
 {% block content %}
+{% set query = craft.request.getParam('q') %}
+{% set results = craft.entries.search(query).order('score').section('video') %}
+
 <div class="layout-split">
   <section class="layout-split-right">
-  	<h1>{{ entry.title }}</h1>
-
+  	<h1>Results for “{{ query }}”</h1>
     <nav class="search-form">
-
-      <form action="{{ url('blog/results') }}">
+      <form action="{{ url('video/results') }}">
         <input type="search" id="fname" name="q" class="search">
         <input type="submit" value="Search" class="search-form-icon">
       </form>
-
     </nav>
   </section>
 </div>
+
 <div class="layout-split">
-  {% include 'global/_sidebar.html' %}
+{% include 'global/_results-sidebar.html' %}
+
   <section class="layout-split-right layout-centered">
+  {% if results|length %}
+
     <ul class="posts-list">
-    	{% for entry in craft.entries.section('blog').find() %}
+    	{% for entry in results %}
     			<a href="{{ entry.url }}" class="posts-list-item">
             <li>
         			{% set assets = entry.blogFeaturedImage %}
@@ -41,6 +44,9 @@
           </a>
     	{% endfor %}
     </ul>
+    {% else %}
+      <p>Sorry, we couldn't find anything related to “{{ query }}”.</p>
+    {% endif %}
   </section>
 </div>
 {% endblock %}
