@@ -22,21 +22,22 @@ header {
 
 .logo {
   padding-right: 2em;
-	img {
-		max-width: 150px;
-		margin-left: -5px;
-	}
+	width: 175px;
+	margin-left: -5px;
   @media #{$small} {
-		img {
-			max-width: 175px;
-		}
+			width: 175px;
   }
   @media #{$small-ish} {
-    margin-right: 5em;
-		img {
-			max-width: 200px;
-		}
+			width: 215px;
   }
+	@media #{$large} {
+			width: 225px;
+			margin-right: 1em;
+  }
+}
+
+.logo img {
+	width: 100%;
 }
 
 .header-inner {
