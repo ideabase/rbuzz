@@ -21,18 +21,22 @@ header {
 }
 
 .logo {
-  padding-right: 2em;
-	width: 175px;
+	width: 160px;
+	min-width: 160px;
 	margin-left: -5px;
   @media #{$small} {
 			width: 175px;
+			min-width: 175px;
   }
   @media #{$small-ish} {
-			width: 215px;
+			width: 190px;
+			min-width: 190px;
+			margin-right: 1.5em;
   }
 	@media #{$large} {
-			width: 225px;
-			margin-right: 1em;
+			width: 215px;
+			min-width: 215px;
+			margin-right: 3em;
   }
 }
 
