@@ -1,6 +1,6 @@
 .infographic-list {
   @extend .plain-list;
-  @media #{$medium} {
+  @media #{$small-ish} {
     display: flex;
     justify-content: space-between;
   }
@@ -8,7 +8,7 @@
 
 .infographic-list-item {
   margin-bottom: 2em;
-  @media #{$medium} {
+  @media #{$small-ish} {
     width: 30%;
   }
 }
