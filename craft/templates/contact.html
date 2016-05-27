@@ -1,27 +1,18 @@
 {#
- # Homepage template
+ # Contact page template
  # ---------------
- #
- # When this template gets loaded, it will be because someone has accessed
- # http://yoursite.com/ (without any URI). Craft checks to see if you have
- # a Single section set to be the Homepage (as you do, by default), and
- # loads the section’s Template (this file). A special ‘entry’ variable
- # will already be set for you, assigned to the Homepage entry.
- #
- # It's worth noting that even if you didn't have a Homepage Single section,
- # as long as this template remains at craft/templates/index.html, it
- # would still be the one to get loaded when accessing http://yoursite.com/,
- # albeit without an ‘entry’ variable already set for you.
- #
- # See this page for more details on how Craft routes requests:
- # http://craftcms.com/docs/routing
  #}
 
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
-
-	<p>{{ entry.description }}</p>
+  <section class="layout-inner layout-centered">
+  	<h1>{{ entry.title }}</h1>
+  	<p>{{ entry.description }}</p>
+  </section>
 	{% include 'global/_contact-form.html' %}
+  <section class="layout-inner layout-centered">
+    <h4>Already a Member? These Fields Need Created</h4>
+    <p>This field needs created.  Once you've signed up, you should have received a welcome email with a private link to view your latest content. Can't find the email? Let us know by emailing readingbuzzllc@gmail.com and we'll get back to you right away!</p>
+  </section>
 {% endblock %}

@@ -1,0 +1,88 @@
+.plans-list {
+  @extend .plain-list;
+  width: 80%;
+  margin: 2em auto 0 auto;
+  @media #{$medium} {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.plans-list-item {
+  text-align: center;
+  color: white;
+  background-color: $green;
+  padding: $globalpadding*2;
+  margin-bottom: 2em;
+  @media #{$medium} {
+    width: 31%;
+  }
+}
+
+.plans-list-item:nth-child(1) {
+  background-color: $blue;
+  .plans-list-item-includes-name {
+    color: $darkblue;
+  }
+}
+
+.plans-list-item:nth-child(2) {
+  background-color: $yellow;
+  .plans-list-item-includes-name {
+    color: $darkyellow;
+  }
+}
+
+.plans-list-item:nth-child(3) {
+  background-color: $green;
+  .plans-list-item-includes-name {
+    color: $darkgreen;
+  }
+}
+
+.plans-list-item-name {
+  font-family: $serif;
+  color: white;
+  border-bottom: 1px solid white;
+  width: 80%;
+  display: block;
+  margin: 0 auto 1em auto;
+  padding: 0 0 .5em 0;
+  font-size: 1.3em;
+}
+
+.plans-list-item-includes-list {
+  @extend .plain-list;
+}
+
+.plans-list-item-includes-list-item {
+  margin-bottom: .75em;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.plans-list-item-includes-name {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: .75em;
+}
+
+.plans-list-item-price-amount {
+  display: block;
+  margin-top: .35em;
+  font-size: 1.2em;
+}
+
+.plans-list-item-price {
+  font-size: 200%;
+  display: block;
+  font-weight: 700;
+  margin-top: .8em;
+}
+
+.plans-list-item-year {
+  margin-top: 1.2em;
+  display: block;
+  font-size: .95em;
+}

@@ -10,37 +10,35 @@
 
 {% from _self import errorList %}
 
-<div class="contact-form">
-<form method="post" action="" accept-charset="UTF-8">
+<form method="post" class="contact-form" action="" accept-charset="UTF-8">
     {{ getCsrfInput() }}
     <div class="contact-form__column">
-        <input type="hidden" name="action" value="contactForm/sendMessage">
-        <input type="hidden" name="redirect" value="{{ siteUrl }}/success/">
+      <div class="contact-form__column-item">
+          <input type="hidden" name="action" value="contactForm/sendMessage">
+          <input type="hidden" name="redirect" value="{{ siteUrl }}/success/">
 
-            <label for="fromName">First Name</label>
-            <input placeholder="First Name" id="fromName" type="text" name="message[First Name]" value="{% if message is defined %}{{ message.fromName }}{% endif %}">
-            <!--{{ message is defined and message ? errorList(message.getErrors('fromName')) }}-->
-
-            <label for="fromEmailAddress">Last Name</label>
-            <input placeholder="Last Name" id="fromEmailAddress" type="text" name="message[Last Name]" value="{% if message is defined %}{{ message.fromEmailAddress }}{% endif %}">
-            <!--{{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}-->
-
-
+              <label for="fromName">First Name</label>
+              <input id="fromName" type="text" name="message[First Name]" value="{% if message is defined %}{{ message.fromName }}{% endif %}">
+              <!--{{ message is defined and message ? errorList(message.getErrors('fromName')) }}-->
+      </div>
+      <div class="contact-form__column-item">
+              <label for="fromEmailAddress">Last Name</label>
+              <input id="fromEmailAddress" type="text" name="message[Last Name]" value="{% if message is defined %}{{ message.fromEmailAddress }}{% endif %}">
+              <!--{{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}-->
+      </div>
     </div>
-    <div class="contact-form__column">
             <label for="Email">Email</label>
-            <input placeholder="Company Name" id="email" type="text" name="message[Email Address]" value="{% if message is defined %}{{ message.subject }}{% endif %}">
+            <input id="email" type="text" name="message[Email Address]" value="{% if message is defined %}{{ message.subject }}{% endif %}">
             <!--{{ message is defined and message ? errorList(message.getErrors('subject')) }}-->
 
             <label for="phone">Subject</label>
-            <input placeholder="Subject" id="subject" type="text" name="message[Subject]" value="{% if message is defined %}{{ message.subject }}{% endif %}">
+            <input id="subject" type="text" name="message[Subject]" value="{% if message is defined %}{{ message.subject }}{% endif %}">
             <!--{{ message is defined and message ? errorList(message.getErrors('subject')) }}-->
-    </div> 
+    </div>
             <label for="message">Message</label>
-            <textarea placeholder="Body" rows="5" cols="40" id="message" name="message[Body]">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
+            <textarea rows="5" cols="40" id="message" name="message[Body]">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
             <!--{{ message is defined and message ? errorList(message.getErrors('message')) }}-->
             <input id="justforfun" name="justForFun" type="text">
 
     <input type="submit" value="Send">
 </form>
-</div>
