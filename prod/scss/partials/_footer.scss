@@ -100,9 +100,18 @@ footer {
 
 .social-list {
   @extend .plain-list;
+  @include clearfix;
+  text-align: center;
+  display: inline-block;
+  margin-top: 1em;
+  @media #{$medium} {
+    float: right;
+    margin-top: auto;
+  }
 }
 
 .social-list-item {
+  float: left;
   @media #{$medium} {
     text-align: right;
   }
@@ -114,9 +123,14 @@ footer {
 
 .social-list-item-icon {
   padding: 0 .25em;
+  margin: 0 .15em;
   width: 3.25em;
   transition: .2s all ease-in-out;
   &:hover {
     transform:scale(1.2,1.2);
+  }
+  @media #{$medium} {
+    padding: 0 0 0 .5em;
+    margin: 0 0 0 .25em;
   }
 }
