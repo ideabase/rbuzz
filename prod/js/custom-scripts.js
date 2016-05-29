@@ -10,8 +10,8 @@ $menulink.click(function() {
 });});
 
 $(document).ready(function() {
-  var $filtermenu = $('.filter-content'),
-    $filtermenulink = $('.filter-menu-link');
+  var $filtermenu = $('.sidebar-filter-content'),
+    $filtermenulink = $('.sidebar-filter');
 
 $filtermenulink.click(function() {
   $filtermenulink.toggleClass('active');
