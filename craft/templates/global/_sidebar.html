@@ -31,21 +31,44 @@
 	        </li>
 	    {% endnav %}
 	</ul>
-{% if entry.section.handle == 'video' %}
+{% if entry is defined %}
+	{% set handle = entry.getSection().handle %}
+	{% if handle == 'videoIndex' %}
+	{% set catName3  = craft.categories.group('videoType').first.group %}
+	<h5 class="filter-title">{{ catName3}}</h5>
+		<ul class="filter-list">
+		    {% nav category in craft.categories.group('videoType') %}
+		        <li class="filter-list-item">
+		            <a href="{{ category.url }}">{{ category.title }}</a>
+		            {% ifchildren %}
+		                <ul>
+		                    {% children %}
+		                </ul>
+		            {% endifchildren %}
+		        </li>
+		    {% endnav %}
+		</ul>
+	{% endif %}
+{% endif %}
+
+{% if category is defined %}
+{% set Video = craft.entries.section('video').relatedTo(category) %}
+{% if Video|length %}
 {% set catName3  = craft.categories.group('videoType').first.group %}
 <h5 class="filter-title">{{ catName3}}</h5>
 	<ul class="filter-list">
-	    {% nav category in craft.categories.group('videoType') %}
-	        <li class="filter-list-item">
-	            <a href="{{ category.url }}">{{ category.title }}</a>
-	            {% ifchildren %}
-	                <ul>
-	                    {% children %}
-	                </ul>
-	            {% endifchildren %}
-	        </li>
-	    {% endnav %}
+			{% nav category in craft.categories.group('videoType') %}
+					<li class="filter-list-item">
+							<a href="{{ category.url }}">{{ category.title }}</a>
+							{% ifchildren %}
+									<ul>
+											{% children %}
+									</ul>
+							{% endifchildren %}
+					</li>
+			{% endnav %}
 	</ul>
+{% endif %}
 {% endif %}
 
 {% set allEntries = craft.entries.section('blog').find() %}

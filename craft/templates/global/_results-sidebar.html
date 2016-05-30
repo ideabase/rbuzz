@@ -2,10 +2,12 @@
 <aside class="layout-split-left">
 	<a href="#filtermenu" class="sidebar-filter">Filter By</a>
 {% set catName  = craft.categories.group('gradeLevel').first.group %}
-{{ catName}}
-	<ul>
+
+<div class="sidebar-filter-content">
+<h5 class="filter-title">{{ catName}}</h5>
+	<ul class="filter-list">
 	    {% nav category in craft.categories.group('gradeLevel') %}
-	        <li>
+	        <li class="filter-list-item">
 	            <a href="{{ category.url }}">{{ category.title }}</a>
 	            {% ifchildren %}
 	                <ul>
@@ -16,10 +18,10 @@
 	    {% endnav %}
 	</ul>
 {% set catName2  = craft.categories.group('theme').first.group %}
-{{ catName2 }}
-	<ul>
+<h5 class="filter-title">{{ catName2 }}</h5>
+	<ul class="filter-list">
 	    {% nav category in craft.categories.group('theme') %}
-	        <li>
+	        <li class="filter-list-item">
 	            <a href="{{ category.url }}">{{ category.title }}</a>
 	            {% ifchildren %}
 	                <ul>
@@ -29,7 +31,25 @@
 	        </li>
 	    {% endnav %}
 	</ul>
-
+{% if entry is defined %}
+	{% set handle = entry.getSection().handle %}
+	{% if handle == 'videoIndex' %}
+	{% set catName3  = craft.categories.group('videoType').first.group %}
+	<h5 class="filter-title">{{ catName3}}</h5>
+		<ul class="filter-list">
+		    {% nav category in craft.categories.group('videoType') %}
+		        <li class="filter-list-item">
+		            <a href="{{ category.url }}">{{ category.title }}</a>
+		            {% ifchildren %}
+		                <ul>
+		                    {% children %}
+		                </ul>
+		            {% endifchildren %}
+		        </li>
+		    {% endnav %}
+		</ul>
+	{% endif %}
+{% endif %}
 
 {% set allEntries = craft.entries.section('blog').find() %}
 {% set allEntriesByYear = allEntries < 'postDate.year' %}
@@ -43,5 +63,6 @@
         {% endfor %}
     </ul>
 {% endfor %}
+</div>
 </aside>
 {% endblock %}

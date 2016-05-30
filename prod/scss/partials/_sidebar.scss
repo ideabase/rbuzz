@@ -10,6 +10,9 @@
   display: block;
   text-decoration: none;
   margin-bottom: 1em;
+  @media #{$medium} {
+    cursor: default;
+  }
 }
 
 .search-form {
@@ -19,11 +22,13 @@
   @media #{$medium} {
     float: right;
     width: 50%;
+    text-align: right;
   }
 }
 
 .search-form-field {
   min-width: 70%;
+  padding: .5em;
 }
 
 .search-form-icon {
