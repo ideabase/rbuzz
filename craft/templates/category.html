@@ -26,20 +26,7 @@
   {% if Video|length %}
       <ul class="posts-list">
         {% for entry in Video %}
-      			<a href="{{ entry.url }}" class="posts-list-item">
-              <li>
-          			{% set assets = entry.blogFeaturedImage %}
-          			{% for asset in assets %}
-          				<img src="{{ asset.url }}" />
-          			{% endfor %}
-                <h3 class="posts-title">{{ entry.title }}</h3>
-                <figcaption class="posts-description">{{ entry.blogShortDescription }}</figcaption>
-                <dl class="post-date">
-                  <dt>Posted on</dt>
-                  <dd>{{ entry.postDate | date("M Y") }}</dd>
-                </dl>
-              </li>
-            </a>
+      			{% include 'global/_posts-teaser.html' %}
       	{% endfor %}
     </ul>
 
@@ -47,24 +34,9 @@
   {% set Blog = craft.entries.section('blog').relatedTo(category) %}
 
   {% if Blog|length %}
-    <p>Blog Posts</p>
      <ul class="posts-list">
       {% for entry in Blog %}
-
-          <a href="{{ entry.url }}" class="posts-list-item">
-            <li>
-              {% set assets = entry.blogFeaturedImage %}
-              {% for asset in assets %}
-                <img src="{{ asset.url }}" />
-              {% endfor %}
-              <h3 class="posts-title">{{ entry.title }}</h3>
-              <figcaption class="posts-description">{{ entry.blogShortDescription }}</figcaption>
-              <dl class="post-date">
-                <dt>Posted on</dt>
-                <dd>{{ entry.postDate | date("M Y") }}</dd>
-              </dl>
-            </li>
-          </a>
+        {% include 'global/_posts-teaser.html' %}
       {% endfor %}
     </ul>
   {% endif %}

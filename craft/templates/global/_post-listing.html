@@ -1,0 +1,14 @@
+{% set handle = entry.getSection().handle %}
+{% if handle == 'blogIndex' %}
+  {% set sectionHandle = 'blog' %}
+{% endif %}
+{% if handle == 'videoIndex' %}
+  {% set sectionHandle = 'video' %}
+{% endif %}
+<section class="layout-split-right layout-centered">
+  <ul class="posts-list">
+    {% for entry in craft.entries.section(sectionHandle).find() %}
+        {% include 'global/_posts-teaser.html' %}
+    {% endfor %}
+  </ul>
+</section>

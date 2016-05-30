@@ -49,20 +49,7 @@
   	{% set entries = craft.entries.section('video').limit(3) %}
     <ul class="posts-list">
     	{% for entry in entries %}
-        <a href="{{ entry.url }}" class="posts-list-item">
-          <li>
-            {% set assets = entry.blogFeaturedImage %}
-            {% for asset in assets %}
-              <img src="{{ asset.url }}" />
-            {% endfor %}
-            <h3 class="posts-title">{{ entry.title }}</h3>
-            <figcaption class="posts-description">{{ entry.blogShortDescription }}</figcaption>
-            <dl class="post-date">
-              <dt>Posted on</dt>
-              <dd>{{ entry.postDate | date("M Y") }}</dd>
-            </dl>
-          </li>
-        </a>
+        {% include 'global/_posts-teaser.html' %}
     	{% endfor %}
     </ul>
     <a class="button button--red" href="#">Sign Up Button Field Here</a>
