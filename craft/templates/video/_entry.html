@@ -1,44 +1,46 @@
 {#
- # News entry template
+ # Video Entry Template
  # -------------------
- #
- # This template gets loaded whenever a News entry’s URL is
- # requested. That’s because the News section’s Template setting is
- # set to “news/_entry”, the path to this template.
- #
- # When this template is loaded, it will already have an ‘entry’
- # variable, set to the requested News entry.
- #
- # See this page for more details on how Craft routes requests:
- # http://craftcms.com/docs/routing
  #}
 
 {% extends "_layout" %}
 
 {% block content %}
-		{{ entry.videoUrl|videoEmbed }}
-		<h1>{{ entry.title }}</h1>
-		<p>{{ entry.blogShortDescription }}</p>
-		<ul>
-			<li>
-				{% for category in entry.blogTheme %}
-				    {{ category.title }}
-				{% endfor %}
-			</li>
-			<li>
-				{% for category in entry.blogGradeLevel %}
-				    {{ category.title }}
-				{% endfor %}
-			</li>
-		</ul>
-		<p>Posted on {{ entry.postDate | date("M Y") }}</p>
-
-		<p>{{ entry.videoDescription }}</p>
-
-		<h2>{{ entry.relatedPostsTitle }}</h2>
-			{% set category = craft.categories.group('theme') %}
-			{% set entries = craft.entries.section('video').relatedTo(category).id('not ' ~ entry.id).limit(3) %}
-			{% for entry in entries %}
-				{% include 'global/_posts-teaser.html' %}
-			{% endfor %}
+    <section class="feature-image layout-inner">
+      <div class="video-container">
+        {{ entry.videoUrl|videoEmbed }}
+      </div>
+    </section>
+    <article class="layout-inner">
+      <div class="layout-centered">
+    		<h2>{{ entry.title }}</h2>
+        <ul class="tags">
+    			<li>
+    				{% for category in entry.blogTheme %}
+    				    {{ category.title }}
+    				{% endfor %}
+    			</li>
+    			<li>
+    				{% for category in entry.blogGradeLevel %}
+    				    {{ category.title }}
+    				{% endfor %}
+    			</li>
+    		</ul>
+        <dl class="post-date">
+          <dt>Posted on</dt>
+          <dd>{{ entry.postDate | date("M Y") }}</dd>
+        </dl>
+      </div>
+      <div>{{ entry.videoDescription }}</div>
+    </article>
+    <section class="layout-inner layout-centered related-posts">
+    <h4>{{ entry.relatedPostsTitle }}</h4>
+      {% set category = craft.categories.group('theme') %}
+      {% set entries = craft.entries.section('video').relatedTo(category).id('not ' ~ entry.id).limit(3) %}
+      <ul class="posts-list">
+        {% for entry in entries %}
+          {% include 'global/_posts-teaser.html' %}
+        {% endfor %}
+      </ul>
+    </section>
 {% endblock %}
