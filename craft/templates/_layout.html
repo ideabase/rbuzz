@@ -9,8 +9,11 @@
  	<meta charset="utf-8" />
  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	{% include '_includes/_metadata.html' %}
+  <!-- Render SEO Metatags -->
+  {% hook 'seomaticRender' %}
+  <!-- Render Favicons -->
  	{% include '_includes/_favicons.html' %}
+  <!-- Render Above the Fold Critical CSS -->
  	{% include '_includes/_critical-css.html' %}
   <script>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
