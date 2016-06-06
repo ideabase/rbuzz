@@ -11,7 +11,7 @@ class AdminbarPlugin extends BasePlugin
   }
   public function getVersion()
   {
-    return '2.0.1';
+    return '2.0.2';
   }
   public function getSchemaVersion()
   {
@@ -90,5 +90,13 @@ class AdminbarPlugin extends BasePlugin
     return craft()->templates->render('adminbar/settings', array(
       'settings' => $this->getSettings(),
     ));
+  }
+  public function prepSettings($settings) {
+    // if last custom link is deleted, replace old settings with blank array
+    if (!isset($settings['customLinks'])) {
+      $settings['customLinks'] = array();
+    }
+
+    return $settings;
   }
 }
