@@ -19,7 +19,7 @@ return array(
         )
     ),
 
-    '.com' => array(
+    '.us' => array(
       'allowAutoUpdates' => false,
       'environmentVariables' => array(
           'baseUrl'  => 'http://readingbuzz.us/prod/',
