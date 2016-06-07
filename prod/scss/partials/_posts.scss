@@ -26,7 +26,9 @@ article ul {
 
 .posts-list-item {
   margin-top: 1.5em;
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
   @media #{$small-ish} {
     width: 45%;
   }
