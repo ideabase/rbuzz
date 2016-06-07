@@ -1,0 +1,17 @@
+@import '_clearfix';
+@import '_reset';
+@import '_variables';
+@import '_layout';
+@import '_header';
+@import '_slider';
+@import '_buttons';
+@import '_accessibility';
+@import '_callout';
+
+/* Global Styles */
+
+body {
+	font-family: $sans-serif;
+	color: $gray;
+	font-size: $basefontsize;
+}

@@ -112,6 +112,7 @@ footer {
 
 .social-list-item {
   float: left;
+  margin: 0 1em;
   @media #{$medium} {
     text-align: right;
   }
@@ -123,7 +124,6 @@ footer {
 
 .social-list-item-icon {
   padding: 0 .25em;
-  margin: 0 .15em;
   width: 3.25em;
   transition: .2s all ease-in-out;
   &:hover {

@@ -14,9 +14,15 @@ return array(
 
     '.dev' => array(
         'devMode' => true,
+        'environmentVariables' => array(
+            'baseUrl'  => 'http://readbuzz.dev/prod/',
+        )
     ),
 
-    '.com' => array(
+    '.us' => array(
       'allowAutoUpdates' => false,
+      'environmentVariables' => array(
+          'baseUrl'  => 'http://readingbuzz.us/prod/',
+      )
     )
 );

@@ -73,7 +73,6 @@
 </footer>
 
 <!-- Include Style Sheet -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <link href="{{ siteUrl }}/css/styles.css" type="text/css" rel="stylesheet" media="screen"/>
 <script>
   // Picture element HTML5 shiv
@@ -81,8 +80,6 @@
 </script>
 <script>
   // load a file with loadJS
+  loadJS( "{{ siteUrl }}/js/min/priority-scripts-min.js" );
   loadJS( "{{ siteUrl }}/js/min/custom-scripts-min.js" );
-  loadJS( "{{ siteUrl }}/js/ga.js" );
 </script>
-<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" defer></script>
-<script type="text/javascript" src="{{ siteUrl }}/js/min/custom-scripts-min.js" async defer></script>-->

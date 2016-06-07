@@ -1,3 +1,7 @@
+.js .owl-carousel .carousel-slide .carousel-slide-image-fallback {
+  display: none;
+}
+
 .carousel-slide {
     width: 100%;
 }
@@ -89,13 +93,13 @@
 }
 /* display none until init */
 .owl-carousel{
-	display: none;
+	//display: none;
 	position: relative;
 	width: 100%;
 	-ms-touch-action: pan-y;
 }
 .owl-carousel .owl-wrapper{
-	display: none;
+	//display: none;
 	position: relative;
 	-webkit-transform: translate3d(0px, 0px, 0px);
 }
