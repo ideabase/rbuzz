@@ -6,11 +6,12 @@
 {% extends "_layout" %}
 	{% block content %}
 
-	<section class="section-success panel-primary">
-			<h1 class="section-success__heading">Success Message</h1>
-			<div class="section-success__paragraph">
-			 <p>Success Text</p>
-			</div>
+	<section class="section-success">
+		<article>
+			<h3 class="section-success__heading">Thank You For Your Interest</h3>
+			<p>We will get back to you very soon.</p>
+			<a class="button section-success__button" href="{{ siteUrl }}">Return Home</a>
+		</article>
 	</section>
-	<a class="button button--red" href="{{ siteUrl }}">Return Home</a>
+	
 	{% endblock %}

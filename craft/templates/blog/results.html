@@ -22,7 +22,7 @@
 <div class="layout-split">
   {% include 'global/_sidebar.html' %}
   <section class="layout-split-right layout-centered">
-  {% if results|length %}
+    {% if results|length %}
     <ul class="posts-list">
       {% for entry in results %}
         {% include 'global/_posts-teaser.html' %}
@@ -31,6 +31,7 @@
     {% else %}
       <p>Sorry, we couldn't find anything related to “{{ query }}”.</p>
     {% endif %}
+    <p><a href="{{ url('blogs') }}">Back to Blog Index</a></p>
   </section>
 </div>
 {% endblock %}
