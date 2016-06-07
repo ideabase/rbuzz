@@ -61,16 +61,13 @@ header {
 	}
 }
 
-.layout-split {
-	@media #{$medium} {
-		display: flex;
-		justify-content: flex-end;
-	}
-}
-
 .heading-split {
 	float: left;
 	width: 50%;
+}
+
+.layout-split {
+	@include clearfix;
 }
 
 .layout-split-right {
@@ -79,8 +76,7 @@ header {
 	margin-right: auto;
 	@media #{$medium} {
 		width: 70%;
-		margin-right: inherit;
-		margin-left: auto;
+		float: right;
 	}
 	@media #{$large} {
 		width: 75%;
