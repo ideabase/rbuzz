@@ -11,7 +11,7 @@
               {% set assets = entry.blogFeaturedImage %}
               {% for asset in assets %}
               <!-- Add <img> fallback -->
-              <img class="carousel-slide-image carousel-slide-image-fallback" src="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}" />
+              <img class="carousel-slide-image carousel-slide-image-fallback" src="{{ asset.url('smallFeatureImageFallback') }}" alt="{{ asset.title }}" />
               <picture>
                 <!-- Add Fallback for IE9 -->
                 <!--[if IE 9]><video style="display: none;"><![endif]-->
