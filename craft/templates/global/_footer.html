@@ -15,7 +15,7 @@
         {%- set nodeClasses = nodeClasses|merge([node.listClass]) -%}
     {%- endif -%}
 
-    <li class="footer-section-list-item">
+    <li class="footer-section-list-item {% if nodeClasses|length %} {{ nodeClasses|join(' ') }}{% endif %}">
         <a href="{{ node.url }}" title="{{ node.name }}"{% if node.blank %} target="_blank"{% endif %}>{{ node.name }}</a>
         {% if node.hasChildren %}
             <ul class="nav__level{{ (node.level + 1) }}">
