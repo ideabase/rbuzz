@@ -8,7 +8,7 @@ header {
 		padding: $globalpadding $globalpadding*2;
 	}
 	@media #{$large} {
-		padding: $globalpadding*1.5 $globalpadding*4 $globalpadding $globalpadding*4;
+		padding: $globalpadding $globalpadding*4 $globalpadding/2 $globalpadding*4;
 	}
 	@media #{$x-large} {
 		padding: $globalpadding $globalpadding*6;
