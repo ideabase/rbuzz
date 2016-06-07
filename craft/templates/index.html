@@ -14,11 +14,11 @@
               <img class="carousel-slide-image carousel-slide-image-fallback" src="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}" />
               <picture>
                 <!-- Add Fallback for IE9 -->
-                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
                   <source srcset="{{ asset.url('largeFeatureImage') }}" media="(min-width: 1200px)">
                   <source srcset="{{ asset.url('mediumFeatureImage') }}" media="(min-width: 700px)">
+                <!--[if IE 9]></video><![endif]-->
                   <img class="carousel-slide-image" srcset="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}" />
-                  <!--[if IE 9]></video><![endif]-->
               </picture>
               {% endfor %}
               <figcaption class="carousel-slide-title">

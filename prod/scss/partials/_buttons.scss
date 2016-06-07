@@ -35,6 +35,7 @@
 		}
 	}
 	@media #{$medium} {
+		-js-display: flex; // JavaScript Fallback for IE9 //
 		display: flex;
 		justify-content: space-between;
 	}

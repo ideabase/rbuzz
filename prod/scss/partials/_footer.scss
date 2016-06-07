@@ -14,9 +14,9 @@ footer {
   }
 }
 
-footer {
+.footer-wrapper {
   @media #{$medium} {
-    -js-display: flex;
+    -js-display: flex; // JavaScript Fallback for IE9 //
     display: flex;
     flex-wrap: wrap;
   }
@@ -67,7 +67,7 @@ footer {
     width: 40%;
   }
   @media #{$large} {
-    width: 60%;
+    width: 59%;
   }
 }
 

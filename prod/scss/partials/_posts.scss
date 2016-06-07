@@ -18,6 +18,7 @@ article ul {
 .posts-list {
   @extend .plain-list;
   @media #{$small-ish} {
+    -js-display: flex; // JavaScript Fallback for IE9 //
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
