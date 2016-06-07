@@ -18,7 +18,10 @@ header {
 }
 
 .header-inner {
-	padding: $globalpadding $globalpadding*2;
+	padding: $globalpadding $globalpadding;
+	@media #{$small} {
+		padding: $globalpadding $globalpadding*2;
+	}
 	@media #{$medium} {
 		padding: 0;
 	}
