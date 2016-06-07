@@ -85,10 +85,9 @@ header {
 
 .layout-split-left {
 	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
 	@media #{$medium} {
 		width: 20%;
+		float: left;
 	}
 	@media #{$large} {
 		width: 20%;
