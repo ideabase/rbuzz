@@ -20,7 +20,6 @@ article ul {
   @media #{$small-ish} {
     -js-display: flex; // JavaScript Fallback for IE9 //
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
   }
 }
@@ -32,9 +31,11 @@ article ul {
   }
   @media #{$small-ish} {
     width: 45%;
+    margin-right: 5%;
   }
   @media #{$medium-ish} {
     width: 30%;
+    margin-right: 3%;
   }
 }
 
