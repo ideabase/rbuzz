@@ -23,23 +23,27 @@
   <section class="layout-split-right layout-centered">
   {% set Video = craft.entries.section('video').relatedTo(category) %}
 
-  {% if Video|length %}
+    {% if Video|length %}
       <ul class="posts-list">
         {% for entry in Video %}
       			{% include 'global/_posts-teaser.html' %}
       	{% endfor %}
-    </ul>
+      </ul>
 
-  {% endif %}
-  {% set Blog = craft.entries.section('blog').relatedTo(category) %}
+    {% endif %}
+    {% set Blog = craft.entries.section('blog').relatedTo(category) %}
 
-  {% if Blog|length %}
-     <ul class="posts-list">
-      {% for entry in Blog %}
-        {% include 'global/_posts-teaser.html' %}
-      {% endfor %}
-    </ul>
-  {% endif %}
+    {% if Blog|length %}
+      <ul class="posts-list">
+        {% for entry in Blog %}
+          {% include 'global/_posts-teaser.html' %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <p class="back-to_button-container" >
+      <a class="button--blue button back-to" href="{{ url('blogs') }}">Back to Blog Index</a>
+    </p>
   </section>
+
 </div>
 {% endblock %}

@@ -27,6 +27,14 @@
 	}
 }
 
+.button--blue {
+	background-color: $blue;
+	border-color: $darkblue;
+	&:hover {
+		background-color: $darkblue;
+	}
+}
+
 .button-grid {
 	.button {
 		display: block;

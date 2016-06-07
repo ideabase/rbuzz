@@ -34,7 +34,9 @@
     {% else %}
       <p>Sorry, we couldn't find anything related to “{{ query }}”.</p>
     {% endif %}
-    <p><a href="{{ url('videos') }}">Back to Video Index</a></p>
+    <p class="back-to_button-container" >
+      <a class="button--blue button back-to" href="{{ url('videos') }}">Back to Video Index</a>
+    </p>
   </section>
 </div>
 {% endblock %}

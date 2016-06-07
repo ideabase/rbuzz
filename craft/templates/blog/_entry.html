@@ -63,6 +63,7 @@
 		    {% endif %}
 
 		{% endfor %}
+
 	</article>
   <section class="layout-inner layout-centered related-posts">
   <h4>{{ entry.relatedPostsTitle }}</h4>
@@ -73,5 +74,8 @@
         {% include 'global/_posts-teaser.html' %}
       {% endfor %}
     </ul>
+    <p class="back-to_button-container" >
+      <a class="button--blue button back-to" href="{{ url('blogs') }}">Back to Blog Index</a>
+    </p>
   </section>
 {% endblock %}
