@@ -58,3 +58,5 @@ prod/config.codekit
 config.codekit
 carousel.jpg
 mountainDesktop.jpg
+prod/img/global/newsletter2.svg
+.gitignore
