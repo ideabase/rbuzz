@@ -63,7 +63,12 @@ header {
 
 .heading-split {
 	float: left;
-	width: 50%;
+	text-align: center;
+	width: 100%;
+	@media #{$medium} {
+		width: 50%;
+		text-align: left;
+	}
 }
 
 .layout-split {
@@ -74,9 +79,11 @@ header {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 	@media #{$medium} {
 		width: 70%;
 		float: right;
+		text-align: left;
 	}
 	@media #{$large} {
 		width: 75%;
@@ -85,6 +92,7 @@ header {
 
 .layout-split-left {
 	width: 90%;
+	margin: 0 auto;
 	@media #{$medium} {
 		width: 20%;
 		float: left;

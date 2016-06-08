@@ -34,7 +34,7 @@
       <div>{{ entry.videoDescription }}</div>
     </article>
     <section class="layout-inner layout-centered related-posts">
-    <h4>{{ entry.relatedPostsTitle }}</h4>
+    <h4 class="related-posts__title">{{ miscGlobals.relatedPostsTitle }}</h4>
       {% set category = craft.categories.group('theme') %}
       {% set entries = craft.entries.section('video').relatedTo(category).id('not ' ~ entry.id).limit(3) %}
       <ul class="posts-list">

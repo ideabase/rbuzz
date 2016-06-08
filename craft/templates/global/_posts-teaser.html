@@ -1,14 +1,18 @@
 <a href="{{ entry.url }}" class="posts-list-item">
   <li>
     {% set assets = entry.blogFeaturedImage %}
-    {% for asset in assets %}
-      <img src="{{ asset.url('postThumbnail') }}" />
-    {% endfor %}
+    {% if assets|length %}
+      {% for asset in assets %}
+        <div class="posts-list-item__image__container">
+          <img class="posts-list-item__image" src="{{ asset.url('postThumbnail') }}" />
+        </div>
+      {% endfor %}
+    {% endif %}
     <h3 class="posts-title">{{ entry.title }}</h3>
-    <figcaption class="posts-description">{{ entry.blogShortDescription }}</figcaption>
     <dl class="post-date">
-      <dt>Posted on</dt>
-      <dd>{{ entry.postDate | date("M Y") }}</dd>
+      <dt>Posted</dt>
+      <dd><date>{{ entry.postDate.format('F d, Y') }}</date></dd>
     </dl>
+    <figcaption class="posts-description">{{ entry.blogShortDescription }}</figcaption>
   </li>
 </a>
