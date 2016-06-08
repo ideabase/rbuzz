@@ -1,0 +1,49 @@
+{% block content %}
+<aside class="layout-split-left">
+	<a href="#filtermenu" class="sidebar-filter">Filter By</a>
+{% set catName  = craft.categories.group('blogGradeLevel').first.group %}
+
+<div class="sidebar-filter-content">
+<h5 class="filter-title">{{ catName}}</h5>
+	<ul class="filter-list">
+	    {% nav category in craft.categories.group('blogGradeLevel') %}
+	        <li class="filter-list-item">
+	            <a href="{{ category.url }}">{{ category.title }}</a>
+	            {% ifchildren %}
+	                <ul>
+	                    {% children %}
+	                </ul>
+	            {% endifchildren %}
+	        </li>
+	    {% endnav %}
+	</ul>
+{% set catName2  = craft.categories.group('blogTheme').first.group %}
+<h5 class="filter-title">{{ catName2 }}</h5>
+	<ul class="filter-list">
+	    {% nav category in craft.categories.group('blogTheme') %}
+	        <li class="filter-list-item">
+	            <a href="{{ category.url }}">{{ category.title }}</a>
+	            {% ifchildren %}
+	                <ul>
+	                    {% children %}
+	                </ul>
+	            {% endifchildren %}
+	        </li>
+	    {% endnav %}
+	</ul>
+
+{% set allEntries = craft.entries.section('blog').find() %}
+{% set allEntriesByYear = allEntries < 'postDate.year' %}
+
+{% for allEntries in allEntriesByYear %}
+    <h2>{{ year }}</h2>
+
+    <ul>
+        {% for entry in entriesInYear %}
+            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+</div>
+</aside>
+{% endblock %}

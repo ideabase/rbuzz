@@ -1,35 +1,36 @@
 {#
- # Blog search results template
+ # Blog Category Template
  # -------------------
  #}
 
 {% extends "_layout" %}
-{% block content %}
-{% set query = craft.request.getParam('q') %}
-{% set results = craft.entries.search(query).order('score').section('blog') %}
 
+{% block content %}
 <div class="layout-split">
   <section class="layout-split-right">
-  	<h1>Results for “{{ query }}”</h1>
+  	<h1 class="heading-split">{{ category.title }}</h1>
     <nav class="search-form">
       <form action="{{ url('blog/results') }}">
-        <input type="search" id="fname" name="q" class="search">
+        <input placeholder="Type a Keyword" type="search" id="fname" name="q" class="search-form-field">
         <input type="submit" value="Search" class="search-form-icon">
       </form>
     </nav>
   </section>
 </div>
+
 <div class="layout-split">
-  {% include 'global/_blog-sidebar.html' %}
+{% include 'global/_blog-sidebar.html' %}
   <section class="layout-split-right layout-centered">
-    {% if results|length %}
-    <ul class="posts-list">
-      {% for entry in results %}
-        {% include 'global/_posts-teaser.html' %}
-      {% endfor %}
-    </ul>
-    {% else %}
-      <p>Sorry, we couldn't find anything related to “{{ query }}”.</p>
+  
+
+    {% set Blog = craft.entries.section('blog').relatedTo(category) %}
+
+    {% if Blog|length %}
+      <ul class="posts-list">
+        {% for entry in Blog %}
+          {% include 'global/_posts-teaser.html' %}
+        {% endfor %}
+      </ul>
     {% endif %}
     {% set BackToIndex = miscGlobals.backToBlogText %}
     {% for entry in miscGlobals.backToBlogIndex %}
@@ -38,5 +39,6 @@
       </p>
     {% endfor %}
   </section>
+
 </div>
 {% endblock %}
