@@ -32,9 +32,12 @@
         {% endfor %}
       </ul>
     {% endif %}
-    <p class="back-to_button-container" >
-      <a class="button--blue button back-to" href="{{ url('videos') }}">Back to Video Index</a>
-    </p>
+    {% set BackToIndex = miscGlobals.backToVideoText %}
+    {% for entry in miscGlobals.backToVideoIndex %}
+      <p class="back-to_button-container" >
+        <a class="button--blue button back-to" href="{{ entry.url }}">{{ BackToIndex }}</a>
+      </p>
+    {% endfor %}
   </section>
 
 </div>
