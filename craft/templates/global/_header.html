@@ -1,3 +1,32 @@
+{% set nav = craft.amNav.getNavRaw("mainMenu") %}
+
+{% macro addNodeToNavigation(node, index) %}
+    {%- set nodeClasses = [] -%}
+    {%- if node.hasChildren -%}
+        {%- set nodeClasses = nodeClasses|merge(['has-children']) -%}
+    {%- endif -%}
+    {%- if node.active or node.hasActiveChild -%}
+        {%- set nodeClasses = nodeClasses|merge(['active']) -%}
+    {%- endif -%}
+    {%- if node.level == 1 and index == 1 -%}
+        {%- set nodeClasses = nodeClasses|merge(['first']) -%}
+    {%- endif -%}
+    {%- if node.listClass|length -%}
+        {%- set nodeClasses = nodeClasses|merge([node.listClass]) -%}
+    {%- endif -%}
+
+    <li {% if nodeClasses|length %} class="{{ nodeClasses|join(' ') }}"{% endif %}>
+        <a href="{{ node.url }}" title="{{ node.name }}"{% if node.blank %} target="_blank"{% endif %}>{{ node.name }}</a>
+        {% if node.hasChildren %}
+            <ul class="nav__level{{ (node.level + 1) }}">
+                {% for subnode in node.children %}
+                    {{ _self.addNodeToNavigation(subnode, loop.index) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro %}
+
 {% cache globally %}
 <header role="banner">
 	<div class="header-inner">
@@ -12,10 +41,16 @@
     <a href="#menu" class="menu-link">Menu</a>
 	</div>
 	<nav id="menu" role="navigation">
-		 {{ craft.amNav.getNav("mainMenu") }}
+			<ul>
+			{% endcache %}
+			{% for node in nav %}
+					{{ _self.addNodeToNavigation(node, loop.index) }}
+			{% endfor %}
+			{% cache globally %}
+			</ul>
 		 {% for entry in header.alreadyAMemberPage %}
 		 	<a class="link-supplemental" href="{{ entry.url }}">{{ header.alreadyAMember }}</a></h1>
 		 {% endfor %}
 	</nav>
-{% endcache %}
 </header>
+{% endcache %}

@@ -121,6 +121,10 @@ header nav li a {
 	}
 }
 
+header nav li.active a {
+	color: $blue;
+}
+
 header nav li:nth-last-child(2) a {
 	border-bottom: none;
 }
@@ -139,6 +143,11 @@ header nav li:last-child a {
 	&:hover {
 		color: white;
 	}
+}
+
+header nav li.active:last-child a {
+	color: white ;
+	background-color: $darkred;
 }
 
 header nav li {

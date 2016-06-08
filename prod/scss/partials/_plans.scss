@@ -4,6 +4,7 @@
   margin: 2em auto 0 auto;
   @media #{$medium} {
     width: auto;
+    -js-display: flex; // JavaScript Fallback for IE9 //
     display: flex;
     justify-content: space-between;
   }
