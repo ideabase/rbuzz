@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^(.*)$ /prod/$1 [L]
