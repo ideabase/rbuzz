@@ -1,3 +1,11 @@
+/* Global Styles */
+
+body {
+	font-family: $sans-serif;
+	color: $darkgray;
+	font-size: $basefontsize;
+}
+
 p {
   font-size: 1.05em;
   line-height: 1.7;

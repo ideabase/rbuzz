@@ -9,7 +9,7 @@ footer {
   &:before {
     content: "";
     width: 100%;
-    border-top: 1px solid $darkgray;
+    border-top: 1px solid $gray;
     display: block;
   }
 }
@@ -88,10 +88,10 @@ footer {
 
 .footer-section-list-item {
   font-size: 1.1em;
-  color: $gray;
+  color: $darkgray;
   margin: .75em 0;
   a {
-    color: $gray;
+    color: $darkgray;
     &:hover {
       color: $blue;
     }
