@@ -36,8 +36,8 @@
     </ul>
   </section>
 
-  <section class="layout-full callout">
-      <p>{{ entry.callToActionMessage }}</p>
+  <section class="layout-full">
+      <h3 class="callout">{{ entry.callToActionMessage }}</h3>
   </section>
   <section class="layout-inner layout-centered">
     <h1>{{ entry.servicesTitle }}</h1>
@@ -50,7 +50,7 @@
           <li class="infographic-list-item">
     			{% set image = block.icon.first() %}
     				{% if image %}
-    					<img class="infographic-list-item-icon" alt="{{ block.infoTitle }}" src="{{ image.getUrl('') }}">
+    					<img class="infographic-list-item-icon" alt="" src="{{ image.getUrl('') }}">
     				{% endif %}
             <figcaption class="infographic-list-item-name">{{ block.infoTitle }}</figcaption>
           </li>
@@ -59,7 +59,7 @@
     </ul>
   </section>
   <section class="layout-inner layout-centered">
-  	<div class="callout-secondary">{{ entry.infographicDescription	}}</div>
+  	<div class="callout-secondary"><h3>{{ entry.infographicDescription }}</h3></div>
     <div class="button-grid">
   	{% set plansButton = entry.viewPlansButton %}
   	{% for entry in entry.plansEntry %}

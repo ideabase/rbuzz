@@ -32,11 +32,13 @@ footer {
   background-position: top right;
   @media #{$medium} {
     margin-top: 0;
-    width: 100%;
+    margin-top:-5em;
+    width: 85%;
+    float: right;
     background-size: 800px auto;
   }
   @media #{$large} {
-    margin-top:-5em
+    width: 100%;
   }
 }
 

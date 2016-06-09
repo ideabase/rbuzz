@@ -16,7 +16,7 @@
     {%- endif -%}
 
     <li {% if nodeClasses|length %} class="{{ nodeClasses|join(' ') }}"{% endif %}>
-        <a href="{{ node.url }}" title="{{ node.name }}"{% if node.blank %} target="_blank"{% endif %}>{{ node.name }}</a>
+        <a href="{{ node.url }}" {% if node.blank %} target="_blank"{% endif %}>{{ node.name }}</a>
         {% if node.hasChildren %}
             <ul class="nav__level{{ (node.level + 1) }}">
                 {% for subnode in node.children %}
