@@ -4,7 +4,7 @@
 {% set catName  = craft.categories.group('blogGradeLevel').first.group %}
 
 <div class="sidebar-filter-content">
-<h5 class="filter-title">{{ catName}}</h5>
+<h5 class="filter-title">Grade Level</h5>
 	<ul class="filter-list">
 	    {% nav category in craft.categories.group('blogGradeLevel') %}
 	        <li class="filter-list-item">
@@ -18,7 +18,7 @@
 	    {% endnav %}
 	</ul>
 {% set catName2  = craft.categories.group('blogTheme').first.group %}
-<h5 class="filter-title">{{ catName2 }}</h5>
+<h5 class="filter-title">Theme</h5>
 	<ul class="filter-list">
 	    {% nav category in craft.categories.group('blogTheme') %}
 	        <li class="filter-list-item">
