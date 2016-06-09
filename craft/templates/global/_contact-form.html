@@ -27,15 +27,18 @@
               <!--{{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}-->
       </div>
     </div>
-            <label for="Email">Email</label>
+            <label for="email">Email Address</label>
             <input id="email" type="text" name="message[Email Address]" value="{% if message is defined %}{{ message.subject }}{% endif %}">
             <!--{{ message is defined and message ? errorList(message.getErrors('subject')) }}-->
-
-            <label for="phone">Subject</label>
-            <input id="subject" type="text" name="message[Subject]" value="{% if message is defined %}{{ message.subject }}{% endif %}">
-            <!--{{ message is defined and message ? errorList(message.getErrors('subject')) }}-->
-    </div>
-            <label for="message">Message</label>
+            <label for="subject">Message Subject</label>
+            <select id="subject">
+              <option selected disabled>--Choose One--</option>
+              <option value="Sign Up">Sign Up</option>
+              <option value="Question">Question</option>
+              <option value="Comment">Comment</option>
+              <option value="Other">Other</option>
+            </select>
+            <label for="message">Your Message</label>
             <textarea rows="5" cols="40" id="message" name="message[Body]">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
             <!--{{ message is defined and message ? errorList(message.getErrors('message')) }}-->
             <input id="justforfun" name="justForFun" type="text">
