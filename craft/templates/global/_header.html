@@ -38,9 +38,9 @@
 					<!-- Need to add alt text for logo -->
 			{% endif %}
 		</a>
-    <a href="#menu" class="menu-link">Menu</a>
+    <a id="menu-button" href="#menu" aria-label="Menu" aria-expanded="false" aria-controls="menu" class="menu-link">Menu</a>
 	</div>
-	<nav id="menu" role="navigation">
+	<nav id="menu" aria-labelledby="menu-button" role="navigation">
 			<ul>
 			{% endcache %}
 			{% for node in nav %}

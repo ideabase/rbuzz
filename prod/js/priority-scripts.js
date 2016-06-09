@@ -3,13 +3,25 @@ $(document).ready(function() {
   $('body').removeClass('no-js');
 });
 
+$.fn.toggleAttr = function(attr, attr1, attr2) {
+  return this.each(function() {
+    var self = $(this);
+    if (self.attr(attr) == attr1)
+      self.attr(attr, attr2);
+    else
+      self.attr(attr, attr1);
+  });
+};
+
 $(document).ready(function() {
   var $menu = $('#menu'),
     $menulink = $('.menu-link');
 
   $menulink.click(function() {
     $menulink.toggleClass('active');
+    $menulink.toggleAttr('aria-expanded', 'true', 'false');
     $menu.toggleClass('active');
+    $menu.toggleAttr('aria-hidden', 'false','true');
     return false;
   });
 
@@ -18,10 +30,24 @@ $(document).ready(function() {
 
   $filtermenulink.click(function() {
   $filtermenulink.toggleClass('active');
+  $filtermenulink.toggleAttr('aria-expanded', 'true', 'false');
   $filtermenu.toggleClass('active');
+  $filtermenu.toggleAttr('aria-hidden', 'false','true');
   return false;
   });
 });
+
+//Check if at small screen - if so, add aria attribute to menu for accessibility
+if($(window).innerWidth() <= 800) {
+      $(document).ready(function() {
+        var $menu = $('#menu');
+        $menu.attr('aria-hidden', 'true');
+        var $filtermenu = $('.sidebar-filter-content');
+        $filtermenu.attr('aria-hidden', 'true');
+        var $filtermenulink = $('.sidebar-filter');
+        $filtermenulink.attr('aria-expanded', 'false');
+      });
+}
 
 // Owl Carousel //
 
