@@ -103,9 +103,11 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 
 $(".owl-carousel").owlCarousel({
 
-      navigation : false, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
+      navigation : true,
+      autoPlay : true,
+      autoPlaySpeed : 5000,
+      autoPlayTimeout : 8000,
+      paginationSpeed : 800,
       singleItem : true,
       lazyLoad : true,
   });

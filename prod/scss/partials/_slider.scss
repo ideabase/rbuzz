@@ -16,6 +16,13 @@
   color: white;
 }
 
+.owl-buttons {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  display: none;
+}
+
 .owl-carousel .carousel-slide img {
   display: block;
   width: 100%;
