@@ -11,6 +11,7 @@
   	<h1 class="heading-split">{{ entry.title }}</h1>
     <nav class="search-form">
       <form action="{{ url('blog/results') }}">
+        <label class="search-form-label" class="hidden">Search</label>
         <input placeholder="Type a Keyword" type="search" id="fname" name="q" class="search-form-field">
         <input type="submit" value="Search" class="search-form-icon">
       </form>

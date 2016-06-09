@@ -4,7 +4,7 @@
     {% if assets|length %}
       {% for asset in assets %}
         <div class="posts-list-item__image__container">
-          <img class="posts-list-item__image" src="{{ asset.url('postThumbnail') }}" />
+          <img class="posts-list-item__image" alt="{{ asset.title }}" src="{{ asset.url('postThumbnail') }}" />
         </div>
       {% endfor %}
     {% endif %}

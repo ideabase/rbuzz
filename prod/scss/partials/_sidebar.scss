@@ -34,6 +34,10 @@
   padding: .5em;
 }
 
+.search-form-label {
+  @include hidden;
+}
+
 .search-form-icon {
   text-indent: -9999px;
   width: 40px;
