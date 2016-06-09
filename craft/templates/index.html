@@ -66,9 +66,9 @@
   		<a class="button button--white" href="{{ entry.url }}">{{ plansButton }}</a>
   	{% endfor %}
 
-  	{% set signUpButton = entry.signUpButton %}
-  	{% for entry in entry.signUpEntry %}
-  		<a class="button button--red" href="{{ entry.url }}">{{ signUpButton }}</a>
+  	{% set signUp = miscGlobals.signUpButton %}
+  	{% for entry in miscGlobals.signUpEntry %}
+  		<a class="button button--red" href="{{ entry.url }}">{{ signUp }}</a>
   	{% endfor %}
     </div>
   </section>

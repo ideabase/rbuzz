@@ -52,6 +52,22 @@
         {% include 'global/_posts-teaser.html' %}
     	{% endfor %}
     </ul>
-    <a class="button button--red" href="#">Sign Up Button Field Here</a>
+
+    {% set signUp = miscGlobals.signUpButton %}
+    {% for entry in miscGlobals.signUpEntry %}
+    <p class="signup-button-container">
+      <a class="button button--red" href="{{ entry.url }}">{{ signUp }}</a>
+    </p>
+    {% endfor %}
+
   </section>
+
 {% endblock %}
+
+
+
+
+
+
+
+
