@@ -9,8 +9,8 @@
     {% set assets = entry.blogFeaturedImage %}
     {% for asset in assets %}
     <picture>
-        <source srcset="{{ asset.url('largeFeatureImage') }}" media="(min-width: 1200px)">
-        <source srcset="{{ asset.url('mediumFeatureImage') }}" media="(min-width: 700px)">
+        <source srcset="{{ asset.url('postLargeFeatureImage') }}" media="(min-width: 1000px)">
+        <source srcset="{{ asset.url('mediumFeatureImage') }}" media="(min-width: 600px)">
         <img class="carousel-slide-image" srcset="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}">
     </picture>
     {% endfor %}
@@ -19,20 +19,16 @@
     <div class="layout-centered">
   		<h2>{{ entry.title }}</h2>
   		<ul class="tags">
-  			<li>
   				{% for category in entry.blogTheme %}
-  				    {{ category.title }}
+              <li>{{ category.title }}</li>
   				{% endfor %}
-  			</li>
-  			<li>
   				{% for category in entry.blogGradeLevel %}
-  				    {{ category.title }}
+  				    <li>{{ category.title }}</li>
   				{% endfor %}
-  			</li>
   		</ul>
   		<dl class="post-date">
-        <dt>Posted on</dt>
-        <dd>{{ entry.postDate | date("M Y") }}</dd>
+        <dt>Posted</dt>
+        <dd><date>{{ entry.postDate.format('F d, Y') }}</date></dd>
       </dl>
     </div>
 
@@ -66,7 +62,7 @@
 
 	</article>
   <section class="layout-inner layout-centered related-posts">
-  <h4>{{ entry.relatedPostsTitle }}</h4>
+  <h4 class="related-posts__title">{{ miscGlobals.relatedPostsTitle }}</h4>
     {% set category = craft.categories.group('theme') %}
     {% set entries = craft.entries.section('blog').relatedTo(category).id('not ' ~ entry.id).limit(3) %}
     <ul class="posts-list">

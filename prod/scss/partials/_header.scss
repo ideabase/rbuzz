@@ -19,6 +19,9 @@ header {
     @media #{$medium} {
 	    display: none;
 	}
+	&.active {
+		background-color: $darkblue;
+	}
 }
 
 .logo {
@@ -83,6 +86,7 @@ header nav {
 
 .js header nav.active {
 	max-height: 17em;
+	margin-bottom: 1.5em;
 }
 
 header nav ul {

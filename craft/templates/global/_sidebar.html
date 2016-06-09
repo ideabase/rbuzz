@@ -1,9 +1,9 @@
 {% block content %}
 <aside class="layout-split-left">
-	<a href="#filtermenu" class="sidebar-filter">Filter By</a>
+	<a href="#filtermenu" class="sidebar-filter" aria-controls="filter" aria-label="Filter">Filter By</a>
 {% set catName  = craft.categories.group('gradeLevel').first.group %}
 
-<div class="sidebar-filter-content">
+<div id="filter" aria-labelledby="filtermenu" class="sidebar-filter-content">
 <h5 class="filter-title">{{ catName}}</h5>
 	<ul class="filter-list">
 	    {% nav category in craft.categories.group('gradeLevel') %}

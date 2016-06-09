@@ -1,9 +1,15 @@
 .tags {
   @extend h5;
   @extend .plain-list;
-  display: inline-flex;
+  display: block;
+  font-style: normal;
+  font-family: $sans-serif;
+  width: 100%;
+  text-align: center;
+  margin-bottom: .5em;
   li {
     margin-right: 1em;
+    display: inline-block;
   }
 }
 
@@ -12,7 +18,10 @@ article ul {
 }
 
 .related-posts {
-  margin-top: 3em;
+  margin-top: 5em;
+  .related-posts__title {
+    margin-bottom: 1em;
+  }
 }
 
 .posts-list {
@@ -27,13 +36,51 @@ article ul {
 .posts-list-item {
   margin-top: 1.5em;
   text-decoration: none;
+  margin-bottom: 1.5em;
+  display: inline-block;
+  text-align: center;
   @media #{$small-ish} {
     width: 45%;
-    margin-right: 5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
-  @media #{$medium-ish} {
-    width: 30%;
-    margin-right: 3%;
+  @media #{$large} {
+    width: 28%;
+  }
+  &:hover, &:focus {
+    .posts-title {
+      color: $darkred;
+    }
+    .posts-list-item__image__container:after {
+      opacity: .3;
+    }
+  }
+}
+
+.posts-list-item__image {
+  position: relative;
+}
+
+.posts-list-item__image__container {
+  position: relative;
+  width: 80%;
+  max-width: 300px;
+  margin: 0 auto;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    z-index:1000;
+    transition: .3s all ease-in-out;
+    overflow: hidden;
+  }
+  @media #{$small-ish} {
+    width: 100%;
   }
 }
 
@@ -41,18 +88,22 @@ article ul {
   margin-bottom: .5em;
 }
 
+.posts-description {
+  color: $gray;
+}
+
 .post-date {
-  font-size: 1em;
+  font-size: .95em;
   text-transform: uppercase;
   font-weight: 700;
   color: $gray;
   display: inline-flex;
-  margin-top: 1.5em;
-  margin-bottom: 2em;
+  margin-top: .5em;
+  margin-bottom: 1em;
   dt {
     &:after {
     content: "";
-    width: .35em;
+    width: .25em;
     display: inline-block;
     }
   }
@@ -60,8 +111,3 @@ article ul {
 
 .back-to_button-container {margin-top: 2em}
 .back-to {display: inline-block}
-
-
-
-
-
