@@ -13,6 +13,7 @@ return array(
     ),
 
     '.dev' => array(
+        'allowAutoUpdates' => true,
         'devMode' => true,
         'environmentVariables' => array(
             'baseUrl'  => 'http://readbuzz.dev/prod/',

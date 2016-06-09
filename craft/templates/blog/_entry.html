@@ -9,8 +9,8 @@
     {% set assets = entry.blogFeaturedImage %}
     {% for asset in assets %}
     <picture>
-        <source srcset="{{ asset.url('largeFeatureImage') }}" media="(min-width: 1200px)">
-        <source srcset="{{ asset.url('mediumFeatureImage') }}" media="(min-width: 700px)">
+        <source srcset="{{ asset.url('postLargeFeatureImage') }}" media="(min-width: 1000px)">
+        <source srcset="{{ asset.url('mediumFeatureImage') }}" media="(min-width: 600px)">
         <img class="carousel-slide-image" srcset="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}">
     </picture>
     {% endfor %}

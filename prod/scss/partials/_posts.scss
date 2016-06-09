@@ -1,9 +1,15 @@
 .tags {
   @extend h5;
   @extend .plain-list;
-  display: inline-flex;
+  display: block;
+  font-style: normal;
+  font-family: $sans-serif;
+  width: 100%;
+  text-align: center;
+  margin-bottom: .5em;
   li {
     margin-right: 1em;
+    display: inline-block;
   }
 }
 
