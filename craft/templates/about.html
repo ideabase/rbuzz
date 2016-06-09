@@ -18,7 +18,7 @@
         {% set headshot = entry.staffHeadshot %}
         {% for asset in headshot %}
         <div class="bio-list-item-headshot">
-          <img src="{{ asset.url('profile') }}" />
+          <img src="{{ asset.url('profile') }}" alt="{{ asset.title }}" />
         </div>
         {% endfor %}
         <div class="bio-list-item-description">
