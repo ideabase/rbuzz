@@ -46,6 +46,8 @@ header {
 
 .layout-centered {
 	text-align: center;
+	margin-bottom: .75em;
+	@include clearfix;
 }
 
 .layout-inner {

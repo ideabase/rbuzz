@@ -26,6 +26,7 @@ article ul {
 
 .posts-list {
   @extend .plain-list;
+  margin-bottom: 2em;
   @media #{$small-ish} {
     -js-display: flex; // JavaScript Fallback for IE9 //
     display: flex;
