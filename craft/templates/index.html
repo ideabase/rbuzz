@@ -8,10 +8,14 @@
     <ul class="owl-carousel owl-theme" aria-label="Featured News Items">
         {% for entry in entry.featuredPost %}
           <li class="carousel-slide">
+              {% if loop.first %}
+                  {% set assets = entry.blogFeaturedImage %}
+                  {% for asset in assets %}
+                    <img class="carousel-slide-image carousel-slide-image-fallback" src="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}" />
+                  {% endfor %}
+              {% endif %}
               {% set assets = entry.blogFeaturedImage %}
               {% for asset in assets %}
-              <!-- Add <img> fallback -->
-              <img class="carousel-slide-image carousel-slide-image-fallback" src="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}" />
               <picture>
                 <!-- Add Fallback for IE9 -->
                 <!--[if IE 9]><video style="display: none;"><![endif]-->
