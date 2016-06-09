@@ -11,7 +11,8 @@
   	<h1 class="heading-split">{{ entry.title }}</h1>
     <nav class="search-form">
       <form action="{{ url('video/results') }}">
-        <input placeholder="Type a Keyword" type="search" id="fname" name="q" class="search-form-field">
+        <label for="search-input" class="search-form-label" class="hidden">Search</label>
+        <input id="search-input" placeholder="Search for Keywords" type="search" name="q" class="search-form-field">
         <input type="submit" value="Search" class="search-form-icon">
       </form>
     </nav>
