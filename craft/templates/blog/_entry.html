@@ -19,20 +19,16 @@
     <div class="layout-centered">
   		<h2>{{ entry.title }}</h2>
   		<ul class="tags">
-  			<li>
   				{% for category in entry.blogTheme %}
-  				    {{ category.title }}
+              <li>{{ category.title }}</li>
   				{% endfor %}
-  			</li>
-  			<li>
   				{% for category in entry.blogGradeLevel %}
-  				    {{ category.title }}
+  				    <li>{{ category.title }}</li>
   				{% endfor %}
-  			</li>
   		</ul>
   		<dl class="post-date">
-        <dt>Posted on</dt>
-        <dd>{{ entry.postDate | date("M Y") }}</dd>
+        <dt>Posted</dt>
+        <dd><date>{{ entry.postDate.format('F d, Y') }}</date></dd>
       </dl>
     </div>
 

@@ -27,8 +27,8 @@
     			</li>
     		</ul>
         <dl class="post-date">
-          <dt>Posted on</dt>
-          <dd>{{ entry.postDate | date("M Y") }}</dd>
+          <dt>Posted</dt>
+          <dd><date>{{ entry.postDate.format('F d, Y') }}</date></dd>
         </dl>
       </div>
       <div>{{ entry.videoDescription }}</div>
