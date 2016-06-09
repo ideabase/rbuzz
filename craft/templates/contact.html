@@ -8,11 +8,11 @@
 {% block content %}
   <section class="layout-inner layout-centered">
   	<h1>{{ entry.title }}</h1>
-  	<p>{{ entry.description }}</p>
+  	{{ entry.description }}
   </section>
 	{% include 'global/_contact-form.html' %}
   <section id="member" class="layout-inner layout-centered">
-    <h4>Already a Member? These Fields Need Created</h4>
-    <p>This field needs created.  Once you've signed up, you should have received a welcome email with a private link to view your latest content. Can't find the email? Let us know by emailing readingbuzzllc@gmail.com and we'll get back to you right away!</p>
+    <h4>{{ entry.subheader }}</h4>
+    {{ entry.bottomSection }}
   </section>
 {% endblock %}
