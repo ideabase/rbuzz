@@ -36,3 +36,10 @@
     font-weight: normal;
   }
 }
+
+.callout-secondary--small {
+  font-size: 1em;
+  @media #{$medium} {
+    font-size: 1.1em;
+  }
+}
