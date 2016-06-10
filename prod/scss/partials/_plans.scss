@@ -14,7 +14,7 @@
   text-align: center;
   color: white;
   background-color: $green;
-  padding: $globalpadding*2;
+  padding: $globalpadding*2 $globalpadding*4;
   margin-bottom: 2em;
   @media #{$medium} {
     width: 31%;
