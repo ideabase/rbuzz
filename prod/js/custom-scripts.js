@@ -1,7 +1,7 @@
 // Load Google Fonts
 
 WebFontConfig = {
-    google: { families: [ 'Merriweather:400,400italic:latin', 'Lato:400,900,700,300:latin' ] }
+    google: { families: [ 'Merriweather:400,400italic:latin', 'Lato:400,900,700:latin' ] }
   };
   (function() {
     var wf = document.createElement('script');
