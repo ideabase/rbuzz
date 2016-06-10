@@ -68,7 +68,8 @@ header {
 	text-align: center;
 	width: 100%;
 	@media #{$medium} {
-		width: 50%;
+		width: 47.5%;
+		margin-left: 2.5%;
 		text-align: left;
 	}
 }
