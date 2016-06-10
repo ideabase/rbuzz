@@ -8,7 +8,7 @@
 {% block content %}
     <section class="feature-image layout-inner">
       <div class="video-container">
-        {{ entry.videoUrl|videoEmbed }}
+        {{ entry.videoUrl|videoEmbed({ badge: 0, byline: 0, portrait: 0, title: 0 }) }}
       </div>
     </section>
     <article>
@@ -16,12 +16,12 @@
     		<h2>{{ entry.title }}</h2>
         <ul class="tags">
     			<li>
-    				{% for category in entry.blogTheme %}
+    				{% for category in entry.videoTheme %}
     				    {{ category.title }}
     				{% endfor %}
     			</li>
     			<li>
-    				{% for category in entry.blogGradeLevel %}
+    				{% for category in entry.videoGradeLevel %}
     				    {{ category.title }}
     				{% endfor %}
     			</li>
