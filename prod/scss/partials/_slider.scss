@@ -41,33 +41,33 @@
   text-align: center;
   width: 100%;
   @media #{$small} {
-    font-size: 110%;
+    font-size: 115%;
+    padding-bottom: 4.5rem;
   }
   @media #{$medium} {
-    font-size: 130%;
-    padding-bottom: 4rem;
+    font-size: 135%;
   }
   @media #{$large} {
     font-size: 150%;
   }
   h1, h2 {
-    text-shadow: 3px 1px 10px rgba(0,0,0,.8);
     color: white;
     text-transform: none;
     z-index: 50000;
-
   }
   h1 {
     font-size: 1.5em;
     margin-bottom: .3em;
     padding-bottom: 0;
     font-weight: 900;
+    text-shadow: 3px 1px 10px rgba(0,0,0,.8);
   }
   h2 {
     font-size: .95em;
     margin-top: 0;
     margin-bottom: 1.8rem;
     font-weight:500;
+    text-shadow: 3px 1px 10px rgba(0,0,0,1);
   }
 }
 

@@ -6,7 +6,7 @@
   {% set sectionHandle = 'video' %}
 {% endif %}
 <section class="layout-split-right layout-centered">
-  <ul class="posts-list">
+  <ul class="posts-list {% if sectionHandle == 'video' %}posts-list-video{% endif %}">
     {% for entry in craft.entries.section(sectionHandle).find() %}
         {% include 'global/_posts-teaser.html' %}
     {% endfor %}

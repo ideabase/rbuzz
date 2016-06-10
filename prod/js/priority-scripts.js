@@ -104,7 +104,7 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 $(".owl-carousel").owlCarousel({
 
       navigation : true,
-      autoPlay : true,
+      autoPlay : 10000,
       autoPlaySpeed : 5000,
       autoPlayTimeout : 8000,
       paginationSpeed : 800,
