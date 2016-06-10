@@ -8,8 +8,8 @@
         <language>en-us</language>
         <pubDate>{{ now.rss }}</pubDate>
         <lastBuildDate>{{ now.rss }}</lastBuildDate>
-
-        {% for entry in craft.section('blog').find() %}
+        {% set rss = craft.entries({ section: 'blog' }) %}
+        {% for entry in rss %}
             <item>
                 <title>{{ entry.title }}</title>
                 <link>{{ entry.url }}</link>
