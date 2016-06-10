@@ -1,0 +1,33 @@
+{% for block in entry.blogContentMatrix %}
+
+    {% if block.type == "text" %}
+        <section class="layout-inner">
+            {{ block.text|markdown }}
+        </section>
+
+    {% elseif block.type == "image" %}
+
+        {% set image = block.image.first() %}
+        {% if image %}
+            <section class="layout-full layout-full--smallonly">
+                <figure class="post-embed-image">
+                    <img src="{{ image.getUrl('mediumFeatureImage') }}" />
+                    {% if block.imageCaption | length %}
+                      <figcaption class="post-embed-image__caption">
+                          {{ block.imageCaption }}
+                      </figcaption>
+                    {% endif %}
+                </figure>
+            </section>
+        {% endif %}
+
+    {% elseif block.type == "pullQuote" %}
+
+        <blockquote>
+            {{ block.pullQuote }}
+            <cite>{{ block.quotee }}</cite>
+        </blockquote>
+
+    {% endif %}
+
+{% endfor %}

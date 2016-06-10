@@ -12,7 +12,7 @@ header {
 	}
 	@media #{$x-large} {
 		padding: $globalpadding $globalpadding*6;
-		max-width: $globalpadding*100;
+		max-width: $globalpadding*105;
 		margin: 0 auto;
 	}
 }
@@ -41,6 +41,16 @@ header {
 	@media #{$x-large} {
 		margin-left: auto;
 		width: auto;
+	}
+}
+
+.layout-full--smallonly {
+	@media #{$medium} {
+		max-width:80%;
+		margin: 0 auto;
+	}
+	@media #{$large} {
+		max-width:60%;
 	}
 }
 

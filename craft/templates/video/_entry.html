@@ -11,7 +11,7 @@
         {{ entry.videoUrl|videoEmbed }}
       </div>
     </section>
-    <article class="layout-inner">
+    <article>
       <div class="layout-centered">
     		<h2>{{ entry.title }}</h2>
         <ul class="tags">
@@ -31,7 +31,7 @@
           <dd><date>{{ entry.postDate.format('F d, Y') }}</date></dd>
         </dl>
       </div>
-      <div>{{ entry.videoDescription }}</div>
+      {% include 'global/_post-content.html' %}
     </article>
     <section class="layout-inner layout-centered related-posts">
     <h4 class="related-posts__title">{{ miscGlobals.relatedPostsTitle }}</h4>

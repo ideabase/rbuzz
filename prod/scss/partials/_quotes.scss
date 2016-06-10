@@ -1,0 +1,23 @@
+blockquote {
+  @extend .default-list-style;
+  text-align: center;
+  margin-bottom: 3em;
+  margin-top: 2.5em;
+}
+
+cite {
+  display: block;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: .7em;
+  color: $blue;
+  letter-spacing: .5px;
+  &:before {
+    content: "";
+    display: block;
+    width: 5%;
+    margin: 2em auto 1.5em auto;
+    background-color: $gray;
+    height: 1px;
+  }
+}
