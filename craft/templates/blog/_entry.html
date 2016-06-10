@@ -65,7 +65,7 @@
   <h4 class="related-posts__title">{{ miscGlobals.relatedPostsTitle }}</h4>
     {% set category = craft.categories.group('blogTheme') %}
     {% set entries = craft.entries.section('blog').relatedTo(category).id('not ' ~ entry.id).limit(3) %}
-    <ul class="posts-list">
+    <ul class="posts-list posts-list-item--promo">
       {% for entry in entries %}
         {% include 'global/_posts-teaser.html' %}
       {% endfor %}
