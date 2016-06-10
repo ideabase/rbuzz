@@ -9,7 +9,7 @@
         <pubDate>{{ now.rss }}</pubDate>
         <lastBuildDate>{{ now.rss }}</lastBuildDate>
 
-        {% for entry in craft.entries.find('blog') %}
+        {% for entry in craft.section('blog').find() %}
             <item>
                 <title>{{ entry.title }}</title>
                 <link>{{ entry.url }}</link>
