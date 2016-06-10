@@ -1,0 +1,36 @@
+{#
+ # Email Newsletter Template
+ # ---------------
+ #}
+
+{% extends "email/_layout" %}
+
+{% block content %}
+
+    <h2>{{ entry.emailHeadline }}</h2>
+    <div>{{ entry.emailMessage }}</div>
+    <h3>What's New?</h3>
+    <!-- Get Selected Posts -->
+    {% set posts = entry.whatsNewPosts %}
+    {% if posts | length %}
+      {% for post in posts %}
+          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+      {% endfor %}
+    {% endif %}
+    <!-- End Get Selected Posts -->
+    <h3>Weekly Tip</h3>
+    {% set posts = entry.weeklyTip %}
+    {% if posts | length %}
+      {% for post in posts %}
+          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+      {% endfor %}
+    {% endif %}
+    <p>{{ email.emailCallToAction }}</p>
+    {% set videolink = email.emailBrowseAllVideos %}
+    {% if videolink | length %}
+      {% for link in videolink %}
+          <h4><a href="{{ link.url }}">View All {{ link.title }}</a></h4>
+      {% endfor %}
+    {% endif %}
+    <p>{{ email.emailThankYou }}</p>
+{% endblock %}
