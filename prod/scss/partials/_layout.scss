@@ -125,7 +125,7 @@ main {
 	}
 	@media #{$x-large} {
 		padding: $globalpadding $globalpadding*6;
-		max-width: $globalpadding*100;
+		max-width: $globalpadding*105;
 		margin: 0 auto;
 	}
 }
@@ -140,7 +140,7 @@ footer {
 	}
 	@media #{$x-large} {
 		padding: $globalpadding $globalpadding*6;
-		max-width: $globalpadding*100;
+		max-width: $globalpadding*105;
 		margin: 0 auto;
 	}
 }
