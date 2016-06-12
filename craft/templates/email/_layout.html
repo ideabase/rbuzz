@@ -3,17 +3,39 @@
  # ---------------
  #}
 
- <!DOCTYPE html>
- <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
-     	<meta charset="utf-8" />
-     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-     	<meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>{{ entry.title }}</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta name="viewport" content="width=device-width"/>
+     <title>{{ entry.title }}</title>
+      {% block css %}
+        <style type="text/css">
+          {% include 'email/foundation.css' %}
+          {% include 'email/email.css' %}
+        </style>
+      {% endblock %}
     </head>
     <body>
-        <h1>Reading Buzz</h1>
-        {% block content %}
-    		{% endblock %}
+      <!-- <style> -->
+      <table class="body" data-made-with-foundation>
+        <tr>
+          <td class="float-center" align="center" valign="top">
+            <center>
+              <table class="container">
+                <tr>
+                  <td><h1>Reading Buzz</h1></td>
+                </tr>
+                <tr>
+                  <td>
+                  {% block content %}
+              		{% endblock %}
+                  </td>
+                </tr>
+              </table>
+            </center>
+          </td>
+        </tr>
+      </table>
     </body>
   </html>
