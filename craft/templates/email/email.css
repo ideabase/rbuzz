@@ -50,29 +50,6 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       /*@editable*/ text-decoration:underline;
     }
 
-    
-/* Mobile Styles */
-
-@media only screen and (max-width: 550px){
-
-
-  body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
-                    body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
-
-  #bodyCell{padding:10px !important;}
-
-
-  #templateContainer{
-    					max-width:600px !important;
-    					/*@editable*/ width:100% !important;
-  }
-
-  #templatePreheader{display:none !important;} /* Hide the template preheader to save space */
-
-}
-/*  End Mobile Media Query */
-
-
 /* Custom Styles */
 
 body,
@@ -112,3 +89,29 @@ h2 {
   font-size: 20px;
   font-weight: bold;;
 }
+
+
+
+
+
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 550px){
+
+
+  body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+                    body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+
+  #bodyCell{padding:10px !important;}
+
+
+  #templateContainer{
+    					max-width:600px !important;
+    					/*@editable*/ width:100% !important;
+  }
+
+  #templatePreheader{display:none !important;} /* Hide the template preheader to save space */
+
+}
+/*  End Mobile Media Query */
