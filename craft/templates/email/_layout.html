@@ -27,37 +27,31 @@
                 <table class="container"> <!-- Start Main Container Wrapper -->
                   <tr> <!-- Start Container TR -->
                     <td> <!-- Start Container TD -->
-
-                      <!-- Start Header -->
                       {% include 'email/_header' %}
-                      <!-- End Header -->
-
-                      <!-- Start Main Body -->
                       <table class="container">
-                          <tr>
-                            <td>
-                              <table class="row">
-                                  <th class="columns first last">
-                                    <table>
-                                      <tr>
-                                        <th>
-                                          {% block content %}
-                                    		  {% endblock %}
-                                        </th>
-                                        <th class="expander"></th>
-                                      </tr>
-                                    </table>
-                                  </th>
-                              </table>
-                            </td>
-                          </tr>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <table class="row">
+                                  <tbody>
+                                    <th class="columns first last">
+                                      <table>
+                                        <tr>
+                                          <th>
+                                            {% block content %}
+                                      		  {% endblock %}
+                                          </th>
+                                          <th class="expander"></th>
+                                        </tr>
+                                      </table>
+                                    </th>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
                       </table>
-                      <!-- End Main Body -->
-
-                      <!-- Start Footer -->
                       {% include 'email/_footer' %}
-                      <!-- End Footer -->
-
                     </td> <!-- End Container TD -->
                   </tr> <!-- End Container TR -->
                 </table> <!-- End Main Container Wrapper -->
