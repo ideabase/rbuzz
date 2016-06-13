@@ -11,11 +11,7 @@
      <title>{{ entry.title }}</title>
      <!-- Import Fonts for Mail Clients that Support Them -->
      <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:700italic' rel='stylesheet' type='text/css'>
-      {% block css %}
-        <style type="text/css">
-          {% include 'email/email.css' %}
-        </style>
-      {% endblock %}
+     <link href="{{ siteUrl }}/css/email.css" type="text/css" rel="stylesheet" media="screen"/>
     </head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
       <center>

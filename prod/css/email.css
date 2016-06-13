@@ -92,12 +92,7 @@ h2 {
 
 
 
-
-
-
-/* Mobile Styles */
-
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 550px) {
 
 
   body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
