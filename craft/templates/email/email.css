@@ -29,6 +29,28 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       /*@editable*/ background-color:#DEE0E2;
     }
 
+    /* Preheader */
+
+    #templatePreheader{
+      /*@editable*/ background-color:#F4F4F4;
+      /*@editable*/ border-bottom:1px solid #CCCCCC;
+    }
+
+    .preheaderContent{
+      /*@editable*/ color:#808080;
+      /*@editable*/ font-family:Helvetica;
+      /*@editable*/ font-size:10px;
+      /*@editable*/ line-height:125%;
+      /*@editable*/ text-align:left;
+    }
+
+    .preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */{
+      /*@editable*/ color:#606060;
+      /*@editable*/ font-weight:normal;
+      /*@editable*/ text-decoration:underline;
+    }
+
+    
 /* Mobile Styles */
 
 @media only screen and (max-width: 550px){
@@ -50,26 +72,6 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
 }
 /*  End Mobile Media Query */
 
-/* Preheader */
-
-#templatePreheader{
-  /*@editable*/ background-color:#F4F4F4;
-  /*@editable*/ border-bottom:1px solid #CCCCCC;
-}
-
-.preheaderContent{
-  /*@editable*/ color:#808080;
-  /*@editable*/ font-family:Helvetica;
-  /*@editable*/ font-size:10px;
-  /*@editable*/ line-height:125%;
-  /*@editable*/ text-align:left;
-}
-
-.preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */{
-  /*@editable*/ color:#606060;
-  /*@editable*/ font-weight:normal;
-  /*@editable*/ text-decoration:underline;
-}
 
 /* Custom Styles */
 
