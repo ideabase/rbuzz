@@ -17,10 +17,39 @@
         </style>
       {% endblock %}
     </head>
-    <body>
-        {% include 'email/_header' %}
-        {% block content %}
-        {% endblock %}
-        {% include 'email/_footer' %}
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+      <center>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+            <tr>
+                <td align="center" valign="top" id="bodyCell">
+                  <!-- BEGIN TEMPLATE // -->
+                  <table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
+                    <tr> <!-- Start Row -->
+                      <td align="center" valign="top">
+                          {% include 'email/_preheader' %}
+                      </td>
+                    </tr> <!-- End Row -->
+                    <tr> <!-- Start Row -->
+                      <td align="center" valign="top">
+                          {% include 'email/_header' %}
+                      </td>
+                    </tr> <!-- End Row -->
+                    <tr> <!-- Start Row -->
+                      <td align="center" valign="top">
+                    {% block content %}
+                    {% endblock %}
+                      </td>
+                    </tr> <!-- End Row -->
+                    <tr> <!-- Start Row -->
+                      <td align="center" valign="top">
+                    {% include 'email/_footer' %}
+                      </td>
+                    </tr> <!-- End Row -->
+                  </table>
+                  <!-- // END TEMPLATE -->
+                </td>
+            </tr>
+        </table>
+      </center>
     </body>
   </html>
