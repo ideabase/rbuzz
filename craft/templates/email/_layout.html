@@ -13,28 +13,14 @@
      <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:700italic' rel='stylesheet' type='text/css'>
       {% block css %}
         <style type="text/css">
-          {% include 'email/foundation.css' %}
           {% include 'email/email.css' %}
         </style>
       {% endblock %}
     </head>
     <body>
-      <!-- <style> -->
-      <table class="body" data-made-with-foundation>
-          <tr>
-            <td class="float-center" align="center" valign="top">
-              <center> <!-- Start Required Center Tag -->
-                <table class="container"> <!-- Start Main Container Wrapper -->
-                  <tr> <!-- Start Container TR -->
-                    <td> <!-- Start Container TD -->
-                      {% include 'email/_header' %}
-                      {% include 'email/_footer' %}
-                    </td> <!-- End Container TD -->
-                  </tr> <!-- End Container TR -->
-                </table> <!-- End Main Container Wrapper -->
-              </center> <!-- End Required Center Tag -->
-            </td>
-          </tr>
-      </table>
+        {% include 'email/_header' %}
+        {% block content %}
+        {% endblock %}
+        {% include 'email/_footer' %}
     </body>
   </html>
