@@ -1,0 +1,65 @@
+<table class="container">
+  <tbody>
+    <tr>
+      <td>
+        <table class="row"> <!-- Start Row -->
+          <tbody>
+            <th class="columns first last">
+              <table>
+                <tr>
+                  <th> <!-- Start Content -->
+                    <br />
+                    {% for asset in header.logoFallback %}
+                      <center>
+                        <img align="center" class="float-center logo" class="logo" width="200" height="200" src="{{ asset.url }}" alt="{{ asset.title }}" />
+                      </center>
+                    {% endfor %}
+                  </th> <!-- End Content -->
+                  <th class="expander"></th>
+                </tr>
+              </table>
+            </th>
+          </tbody>
+        </table> <!-- End Row -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="container">
+  <tbody>
+    <tr>
+      <td>
+        <table class="row"> <!-- Start Row -->
+          <tbody>
+            <th class="columns first last">
+              <table class="callout">
+                <tr>
+                  <th class="callout-inner primary"> <!-- Start Content -->
+                    <table class="row">
+                      <tbody>
+                        <tr>
+                          <th class="small-12 large-12 columns first last">
+                            <table>
+                              <tr>
+                                <th>
+                                  <h1 class="text-center">{{ entry.emailHeadline }}</h1>
+                                </th>
+                                <th class="expander"></th>
+                              </tr>
+                            </table>
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </th> <!-- End Content -->
+                  <th class="expander"></th>
+                </tr>
+              </table>
+            </th>
+          </tbody>
+        </table> <!-- End Row -->
+      </td>
+    </tr>
+  </tbody>
+</table>
