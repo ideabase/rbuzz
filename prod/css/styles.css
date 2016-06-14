@@ -573,6 +573,10 @@ footer {
   border-color: white;
   margin-top: 1.5em; }
 
+.four-o-four__button {
+  display: inline-block;
+  margin-top: 1.15em; }
+
 .signup-button-container {
   margin-top: 2em; }
 
@@ -1157,6 +1161,12 @@ h5, .tags {
   color: #6bc8c8;
   font-size: 1.05em;
   text-transform: uppercase; }
+
+.four-o-four__heading {
+  font-size: 7em;
+  letter-spacing: .05em;
+  margin-bottom: 0;
+  line-height: .6em; }
 
 .callout {
   background-color: #e94834;
