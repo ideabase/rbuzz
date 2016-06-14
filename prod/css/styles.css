@@ -1163,10 +1163,13 @@ h5, .tags {
   text-transform: uppercase; }
 
 .four-o-four__heading {
-  font-size: 7em;
+  font-size: 5em;
   letter-spacing: .05em;
   margin-bottom: 0;
   line-height: .6em; }
+  @media (min-width: 37.5em) {
+    .four-o-four__heading {
+      font-size: 7em; } }
 
 .callout {
   background-color: #e94834;
