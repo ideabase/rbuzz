@@ -1635,6 +1635,10 @@ article p {
   margin-bottom: 1.5em;
   border: 1px solid #ccc; }
 
+.contact-form select {
+  height: 3em;
+  cursor: pointer; }
+
 .contact-form input[type="submit"] {
   max-width: 10em; }
 
