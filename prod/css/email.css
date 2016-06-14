@@ -50,6 +50,79 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       /*@editable*/ text-decoration:underline;
     }
 
+    /* Header */
+
+    #templateHeader{
+      /*@editable*/ background-color: white;
+      /*@editable*/ border-top:1px solid #FFFFFF;
+      /*@editable*/ border-bottom:1px solid #CCCCCC;
+    }
+
+    .headerContent {
+      padding-top:20px;
+      padding-right:20px;
+      padding-bottom:20px;
+      padding-left:20px;
+      /*@editable*/ text-align:left;
+    }
+
+    /* Body */
+
+    #templateBody{
+      /*@editable*/ background-color: white;
+      /*@editable*/ border-top:1px solid #FFFFFF;
+      /*@editable*/ border-bottom:1px solid #CCCCCC;
+    }
+
+    .bodyContent{
+      /*@editable*/ color:#505050;
+      /*@editable*/ font-family:Helvetica;
+      /*@editable*/ font-size:14px;
+      /*@editable*/ line-height:150%;
+      padding-top:20px;
+      padding-right:20px;
+      padding-bottom:20px;
+      padding-left:20px;
+      /*@editable*/ text-align:left;
+    }
+
+    .bodyContent a:link, .bodyContent a:visited, /* Yahoo! Mail Override */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */{
+      /*@editable*/ color: rgb(9,142,133);
+      /*@editable*/ font-weight:normal;
+      /*@editable*/ text-decoration:underline;
+    }
+
+    .bodyContent img{
+      display:inline;
+      height:auto;
+      max-width:560px;
+    }
+
+    /* Footer */
+
+    #templateFooter{
+      /*@editable*/ background-color:#F4F4F4;
+      /*@editable*/ border-top:1px solid #FFFFFF;
+    }
+
+    .footerContent{
+      /*@editable*/ color:#808080;
+      /*@editable*/ font-family:Helvetica;
+      /*@editable*/ font-size:10px;
+      /*@editable*/ line-height:150%;
+      padding-top:20px;
+      padding-right:20px;
+      padding-bottom:20px;
+      padding-left:20px;
+      /*@editable*/ text-align:left;
+    }
+
+    .footerContent a:link, .footerContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshortcuts, .footerContent a span /* Yahoo! Mail Override */{
+      /*@editable*/ color:#606060;
+      /*@editable*/ font-weight:normal;
+      /*@editable*/ text-decoration:underline;
+    }
+
 /* Custom Styles */
 
 body,
@@ -91,14 +164,14 @@ h2 {
 }
 
 
-
+/*
 @media only screen and (max-width: 550px) {
 
 
   body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
-                    body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+/*                    body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
 
-  #bodyCell{padding:10px !important;}
+/*  #bodyCell{padding:10px !important;} */
 
 
   #templateContainer{
@@ -106,6 +179,6 @@ h2 {
     					/*@editable*/ width:100% !important;
   }
 
-  #templatePreheader{display:none !important;} /* Hide the template preheader to save space */
+/*  #templatePreheader{display:none !important;} /* Hide the template preheader to save space */
 
-}
+/* }

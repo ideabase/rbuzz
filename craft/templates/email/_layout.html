@@ -27,18 +27,42 @@
                     </tr> <!-- End Row -->
                     <tr> <!-- Start Row -->
                       <td align="center" valign="top">
-                          {% include 'email/_header' %}
+                          <!-- BEGIN HEADER // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                                <tr>
+                                    <td valign="top" class="headerContent">
+                                      {% include 'email/_header' %}
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- // END HEADER -->
                       </td>
                     </tr> <!-- End Row -->
                     <tr> <!-- Start Row -->
                       <td align="center" valign="top">
-                    {% block content %}
-                    {% endblock %}
+                        <!-- BEGIN BODY // -->
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+                              <tr>
+                                  <td valign="top" class="bodyContent" mc:edit="body_content">
+                                    {% block content %}
+                                    {% endblock %}
+                                  </td>
+                              </tr>
+                          </table>
+                          <!-- // END BODY -->
                       </td>
                     </tr> <!-- End Row -->
                     <tr> <!-- Start Row -->
                       <td align="center" valign="top">
-                    {% include 'email/_footer' %}
+                      <!-- BEGIN FOOTER // -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+                            <tr>
+                                <td valign="top" class="footerContent" mc:edit="footer_content00">
+                                    {% include 'email/_footer' %}
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- // END FOOTER -->
                       </td>
                     </tr> <!-- End Row -->
                   </table>
