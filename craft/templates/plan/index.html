@@ -10,42 +10,46 @@
   	<h1>{{ entry.title }}</h1>
   	<p>{{ entry.plansSubdescription }}</p>
   </section>
+  
   <section class="layout-centered">
-  <ul class="plans-list">
-  	{% set entries = craft.entries.section('plans') %}
-  	{% for entry in entries %}
-  	{% for block in entry.planMatrix %}
-  		{% if block.type == "plan" %}
-        <li class="plans-list-item">
-    			<h2 class="plans-list-item-name">{{ block.planTitle }}</h2>
-          <dl class="plans-list-item-includes">
-            <dt class="plans-list-item-includes-name">Includes:</dt>
-            {% if block.feature | length %}
-      				<ul class="plans-list-item-includes-list">
-      					{% for row in block.feature %}
-      						<li class="plans-list-item-includes-list-item">{{ row.featureText }}</li>
-      					{% endfor %}
-      				</ul>
-      			{% endif %}
-          </dl>
-    			<span class="plans-list-item-price">{{ block.monthlyPrice }}</span>
-          <span class="plans-list-item-price-amount">Per Month</span>
-    			<span class="plans-list-item-year">or {{ block.yearlyPrice }}</span>
-        </li>
-  		{% endif %}
-  	{% endfor %}
-  	{% endfor %}
-  </ul>
-  <p class="callout-secondary callout-secondary--small">Field Needs Added.  Schools may request an additional 3 videos for summer months. Yearly contracts are available upon request.
+    <ul class="plans-list">
+    	{% set entries = craft.entries.section('plans') %}
+    	{% for entry in entries %}
+    	{% for block in entry.planMatrix %}
+    		{% if block.type == "plan" %}
+          <li class="plans-list-item">
+      			<h2 class="plans-list-item-name">{{ block.planTitle }}</h2>
+            <dl class="plans-list-item-includes">
+              <dt class="plans-list-item-includes-name">Includes:</dt>
+              {% if block.feature | length %}
+        				<ul class="plans-list-item-includes-list">
+        					{% for row in block.feature %}
+        						<li class="plans-list-item-includes-list-item">{{ row.featureText }}</li>
+        					{% endfor %}
+        				</ul>
+        			{% endif %}
+            </dl>
+      			<span class="plans-list-item-price">{{ block.monthlyPrice }}</span>
+            <span class="plans-list-item-price-amount">Per Month</span>
+      			<span class="plans-list-item-year">or {{ block.yearlyPrice }}</span>
+          </li>
+    		{% endif %}
+    	{% endfor %}
+    	{% endfor %}
+    </ul>
+    <p class="callout-secondary callout-secondary--small">{{ entry.additionalInfo }}</p>
   </section>
+
   <section class="layout-inner layout-centered">
   	<h4>{{ entry.plansSubquestion }}</h4>
   	<p>{{ entry.description }}</p>
   </section>
+
   <section class="layout-inner layout-centered">
   	<h4>{{ entry.relatedPostsTitle }}</h4>
   	<p>{{ entry.blogShortDescription }}</p>
   </section>
+
   <section class="layout-centered">
   	{% set entries = craft.entries.section('video').limit(3) %}
     <ul class="posts-list posts-list-video posts-list-item--promo">
@@ -53,8 +57,8 @@
         {% include 'global/_posts-teaser.html' %}
     	{% endfor %}
     </ul>
-</p>
   </section>
+
   <section class="layout-centered">
     {% set signUp = miscGlobals.signUpButton %}
     {% for entry in miscGlobals.signUpEntry %}
