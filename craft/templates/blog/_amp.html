@@ -1,0 +1,158 @@
+{#
+ # Reading Buzz - AMP Accelerated Mobile Template
+ # ---------------
+ #}
+
+{% set entry = craft.entries.section('blog').slug(slug)[0] %}
+
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8"> <!-- Must be first -->
+    <title>{{ entry.title }}</title>
+    <link rel="canonical" href="{{entry.url}}" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:700italic' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+      /* any custom style goes here */
+      body {
+        background-color: white;
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        padding: 1em;
+        box-sizing: border-box;
+        max-width: 700px;
+        color: rgb(112,112,112);
+      }
+      header {
+        text-align: center;
+      }
+      amp-img {
+        background-color: gray;
+        text-align: center;
+      }
+      amp-img.logo {
+        background-color: transparent;
+      }
+      dt, dd {
+        display: inline-block;
+      }
+      dd {
+        margin-left: 2px;
+      }
+      h2 {
+        font-size: 1.85em;
+        font-style: normal;
+        color: rgb(233,72,52);
+        margin-bottom: .5em;
+      }
+
+      h3 {
+        font-size: 1.4em;
+        color: rgb(233,72,52);
+      }
+
+      h4 {
+        color:rgb(240,194,66);
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+
+      h5 {
+        color: rgb(107,200,200);
+        font-size: 1.05em;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 1.05em;
+        line-height: 1.6;
+        font-weight: 400;
+      }
+
+      a {
+      	color: rgb(107,200,200);
+      }
+
+      p a {
+        font-weight: bold;
+      }
+
+      cite {
+        display: block;
+        margin-top: 1em;
+      }
+
+      ul {
+        font-size: 1.05em;
+      }
+
+      li {
+        margin-bottom: .25em;
+      }
+
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "{{entry.title}}",
+        "datePublished": "{{entry.dateCreated.iso8601()}}",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script> <!-- Must be last -->
+  </head>
+  <body>
+    {% block content %}
+    <header>
+      {% for asset in header.logoFallback %}
+        <a href="{{siteUrl}}"><amp-img class="logo" src="{{ asset.url }}" width="180" height="140" alt="{{ asset.title }}"></amp-img></a>
+      {% endfor %}
+    </header>
+    <!--Start Blog Post Content -->
+    {% set assets = entry.blogFeaturedImage %}
+    {% for asset in assets %}
+      <amp-img src="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}" height="300" width="300"></amp-img>
+    {% endfor %}
+      <h2>{{ entry.title }}</h2>
+      <dl class="post-date">
+        <dt>Posted</dt>
+        <dd>{{ entry.postDate.format('F d, Y') }}</dd>
+      </dl>
+    {% for block in entry.blogContentMatrix %}
+
+        {% if block.type == "text" %}
+                {{ block.text|markdown }}
+
+        {% elseif block.type == "image" %}
+
+            {% set image = block.image.first() %}
+              {% if image %}
+                <amp-img src="{{ image.getUrl('smallFeatureImage') }}" alt="{{ image.title }}" height="300" width="300"></amp-img>
+                {% if block.imageCaption | length %}
+                <figcaption class="post-embed-image__caption">
+                  {{ block.imageCaption }}
+                  </figcaption>
+              {% endif %}
+            {% endif %}
+
+        {% elseif block.type == "pullQuote" %}
+
+            <blockquote>
+                {{ block.pullQuote }}
+                <cite>{{ block.quotee }}</cite>
+            </blockquote>
+
+        {% endif %}
+
+    {% endfor %}
+
+    <!-- End Blog Post Content -->
+
+    {% endblock %}
+  </body>
+</html>
