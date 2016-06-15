@@ -27,7 +27,9 @@
               {% endfor %}
               <figcaption class="carousel-slide-title">
                 <h1>{{ entry.title }}</h1>
-                <h2>{{ entry.blogShortDescription }}</h2>
+                {% if entry.postTinyDescription | length %}
+                  <h2>{{ entry.postTinyDescription }}</h2>
+                {% endif %}
                   {% if entry.section.handle == 'blog' %}
                     <a href="{{ entry.url }}" class="carousel-slide-button">{{ miscGlobals.blogButton }}</a>
                   {% endif %}
