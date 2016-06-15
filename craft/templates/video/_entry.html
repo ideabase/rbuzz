@@ -15,16 +15,12 @@
       <div class="layout-centered">
     		<h2>{{ entry.title }}</h2>
         <ul class="tags">
-    			<li>
     				{% for category in entry.videoTheme %}
-    				    {{ category.title }}
+    				    <li>{{ category.title }}</li>
     				{% endfor %}
-    			</li>
-    			<li>
     				{% for category in entry.videoGradeLevel %}
-    				    {{ category.title }}
-    				{% endfor %}
-    			</li>
+    				    <li>{{ category.title }}</li>
+    				{% endfor %}	
     		</ul>
         <dl class="post-date">
           <dt>Posted</dt>
