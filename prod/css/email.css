@@ -183,6 +183,10 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       /*@editable*/ text-decoration:underline;
     }
 
+    .hcard-download {
+      color:rgb(107,200,200);
+    }
+
 /* Custom Styles */
 
 body,
