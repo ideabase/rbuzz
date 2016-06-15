@@ -6,7 +6,7 @@
 {% extends "email/_layout" %}
 
 {% block content %}
-    <p><span class="sansSerifCustom">{{ entry.emailMessage }}</span></p>
+    <div class="sansSerifCustom">{{ entry.emailMessage }}</div>
     <br />
     <h2><span class="sansSerifCustom">What's New?</span></h2>
     {% set posts = entry.whatsNewPosts %}
