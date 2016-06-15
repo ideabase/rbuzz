@@ -3,11 +3,30 @@
  # ---------------
  #}
 
-{% extends "email/_layout" %}
-
 {% block content %}
     {% if entry.emailMessage | length %}
       <div class="sansSerifCustom">{{ entry.emailMessage }}</div>
+      {% set profile = craft.entries.section('staff').find() %}
+      {% for entry in profile %}
+            {% set headshot = entry.staffHeadshot %}
+            {% for asset in headshot %}
+              <!-- Post Teaser // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="column">
+                      <tr>
+                        <p class="closing"><span class="sansSerifCustom">{{ email.emailClosing}}</span></p>
+                        <td valign="top" class="column column-15">
+                          <img class="profile-thumb" src="{{ asset.url('profileThumb') }}" height="125" width="125" alt="{{ asset.title }}" />
+                        </td>
+                        <td valign="top" width="180" class="column column-85">
+                          <p><span class="sansSerifCustom">{{ entry.title}}</span>
+                          <br/>
+                          <span class="sansSerifCustom"><a href="mailto:{{ footer.contactEmail }}">{{ footer.contactEmail }}</a></span></p>
+                        </td>
+                      </tr>
+                  </table>
+              <!-- // End Post Teaser -->
+            {% endfor %}
+      {% endfor %}
     {% endif %}
     {% set posts = entry.whatsNewPosts %}
     {% if posts | length %}
