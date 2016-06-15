@@ -15,7 +15,11 @@
             <!-- Post Teaser // -->
               <table border="0" cellpadding="0" cellspacing="0" width="100%" id="column">
                     <tr>
-                      <p class="closing"><span class="sansSerifCustom">{{ email.emailClosing}}</span></p>
+                      <td valign="top">
+                        <p class="closing"><span class="sansSerifCustom">{{ email.emailClosing}}</span></p>
+                      </td>
+                    </tr>
+                    <tr>
                       <td valign="top" class="column column-15">
                         <img class="profile-thumb" src="{{ asset.url('profileThumb') }}" height="125" width="125" alt="{{ asset.title }}" />
                       </td>
