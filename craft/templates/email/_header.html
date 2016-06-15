@@ -3,7 +3,7 @@
       <tr>
           <td valign="top" class="headerContent">
             {% for asset in header.logoFallback %}
-              <img src= "{{ asset.url }}" width="150" height="106" alt="{{ asset.title }}" />
+              <a href="{{siteUrl}}"><img src= "{{ asset.url }}" width="150" height="106" alt="{{ asset.title }}" /></a>
             {% endfor %}
           </td>
       </tr>

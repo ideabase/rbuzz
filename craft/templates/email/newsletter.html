@@ -52,14 +52,30 @@
       {% endfor %}
     {% endif %}
     <br />
-    <p><span class="sansSerifCustom">{{ email.emailCallToAction }}</span></p>
-    <br />
-    {% set videolink = email.emailBrowseAllVideos %}
-    {% if videolink | length %}
-      {% for link in videolink %}
-          <h4><a href="{{ link.url }}"><span class="sansSerifCustom">View All {{ link.title }}</span></a></h4>
-      {% endfor %}
-    {% endif %}
-    <br />
-    <p><span class="sansSerifCustom">{{ email.emailThankYou }}</span></p>
+    <!-- Call to Action Section // -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" id="cta">
+            <tr>
+              <td valign="top" class="cta">
+                <p><span class="sansSerifCustom">{{ email.emailCallToAction }}</span></p>
+                <br />
+                {% set videolink = email.emailBrowseAllVideos %}
+                {% if videolink | length %}
+                  {% for link in videolink %}
+                  <!-- Call to Action Button // -->
+                    <table align="center" border="0" cellpadding="0" width="250" cellspacing="0" width="50%" id="ctaButton">
+                          <tr>
+                            <td valign="top" class="ctaButton">
+                              <a href="{{ link.url }}"><span class="sansSerifCustom">View All {{ link.title }}</span></a>
+                            </td>
+                          </tr>
+                      </table>
+                  <!-- // End Call to Action Button -->
+                  {% endfor %}
+                {% endif %}
+                <br />
+                <p><span class="sansSerifCustom">{{ email.emailThankYou }}</span></p>
+              </td>
+            </tr>
+        </table>
+    <!-- // End Call to Action Secton -->
 {% endblock %}

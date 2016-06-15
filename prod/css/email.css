@@ -33,18 +33,17 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
 
     #templatePreheader{
       /*@editable*/ background-color:#F4F4F4;
-      /*@editable*/ border-bottom:1px solid #CCCCCC;
     }
 
     .preheaderContent{
       /*@editable*/ color:#808080;
       /*@editable*/ font-family:Helvetica;
       /*@editable*/ font-size:10px;
-      /*@editable*/ line-height:125%;
+      /*@editable*/ line-height:155%;
       /*@editable*/ text-align:left;
-      padding-top:5px;
+      padding-top:7px;
       padding-right:10px;
-      padding-bottom:5px;
+      padding-bottom:7px;
       padding-left:10px;
     }
 
@@ -62,9 +61,9 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
     }
 
     .headerContent {
-      padding-top:10px;
+      padding-top:15px;
       padding-right:20px;
-      padding-bottom:10px;
+      padding-bottom:15px;
       padding-left:20px;
       text-align: center;
       font-family: Helvetica, Arial, sans-serif;
@@ -91,11 +90,11 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
 
     .bodyContent{
       /*@editable*/ color:#505050;
-      /*@editable*/ font-size:15px;
+      /*@editable*/ font-size:16px;
       /*@editable*/ line-height:150%;
       padding-top:20px;
       padding-right:20px;
-      padding-bottom:20px;
+      padding-bottom:30px;
       padding-left:20px;
       /*@editable*/ text-align:left;
       font-family: Helvetica, Arial, sans-serif;
@@ -114,9 +113,10 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
     }
 
     .column {
-      padding-top:10px;
+      padding-top:20px;
       padding-right:10px;
-      padding-bottom:10px;
+      padding-bottom:20px;
+      line-height: 130%;
     }
 
     .column-25 {
@@ -126,6 +126,36 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
 
     .column-75 {
       width: 70%;
+    }
+
+
+    /* CTA Section */
+
+    .cta p {
+      text-align: center;
+    }
+
+    .ctaButton {
+      background-color: rgb(233,72,52);
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 3px solid rgb(197, 32, 38);
+    }
+
+    .ctaButton a {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+
+    .ctaButton:hover {
+      background-color: rgb(197, 32, 38);
+    }
+
+    .bodyContent .ctaButton a:link, .bodyContent .ctaButton a:visited {
+      color: white;
+      text-decoration: none;
     }
 
     /* Footer */
@@ -173,7 +203,7 @@ a {
   margin: 0;
   Margin: 0;
   text-align: left;
-  line-height: 1.7; }
+}
 
 h1 {
   color: red;
@@ -188,11 +218,21 @@ p {
 h2 {
   color:rgb(240,194,66);
   text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 130%;
+  color: rgb(233,72,52);
+}
+
+.bodyContent h3 a:link, .bodyContent h3 a:visited {
+  color: rgb(233,72,52);
   font-weight: bold;
 }
 
