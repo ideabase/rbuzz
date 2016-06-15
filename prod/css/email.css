@@ -47,6 +47,10 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       padding-left:10px;
     }
 
+    .preheaderContent-right {
+      text-align: right;
+    }
+
     .preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */{
       /*@editable*/ color:#606060;
       /*@editable*/ font-weight:normal;
