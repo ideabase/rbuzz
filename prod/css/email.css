@@ -67,6 +67,7 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       padding-bottom:20px;
       padding-left:20px;
       text-align: center;
+      font-family: Helvetica, Arial, sans-serif;
     }
 
     .headerBanner {
@@ -77,6 +78,7 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       text-align: center;
       background-color: rgb(233,72,52);
       color: white;
+      font-family: Helvetica, Arial, sans-serif;
     }
 
     /* Body */
@@ -89,7 +91,6 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
 
     .bodyContent{
       /*@editable*/ color:#505050;
-      /*@editable*/ font-family:Helvetica;
       /*@editable*/ font-size:15px;
       /*@editable*/ line-height:150%;
       padding-top:20px;
@@ -97,6 +98,7 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       padding-bottom:20px;
       padding-left:20px;
       /*@editable*/ text-align:left;
+      font-family: Helvetica, Arial, sans-serif;
     }
 
     .bodyContent a:link, .bodyContent a:visited, /* Yahoo! Mail Override */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */{
@@ -166,7 +168,6 @@ td,
 th,
 a {
   color: #0a0a0a;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: normal;
   padding: 0;
   margin: 0;
@@ -198,6 +199,10 @@ h3 {
 .headerBanner h1 {
   color: white;
   text-align: center;
+}
+
+.sansSerifCustom {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 
 

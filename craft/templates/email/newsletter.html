@@ -6,9 +6,9 @@
 {% extends "email/_layout" %}
 
 {% block content %}
-    <p>{{ entry.emailMessage }}</p>
+    <p><span class="sansSerifCustom">{{ entry.emailMessage }}</span></p>
     <br />
-    <h2>What's New?</h2>
+    <h2><span class="sansSerifCustom">What's New?</span></h2>
     {% set posts = entry.whatsNewPosts %}
     {% if posts | length %}
       {% for post in posts %}
@@ -21,8 +21,8 @@
                   {% endfor %}
                 </td>
                 <td valign="top" width="180" class="column column-75">
-                  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                  <p>{{ post.blogShortDescription }}</p>
+                  <h3><a href="{{ post.url }}"><span class="sansSerifCustom">{{ post.title }}</span></a></h3>
+                  <p><span class="sansSerifCustom">{{ post.blogShortDescription }}</span></p>
                 </td>
               </tr>
           </table>
@@ -30,7 +30,7 @@
       {% endfor %}
     {% endif %}
     <br />
-    <h2>Weekly Tip</h2>
+    <h2><span class="sansSerifCustom">Weekly Tip</span></h2>
     {% set posts = entry.weeklyTip %}
     {% if posts | length %}
       {% for post in posts %}
@@ -43,8 +43,8 @@
                   {% endfor %}
                 </td>
                 <td valign="top" width="180" class="column column-75">
-                  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                  <p>{{ post.blogShortDescription }}</p>
+                  <h3><a href="{{ post.url }}"><span class="sansSerifCustom">{{ post.title }}</span></a></h3>
+                  <p><span class="sansSerifCustom">{{ post.blogShortDescription }}</span></p>
                 </td>
               </tr>
           </table>
@@ -52,14 +52,14 @@
       {% endfor %}
     {% endif %}
     <br />
-    <p>{{ email.emailCallToAction }}</p>
+    <p><span class="sansSerifCustom">{{ email.emailCallToAction }}</span></p>
     <br />
     {% set videolink = email.emailBrowseAllVideos %}
     {% if videolink | length %}
       {% for link in videolink %}
-          <h4><a href="{{ link.url }}">View All {{ link.title }}</a></h4>
+          <h4><a href="{{ link.url }}"><span class="sansSerifCustom">View All {{ link.title }}</span></a></h4>
       {% endfor %}
     {% endif %}
     <br />
-    <p>{{ email.emailThankYou }}</p>
+    <p><span class="sansSerifCustom">{{ email.emailThankYou }}</span></p>
 {% endblock %}
