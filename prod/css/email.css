@@ -168,17 +168,17 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
     .footerContent{
       /*@editable*/ color:#808080;
       /*@editable*/ font-family:Helvetica;
-      /*@editable*/ font-size:10px;
+      /*@editable*/ font-size:12px;
       /*@editable*/ line-height:150%;
       padding-top:20px;
       padding-right:20px;
       padding-bottom:20px;
       padding-left:20px;
-      /*@editable*/ text-align:left;
+      /*@editable*/ text-align:center;
     }
 
     .footerContent a:link, .footerContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshortcuts, .footerContent a span /* Yahoo! Mail Override */{
-      /*@editable*/ color:#606060;
+      /*@editable*/ color:rgb(107,200,200);
       /*@editable*/ font-weight:normal;
       /*@editable*/ text-decoration:underline;
     }
@@ -232,10 +232,21 @@ h3 {
   color: rgb(233,72,52);
 }
 
+h4 {
+  color:rgb(240,194,66);
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 .bodyContent h3 a:link, .bodyContent h3 a:visited {
   color: rgb(233,72,52);
   font-weight: bold;
 }
+
 
 .headerBanner h1 {
   color: white;
