@@ -42,10 +42,10 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       /*@editable*/ font-size:10px;
       /*@editable*/ line-height:125%;
       /*@editable*/ text-align:left;
-      padding-top:20px;
-      padding-right:20px;
-      padding-bottom:20px;
-      padding-left:20px;
+      padding-top:10px;
+      padding-right:10px;
+      padding-bottom:10px;
+      padding-left:10px;
     }
 
     .preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */{
@@ -59,7 +59,6 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
     #templateHeader{
       /*@editable*/ background-color: white;
       /*@editable*/ border-top:1px solid #FFFFFF;
-      /*@editable*/ border-bottom:1px solid #CCCCCC;
     }
 
     .headerContent {
@@ -67,7 +66,17 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       padding-right:20px;
       padding-bottom:20px;
       padding-left:20px;
-      /*@editable*/ text-align:left;
+      text-align: center;
+    }
+
+    .headerBanner {
+      padding-top:20px;
+      padding-right:20px;
+      padding-bottom:20px;
+      padding-left:20px;
+      text-align: center;
+      background-color: rgb(233,72,52);
+      color: white;
     }
 
     /* Body */
@@ -100,6 +109,22 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
       display:inline;
       height:auto;
       max-width:560px;
+    }
+
+    .column {
+      padding-top:10px;
+      padding-right:10px;
+      padding-bottom:10px;
+      width: 25%;
+    }
+
+    .column-25 {
+      padding-right: 20px;
+      width: 25%;
+    }
+
+    .column-75 {
+      width: 75%;
     }
 
     /* Footer */
@@ -148,7 +173,7 @@ a {
   margin: 0;
   Margin: 0;
   text-align: left;
-  line-height: 1.3; }
+  line-height: 1.7; }
 
 h1 {
   color: red;
@@ -167,6 +192,15 @@ h2 {
   font-weight: bold;;
 }
 
+h3 {
+  font-weight: bold;
+}
+
+.headerBanner h1 {
+  color: white;
+  text-align: center;
+}
+
 
 /*
 @media only screen and (max-width: 550px) {
@@ -180,6 +214,7 @@ h2 {
 
   #templateContainer{
     					max-width:600px !important;
+              margin: 0 auto;
     					/*@editable*/ width:100% !important;
   }
 

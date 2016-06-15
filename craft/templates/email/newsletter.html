@@ -12,7 +12,21 @@
     {% set posts = entry.whatsNewPosts %}
     {% if posts | length %}
       {% for post in posts %}
-          <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+      <!-- Post Teaser // -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="column">
+              <tr>
+                <td valign="top" class="column column-25">
+                  {% for asset in post.blogFeaturedImage %}
+                      <img src= "{{ asset.url }}" width="150" height="106" alt="{{ asset.title }}" />
+                  {% endfor %}
+                </td>
+                <td valign="top" width="180" class="column column-75">
+                  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                  <p>{{ post.blogShortDescription }}</p>
+                </td>
+              </tr>
+          </table>
+      <!-- // End Post Teaser -->
       {% endfor %}
     {% endif %}
     <br />
@@ -20,7 +34,21 @@
     {% set posts = entry.weeklyTip %}
     {% if posts | length %}
       {% for post in posts %}
-          <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+      <!-- Post Teaser // -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="column">
+              <tr>
+                <td valign="top" class="column column-25">
+                  {% for asset in post.blogFeaturedImage %}
+                      <img src= "{{ asset.url }}" width="150" height="106" alt="{{ asset.title }}" />
+                  {% endfor %}
+                </td>
+                <td valign="top" width="180" class="column column-75">
+                  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                  <p>{{ post.blogShortDescription }}</p>
+                </td>
+              </tr>
+          </table>
+      <!-- // End Post Teaser -->
       {% endfor %}
     {% endif %}
     <br />
