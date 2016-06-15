@@ -13,12 +13,14 @@
           {% set headshot = entry.staffHeadshot %}
           {% for asset in headshot %}
             <!-- Post Teaser // -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="column">
+              <tr>
+                <td width="100%" class="closingContainer" valign="top">
+                  <p class="closing"><span class="sansSerifCustom">{{ email.emailClosing}}</span></p>
+                </td>
+              </tr>
+            </table>
               <table border="0" cellpadding="0" cellspacing="0" width="100%" id="column">
-                    <tr>
-                      <td valign="top">
-                        <p class="closing"><span class="sansSerifCustom">{{ email.emailClosing}}</span></p>
-                      </td>
-                    </tr>
                     <tr>
                       <td valign="top" class="column column-15">
                         <img class="profile-thumb" src="{{ asset.url('profileThumb') }}" height="50" width="50" alt="{{ asset.title }}" />
