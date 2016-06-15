@@ -44,7 +44,7 @@
               <tr>
                 <td valign="top" class="column column-25">
                   {% for asset in post.blogFeaturedImage %}
-                      <img src= "{{ asset.url('postThumbnail') }}" width="150" height="106" alt="{{ asset.title }}" />
+                      <a href="{{ post.url }}"><img src= "{{ asset.url('postThumbnail') }}" width="150" height="106" alt="{{ asset.title }}" /></a>
                   {% endfor %}
                 </td>
                 <td valign="top" width="180" class="column column-75">
