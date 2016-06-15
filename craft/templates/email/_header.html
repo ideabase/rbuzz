@@ -7,10 +7,12 @@
             {% endfor %}
           </td>
       </tr>
+      {% if entry.emailHeadline | length %}
       <tr>
           <td valign="top" class="headerBanner">
             <h1><span class="sansSerifCustom">{{ entry.emailHeadline }}</span></h1>
           </td>
       </tr>
+      {% endif %}
   </table>
   <!-- // END HEADER -->

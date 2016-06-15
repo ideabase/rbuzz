@@ -6,11 +6,13 @@
 {% extends "email/_layout" %}
 
 {% block content %}
-    <div class="sansSerifCustom">{{ entry.emailMessage }}</div>
-    <br />
-    <h2><span class="sansSerifCustom">What's New?</span></h2>
+    {% if entry.emailMessage | length %}
+      <div class="sansSerifCustom">{{ entry.emailMessage }}</div>
+    {% endif %}
     {% set posts = entry.whatsNewPosts %}
     {% if posts | length %}
+      <br />
+      <h2><span class="sansSerifCustom">What's New?</span></h2>
       {% for post in posts %}
       <!-- Post Teaser // -->
         <table border="0" cellpadding="0" cellspacing="0" width="100%" id="column">
@@ -29,10 +31,10 @@
       <!-- // End Post Teaser -->
       {% endfor %}
     {% endif %}
-    <br />
-    <h2><span class="sansSerifCustom">Weekly Tip</span></h2>
     {% set posts = entry.weeklyTip %}
     {% if posts | length %}
+    <br />
+    <h2><span class="sansSerifCustom">Weekly Tip</span></h2>
       {% for post in posts %}
       <!-- Post Teaser // -->
         <table border="0" cellpadding="0" cellspacing="0" width="100%" id="column">
