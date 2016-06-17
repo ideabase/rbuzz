@@ -35,17 +35,24 @@
   background: rgba(0,0,0,.4); // Fallback for browsers that don't support gradient //
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 49%,rgba(0,0,0,0.65) 100%);
   padding-top: 1.5rem;
-  padding-bottom: 3.5rem;
-  padding-left:2.5rem;
-  padding-right:2.5rem;
+  padding-bottom: 3.8rem;
+  padding-left:1.5rem;
+  padding-right:1.5rem;
   text-align: center;
   width: 100%;
+  text-rendering: optimizeLegibility;
+  @media #{$small-ish} {
+    padding-left:5.5rem;
+    padding-right:5.5rem;
+  }
   @media #{$small} {
     font-size: 115%;
     padding-bottom: 4.5rem;
   }
   @media #{$medium} {
     font-size: 135%;
+    padding-left:8.5rem;
+    padding-right:8.5rem;
   }
   @media #{$large} {
     font-size: 200%;
@@ -61,6 +68,7 @@
     padding-bottom: 0;
     font-weight: 900;
     letter-spacing: 1px;
+    line-height: 1.1;
     text-shadow: 3px 1px 8px rgba(0,0,0,.9);
   }
   h2 {
@@ -69,6 +77,9 @@
     margin-bottom: 1.8rem;
     font-weight:700;
     text-shadow: 3px 1px 5px rgba(0,0,0,1);
+    @media #{$large} {
+      font-size: 70%;
+    }
   }
 }
 
@@ -81,7 +92,7 @@
   border: 3px solid $darkblue;
   color: white;
   font-weight: bold;
-  padding: .8em 2.5em;
+  padding: .9em 2.5em;
   text-decoration: none;
   font-size: .7rem;
   transition: .2s all ease-in-out;
