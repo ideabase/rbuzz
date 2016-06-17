@@ -63,15 +63,19 @@
 
 .filter-title {
   margin-bottom: .75em;
-  margin-top: 1em;
+  margin-top: 1.25em;
   font-size: 120%;
+  @media #{$medium} {
+    margin-top: 1em;
+  }
 }
 
 .sidebar-filter-content {
-  margin-bottom: 2em;
+  margin-bottom: .5em;
   text-align: center;
   @media #{$medium} {
     text-align: inherit;
+    margin-bottom: 2em;
   }
 }
 

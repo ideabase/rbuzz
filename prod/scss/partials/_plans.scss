@@ -1,12 +1,13 @@
 .plans-list {
   @extend .plain-list;
   width: 80%;
-  margin: 2em auto 0 auto;
+  margin: .5em auto 0 auto;
   @media #{$medium} {
     width: auto;
     -js-display: flex; // JavaScript Fallback for IE9 //
     display: flex;
     justify-content: space-between;
+    margin-top: 2em;
   }
 }
 
