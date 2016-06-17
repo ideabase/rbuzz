@@ -52,7 +52,8 @@
 
   <section class="layout-centered">
   	{% set entries = craft.entries.section('video').featuredVideo('not 0').limit(3) %}
-    <ul class="posts-list posts-list-video posts-list-item--promo">
+    {% set entriesCount = entries.total() %}
+    <ul class="posts-list posts-list-video posts-list-item--promo {% if entriesCount < 2 %} posts-list-item--promo-single {% endif %} {% if entriesCount == 2 %} posts-list-item--promo-duo {% endif %}">
     	{% for entry in entries %}
         {% include 'global/_posts-teaser.html' %}
     	{% endfor %}

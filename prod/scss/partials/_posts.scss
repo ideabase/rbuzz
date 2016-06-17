@@ -53,6 +53,12 @@ article p {
   }
 }
 
+.posts-list-item--promo-duo.posts-list {
+  @media #{$small-ish} {
+    display: block;
+  }
+}
+
 .posts-list-item {
   margin-top: 1.5em;
   text-decoration: none;
@@ -83,6 +89,13 @@ article p {
     width: 28%;
     margin-left: 2.5%;
     margin-right: 2.5%;
+  }
+}
+
+.posts-list-item--promo-single .posts-list-item {
+  @media #{$small-ish} {
+    margin: 0 auto;
+    margin-bottom: 1em;
   }
 }
 
