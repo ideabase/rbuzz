@@ -41,6 +41,10 @@
   text-align: center;
   width: 100%;
   text-rendering: optimizeLegibility;
+  a {
+    color: white;
+    text-decoration: none;
+  }
   @media #{$small-ish} {
     padding-left:5.5rem;
     padding-right:5.5rem;
