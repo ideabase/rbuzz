@@ -46,18 +46,18 @@
     padding-right:5.5rem;
   }
   @media #{$small} {
-    font-size: 115%;
+    font-size: 125%;
     padding-bottom: 4.5rem;
   }
   @media #{$medium} {
-    font-size: 135%;
-    padding-left:8.5rem;
-    padding-right:8.5rem;
+    font-size: 145%;
+    padding-left:10.5rem;
+    padding-right:10.5rem;
   }
   @media #{$large} {
     font-size: 200%;
-    padding-left:15.5rem;
-    padding-right:15.5rem;
+    padding-left:16.5rem;
+    padding-right:16.5rem;
   }
   h1, h2 {
     color: white;
@@ -79,6 +79,12 @@
     margin-bottom: 1.8rem;
     font-weight:700;
     text-shadow: 3px 1px 5px rgba(0,0,0,1);
+    @media #{$small} {
+      font-size: 80%;
+    }
+    @media #{$medium} {
+      font-size: 70%;
+    }
     @media #{$large} {
       font-size: 70%;
     }
