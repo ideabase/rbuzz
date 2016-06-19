@@ -280,6 +280,9 @@
   position: absolute;
   display: flex;
   width: 100%;
+  @media #{$medium} {
+    margin-top: -42px;
+  }
 }
 
 .owl-pagination {
