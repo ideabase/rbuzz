@@ -4,6 +4,27 @@
 
 {% extends "_layout" %}
 
+{# Overrides the default social media image #}
+
+{% set socialCrop = {
+    mode: 'crop',
+    width: 472,
+    height: 394,
+    quality: 85,
+    position: 'center-center'
+} %}
+{% set assets = entry.blogFeaturedImage %}
+{% for asset in assets %}
+  {% set seomaticMeta = seomaticMeta | merge({
+    og: {
+        image: asset.getUrl(socialCrop),
+    },
+    twitter: {
+      image: asset.getUrl(socialCrop),
+    }
+  }) %}
+{% endfor %}
+
 {% block content %}
   <section class="feature-image">
     {% set assets = entry.blogFeaturedImage %}
