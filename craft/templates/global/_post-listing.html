@@ -6,7 +6,7 @@
   {% set sectionHandle = 'video' %}
 {% endif %}
 <!-- Pagination -->
-{% paginate craft.entries.section(sectionHandle).limit(2) as pageInfo, pageEntries %}
+{% paginate craft.entries.section(sectionHandle).limit(10) as pageInfo, pageEntries %}
 <section class="layout-split-right layout-centered">
   <ul class="posts-list {% if sectionHandle == 'video' %}posts-list-video{% endif %}">
     {% for entry in pageEntries %}
