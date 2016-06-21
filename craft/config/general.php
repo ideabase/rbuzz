@@ -22,7 +22,6 @@ return array(
 
     '.us' => array(
       'allowAutoUpdates' => false,
-      'devMode' => true,
       'environmentVariables' => array(
           'baseUrl'  => 'http://readingbuzz.us/prod/',
       )
