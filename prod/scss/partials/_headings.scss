@@ -1,10 +1,13 @@
 h1 {
-     font-size: 1.85em;
+     font-size: 1.75em;
      font-style: normal;
      text-transform: uppercase;
      color: $yellow;
      margin-top: 0;
      text-rendering: optimizeLegibility;
+     @media #{$medium} {
+       font-size: 1.85em;
+     }
 }
 
 h2 {

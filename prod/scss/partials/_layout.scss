@@ -5,7 +5,7 @@ body {
 
 header {
 	@media #{$medium} {
-		padding: $globalpadding $globalpadding*2;
+		padding: $globalpadding $globalpadding*2 $globalpadding/2 $globalpadding*2;
 	}
 	@media #{$large} {
 		padding: $globalpadding $globalpadding*4 $globalpadding/2 $globalpadding*4;
@@ -18,7 +18,7 @@ header {
 }
 
 .header-inner {
-	padding: $globalpadding $globalpadding;
+	padding: $globalpadding/2 $globalpadding;
 	@media #{$small} {
 		padding: $globalpadding $globalpadding*2;
 	}
