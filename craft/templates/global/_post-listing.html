@@ -5,10 +5,34 @@
 {% if handle == 'videoIndex' %}
   {% set sectionHandle = 'video' %}
 {% endif %}
+<!-- Pagination -->
+{% paginate craft.entries.section(sectionHandle).limit(2) as pageInfo, pageEntries %}
 <section class="layout-split-right layout-centered">
   <ul class="posts-list {% if sectionHandle == 'video' %}posts-list-video{% endif %}">
-    {% for entry in craft.entries.section(sectionHandle).find() %}
+    {% for entry in pageEntries %}
         {% include 'global/_posts-teaser.html' %}
     {% endfor %}
   </ul>
+  <!-- Pagination Navigation -->
+  <nav class="pagination">
+    <ul class="pagination-list">
+    {% if pageInfo.prevUrl %}
+      <li class="pagination-list__item pagination-list__item__previous"><a href="{{ pageInfo.prevUrl }}"><span>Previous Page</span></a></li>
+    {% endif %}
+
+    {% for page, url in pageInfo.getPrevUrls(5) %}
+        <li class="pagination-list__item"><a href="{{ url }}">{{ page }}</a></li>
+    {% endfor %}
+
+      <li class="pagination-list__item pagination-list__current"><span class="current">{{ pageInfo.currentPage }}</span></li>
+
+    {% for page, url in pageInfo.getNextUrls(5) %}
+        <li class="pagination-list__item"><a href="{{ url }}">{{ page }}</a></li>
+    {% endfor %}
+
+    {% if pageInfo.nextUrl %}
+      <li class="pagination-list__item pagination-list__item__next"><a href="{{ pageInfo.nextUrl }}"><span>Next Page</span></a></li>
+    {% endif %}
+    <ul>
+  </nav>
 </section>
