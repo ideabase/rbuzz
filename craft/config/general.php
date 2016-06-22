@@ -23,7 +23,7 @@ return array(
     '.us' => array(
       'allowAutoUpdates' => false,
       'environmentVariables' => array(
-          'baseUrl'  => 'http://readingbuzz.us/prod/',
+          'baseUrl'  => 'http://readingbuzz.us/',
       )
     )
 );
