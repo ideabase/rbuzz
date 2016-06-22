@@ -7,47 +7,51 @@
 
 {% block content %}
     <section class="feature-image layout-inner">
-      <div class="video-container">
-        {{ entry.videoUrl|videoEmbed({ badge: 0, byline: 0, portrait: 0, title: 0 }) }}
-      </div>
+        <div class="video-container">
+            {{ entry.videoUrl|videoEmbed({ badge: 0, byline: 0, portrait: 0, title: 0 }) }}
+        </div>
     </section>
+
     <article>
-      <div class="layout-centered">
-    		<h2>{{ entry.title }}</h2>
-        <ul class="tags">
-    				{% for category in entry.videoTheme %}
-    				    <li>{{ category.title }}</li>
-    				{% endfor %}
-    				{% for category in entry.videoGradeLevel %}
-    				    <li>{{ category.title }}</li>
-    				{% endfor %}
-    		</ul>
-        <dl class="post-date">
-          <dt>Posted</dt>
-          <dd><date>{{ entry.postDate.format('F d, Y') }}</date></dd>
-        </dl>
-      </div>
-      {% include 'global/_post-content.html' %}
+        <div class="layout-centered">
+            <h2>{{ entry.title }}</h2>
+            <ul class="tags">
+                {% for category in entry.videoTheme %}
+                    <li>{{ category.title }}</li>
+    			{% endfor %}
+    			{% for category in entry.videoGradeLevel %}
+    				<li>{{ category.title }}</li>
+    			{% endfor %}
+            </ul>
+            <dl class="post-date">
+                <dt>Posted</dt>
+                <dd><date>{{ entry.postDate.format('F d, Y') }}</date></dd>
+            </dl>
+        </div>
+        {% include 'global/_post-content.html' %}
     </article>
+
     {% if entry.featuredVideo %}
     {% else %}
-      {% set category = craft.categories.group('videoTheme') %}
-      {% set entries = craft.entries.section('video').relatedTo(category).id('not ' ~ entry.id).limit(3) %}
-      <section class="layout-inner layout-centered related-posts">
-      {% if entries | length %}
-      <h4 class="related-posts__title">{{ miscGlobals.relatedPostsTitle }}</h4>
-        <ul class="posts-list posts-list-video posts-list-item--promo">
-          {% for entry in entries %}
-            {% include 'global/_posts-teaser.html' %}
-          {% endfor %}
-        </ul>
-      {% endif %}
-        {% set BackToIndex = miscGlobals.backToVideoText %}
-        {% for entry in miscGlobals.backToVideoIndex %}
-          <div class="back-to_button-container" >
-            <a class="button--blue button back-to" href="{{ entry.url }}">{{ BackToIndex }}</a>
-          </div>
-        {% endfor %}
-      </section>
+
+        {% set category = entry.videoTheme %}
+        {% set entries = craft.entries.section('video').relatedTo(category).id('not ' ~ entry.id).limit(3) %}
+
+        <section class="layout-inner layout-centered related-posts">
+            {% if entries | length %}
+                <h4 class="related-posts__title">{{ miscGlobals.relatedVideosTitle }}</h4>
+                <ul class="posts-list posts-list-video posts-list-item--promo">
+                {% for entry in entries %}
+                    {% include 'global/_posts-teaser.html' %}
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% set BackToIndex = miscGlobals.backToVideoText %}
+            {% for entry in miscGlobals.backToVideoIndex %}
+                <div class="back-to_button-container" >
+                    <a class="button--blue button back-to" href="{{ entry.url }}">{{ BackToIndex }}</a>
+                </div>
+            {% endfor %}
+        </section>
     {% endif %}
 {% endblock %}
