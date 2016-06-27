@@ -101,6 +101,7 @@
         "@type": "NewsArticle",
         "headline": "{{entry.title}}",
         "datePublished": "{{entry.dateCreated.iso8601()}}",
+        "dateModified": "{{entry.dateUpdated.iso8601()}}",
         "description": "{{entry.blogShortDescription}}",
         "author": {
           "@type" : "Person",
@@ -112,15 +113,15 @@
           "logo": {
             "@type": "ImageObject",
             "url": {% for asset in header.logoFallback %}"{{ asset.url }}"{% endfor %},
-            "width": 175,
-            "height": 124
+            "width": 85,
+            "height": 60
           }
         },
         "image": {
           "@type" : "ImageObject",
-          "url" :{% for asset in entry.blogFeaturedImage %}"{{ asset.url('smallFeatureImage') }}"{% endfor %},
-          "height" : 300,
-          "width" : 300
+          "url" :{% for asset in entry.blogFeaturedImage %}"{{ asset.url('mediumFeatureImage') }}"{% endfor %},
+          "height" : 368,
+          "width" : 700
         }
       }
     </script>
@@ -136,7 +137,7 @@
     <!--Start Blog Post Content -->
     {% set assets = entry.blogFeaturedImage %}
     {% for asset in assets %}
-      <amp-img src="{{ asset.url('smallFeatureImage') }}" alt="{{ asset.title }}" height="300" width="300"></amp-img>
+      <amp-img src="{{ asset.url('mediumFeatureImage') }}" alt="{{ asset.title }}" height="158" width="300"></amp-img>
     {% endfor %}
       <h2>{{ entry.title }}</h2>
       <dl class="post-date">
