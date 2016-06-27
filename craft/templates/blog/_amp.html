@@ -117,9 +117,8 @@
           }
         },
         "image": {
-          {% for asset in entry.blogFeaturedImage %}
-            "{{ asset.url('smallFeatureImage') }}",
-          {% endfor %}
+          "@type" : "ImageObject",
+          "url" :{% for asset in entry.blogFeaturedImage %}"{{ asset.url('smallFeatureImage') }}"{% endfor %},
           "height" : 300,
           "width" : 300
         }
