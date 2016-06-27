@@ -96,13 +96,33 @@
     </style>
     <script type="application/ld+json">
       {
+        "mainEntityofPage": "{{entry.url}}",
         "@context": "http://schema.org",
         "@type": "NewsArticle",
         "headline": "{{entry.title}}",
         "datePublished": "{{entry.dateCreated.iso8601()}}",
-        "image": [
-          "logo.jpg"
-        ]
+        "description": "{{entry.blogShortDescription}}",
+        "author": {
+          "@type" : "Person",
+          "name": "Lindsey Buzzelli"
+        }
+        "publisher": {
+          "@type": "Organization",
+          "name": "Reading Buzz",
+          "logo": {
+            "@type": "ImageObject",
+            "url": {% for asset in header.logoFallback %}"{{ asset.url }}"{% endfor %},
+            "width": 175,
+            "height": 124
+          }
+        },
+        "image": {
+          {% for asset in entry.blogFeaturedImage %}
+            "{{ asset.url('smallFeatureImage') }}",
+          {% endfor %}
+          "height" : 300,
+          "width" : 300
+        }
       }
     </script>
     <script async src="https://cdn.ampproject.org/v0.js"></script> <!-- Must be last -->
