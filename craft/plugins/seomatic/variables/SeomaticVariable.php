@@ -108,6 +108,17 @@ class SeomaticVariable
     } /* -- extractTextFromMatrix */
 
 /* --------------------------------------------------------------------------------
+    Returns an array of localized URLs for the current request
+-------------------------------------------------------------------------------- */
+
+    public function getLocalizedUrls()
+    {
+        $result = craft()->seomatic->getLocalizedUrls();
+
+        return $result;
+    } /* -- getLocalizedUrls */
+
+/* --------------------------------------------------------------------------------
     Get a fully qualified URL based on the siteUrl, if no scheme/host is present
 -------------------------------------------------------------------------------- */
 
@@ -453,18 +464,22 @@ class SeomaticVariable
     Get the identity record
 -------------------------------------------------------------------------------- */
 
-    public function getIdentity()
+    public function getIdentity($locale=null)
     {
-        return craft()->seomatic->getIdentity();
+        if (!$locale)
+            $locale = craft()->language;
+        return craft()->seomatic->getIdentity($locale);
     } /* -- getIdentity */
 
 /* --------------------------------------------------------------------------------
     Get the social record
 -------------------------------------------------------------------------------- */
 
-    public function getSocial()
+    public function getSocial($locale=null)
     {
-        return craft()->seomatic->getSocial();
+        if (!$locale)
+            $locale = craft()->language;
+        return craft()->seomatic->getSocial($locale);
     } /* -- getSocial */
 
 /* --------------------------------------------------------------------------------
