@@ -67,12 +67,14 @@ article p {
   text-align: center;
   width: 100%;
   @media #{$small-ish} {
-    width: 45%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    width: 41%;
+    margin-left: 4.5%;
+    margin-right: 4.5%;
   }
   @media #{$large} {
     width: 28%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
   &:hover, &:focus {
     .posts-title {
